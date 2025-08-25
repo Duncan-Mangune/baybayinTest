@@ -21,7 +21,7 @@ export default function HomePage() {
         Know More<br />Baybayin
       </h1>
       <p className={styles.subtitle}>
-        "Reviving our Script, Preserving our Identity."
+        &quot;Reviving our Script, Preserving our Identity.&quot; {/* Escaped quotes */}
       </p>
 
       {/* Search Bar */}
@@ -50,16 +50,6 @@ export default function HomePage() {
           Baybayin Translator
         </Link>
       </div>
-
-
-      <body>
-        
-      </body>
-
-
     </section>
-
-   
-
   );
 }

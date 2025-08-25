@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function PromotionalContents() {
   return (
     <section>
@@ -6,15 +8,19 @@ export default function PromotionalContents() {
         Spread awareness of Baybayin through events, posters, and campaigns.
       </p>
       <div className="grid grid-cols-2 gap-6">
-        <img
+        <Image
           src="https://upload.wikimedia.org/wikipedia/commons/8/84/Baybayin_script_sample.svg"
           alt="Baybayin Poster"
           className="rounded-lg shadow"
+          width={500} // Set an appropriate width
+          height={300} // Set an appropriate height
         />
-        <img
+        <Image
           src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Baybayin_script_sample.svg"
           alt="Baybayin Culture"
           className="rounded-lg shadow"
+          width={500} // Set an appropriate width
+          height={300} // Set an appropriate height
         />
       </div>
     </section>
