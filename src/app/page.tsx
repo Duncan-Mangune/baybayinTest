@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import styles from "./page.module.css"; // 👈 import CSS
+import styles from "./page.module.css"; 
 
 export default function HomePage() {
   const [query, setQuery] = useState("");
