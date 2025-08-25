@@ -1,12 +1,10 @@
-/* app/layout.css */
-
 /* Ensure full height */
 html, body {
   height: 100%;
   margin: 0;
 }
 
-/* Body flex layout */
+/* Body flex layout + background */
 body {
   display: flex;
   flex-direction: column;
@@ -15,48 +13,49 @@ body {
   transition: transform 0.3s ease-in-out;
 
   background-attachment: fixed;
-  background-image: url("public/background1.png");
+  background-image: url("public/background1.png"); /* correct path */
   background-size: cover;       
   background-position: center;
   background-repeat: no-repeat; 
 }
 
-.logo {
-  font-size: 60px; 
-  font-weight: bold;
-  color: black;
-}
-
-  
-/* Navbar styles */
+/* Navbar */
 .navbar {
   font-family: "JejuHallasan", sans-serif;
-  position: fixed;       /* Make it stay in place */
-  top: 0;                /* Stick to the top */
-  left: 0;               /* Align to the left */
-  width: 100%;           /* Full width */
-  z-index: 1000;         /* Keep it above other content */
-  
-  margin: 0;             /* Remove margin so it fits clean */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 24px;
+  padding: 10px 24px;
   background-color: #b9b4a0da; 
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* optional: subtle shadow */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+
+  position: fixed;   /* stay on top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;     /* above other content */
 }
 
-
-.navbar h1 {
-  font-size: 20px;
+/* Logo */
+.logo {
+  padding-left: 20px;
+  font-size: 40px;
   font-weight: bold;
+  color: black;
+  text-decoration: none;
 }
 
+.logo:hover {
+  transform: scale(1.2);
+  color: #626262;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
 
-
-.navbar a {
-  color: black !important;
-  font-size: 25px;
+/* Navbar links */
+.navbar a:not(.logo) {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  -webkit-text-stroke: 0.1px rgb(212,212,212);
+  font-size: 30px;
   font-weight: bold;
   margin-left: 50px;
   text-decoration: none;
@@ -64,19 +63,23 @@ body {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.navbar a:hover {
+.navbar a:not(.logo):hover {
   transform: scale(1.2);
   color: #626262;
 }
-main {
-  flex: 1;
-  padding-top: 80px; /* adjust depending on navbar height */
-}
 
+/* Main content */
+main{
+  flex: 1;
+  padding-top: 65px;  /* matches navbar height */
+  box-sizing: border-box;
+  padding-left: 2rem; /* optional side padding */
+  padding-right: 2rem;
+}
 
 .footer {
   text-align: center;
-  padding: 24px;
+  padding: 30px;
   background-color: #b9b4a0da;
   color: #444;
 }

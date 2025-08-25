@@ -134,7 +134,7 @@
 .buttonGroup {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
   width: 100%;
   max-width: 64rem;
   justify-content: center;
@@ -147,25 +147,36 @@
 }
 
 .bigButton {
+  font-size: 30px;
+  font-weight: 600;
   font-family: "JejuHallasan", sans-serif;
-  margin: 15;
+  text-shadow: 8px 8px 32px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 0.1px rgb(212, 212, 212);
+  color: rgb(0, 0, 0);
+
+  margin: 15px auto;        /* center horizontally if block */
   width: 100%;
-  max-width: 16rem;
+  max-width: 20rem;         /* only one max-width */
   padding: 1.5rem 0;
   border-radius: 1rem;
-  color: rgb(255, 255, 255);
-  font-size: 1.25rem;
-  font-weight: 600;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   text-align: center;
-  transition: background-color 0.2s;
+
+  display: flex;            /* make flex to allow vertical centering */
+  justify-content: center;  /* horizontal center */
+  align-items: center;      /* vertical center */
+
+  transition: background-color 0.2s ease;
+  cursor: pointer;          /* shows pointer on hover */
 }
 
+
 .bigButton:hover {
-  transform: scale(1.30); /* grows smoothly */
+  transform: scale(1.20); /* grows smoothly */
 }
 
 .history {
+  
   background-color: #8d7556;
   transition: transform 0.3s ease-in-out;
 }
