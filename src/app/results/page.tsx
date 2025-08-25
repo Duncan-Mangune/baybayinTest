@@ -4,6 +4,8 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { useState, useEffect, Suspense } from "react";
 import styles from "./results.module.css";
 
+export const dynamic = "force-dynamic";
+
 function ResultsContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
