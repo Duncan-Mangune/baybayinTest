@@ -21,8 +21,8 @@ export default function HomePage() {
         Know More<br />Baybayin
       </h1>
       <p className={styles.subtitle}>
-        &quot;Reviving our Script, Preserving our Identity.&quot; {/* Escaped quotes */}
-      </p>
+  &quot;Reviving our Script, Preserving our Identity.&quot;
+</p>
 
       {/* Search Bar */}
       <form onSubmit={handleSearch} className={styles.searchForm}>
