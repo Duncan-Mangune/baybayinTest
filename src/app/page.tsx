@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import styles from "./page.module.css"; 
+import Image from "next/image";
+import styles from "./page.module.css";
 
 export default function HomePage() {
   const [query, setQuery] = useState("");
@@ -16,12 +17,28 @@ export default function HomePage() {
 
   return (
     <section className={styles.section}>
+
       {/* Title */}
-      <h1 className={styles.title}>
-        Know More<br />Baybayin
-      </h1>
-      <p className={styles.subtitle}> &quot; Reviving our Script, Preserving our Identity&quot;</p>
-      
+      {/* <h1 className={styles.title}>
+        Know More
+        <br />
+        Baybayin
+      </h1> */}
+
+       <div className={styles.titleImage}>
+        <Image
+          src= "/images/Title.png"
+          alt="Know More Baybayin"
+          width={600}     // adjust width
+          height={180}    // adjust height
+          priority
+        />
+      </div>
+
+
+      <p className={styles.subtitle}>
+        &quot; Reviving our Script, Preserving our Identity&quot;
+      </p>
 
       {/* Search Bar */}
       <form onSubmit={handleSearch} className={styles.searchForm}>
@@ -39,13 +56,22 @@ export default function HomePage() {
 
       {/* Big Buttons */}
       <div className={styles.buttonGroup}>
-        <Link href="/baybayinhistory" className={`${styles.bigButton} ${styles.history}`}>
-          History
+        <Link
+          href="/baybayinhistory"
+          className={`${styles.bigButton} ${styles.history}`}
+        >
+          Brief History
         </Link>
-        <Link href="/learnbaybayin" className={`${styles.bigButton} ${styles.learn}`}>
+        <Link
+          href="/learnbaybayin"
+          className={`${styles.bigButton} ${styles.learn}`}
+        >
           Learn Baybayin
         </Link>
-        <Link href="/translator" className={`${styles.bigButton} ${styles.translator}`}>
+        <Link
+          href="/translator"
+          className={`${styles.bigButton} ${styles.translator}`}
+        >
           Baybayin Translator
         </Link>
       </div>

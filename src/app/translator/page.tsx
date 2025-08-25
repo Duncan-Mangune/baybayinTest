@@ -4,7 +4,7 @@ export default function TranslatorPage() {
       <h2 style={{ fontSize: 28, fontWeight: 800, marginBottom: 8 }}>
         Baybayin Translator
       </h2>
-      <p>Coming soon: convert Latin text to Baybayin.</p>
+      <p>Coming soon: convert Texts to Baybayin.</p>
     </section>
   );
 }

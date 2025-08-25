@@ -6,11 +6,38 @@
   text-align: center;
   padding-left: 1rem;
   padding-right: 1rem;
+  
+/* fade-in effect */
+  opacity: 0;
+  animation: fadeIn .50s ease-in forwards;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title Image */
+.titleImage {
+  display: inline-block; /* Allows the image to be treated as a block element */
+  overflow: hidden;     /* Ensures that the image does not overflow the container */
+  transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.titleImage:hover {
+  transform: scale(1.1); /* Increases the size of the image on hover */
+}
+
 
 /* Title */
 .title {
-  color: #000000;
+  color: #ffffff;
   font-size: 3rem; /* text-5xl */
   font-weight: bold;
   line-height: 1.2;
@@ -24,6 +51,7 @@
 
 /* Subtitle */
 .subtitle {
+  padding-top: 25px;
   font-size: 1.5rem;   /* slightly smaller than title */
   font-weight: 500;
   color: #333;
@@ -48,15 +76,17 @@
 
 @media (min-width: 768px) {
   .subtitle {
-    font-size: 1.25rem; /* md:text-xl */
+    font-size: 25px; /* md:text-xl */
+    /* font-size: 1.25rem;  */
   }
 }
 
 /* Search bar */
 .searchForm {
+  background-color: #ffffff14;
   display: flex;
   width: 100%;
-  max-width: 36rem; /* max-w-xl */
+  max-width: 40rem; /* max-w-xl */
   margin-bottom: 2.5rem;
 }
 
@@ -117,6 +147,7 @@
 }
 
 .bigButton {
+  font-family: "JejuHallasan", sans-serif;
   margin: 15;
   width: 100%;
   max-width: 16rem;

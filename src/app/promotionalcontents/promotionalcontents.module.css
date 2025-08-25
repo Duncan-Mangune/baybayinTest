@@ -1,0 +1,48 @@
+.container {
+  max-width: 1100px; /* wider card */
+  margin: 40px auto;
+  padding: 48px;     /* more spacing inside */
+  font-family: "JejuHallasan", sans-serif;
+
+  background-color: #514332; /* brown card */
+  color: #ffffff; /* white text */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(166, 128, 67, 0.889);
+
+  /* fade-in effect */
+  opacity: 0;
+  animation: fadeIn .50s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  text-align: left;
+  font-size: 2.25rem; /* ~36px */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  text-align: left;
+  font-size: 1.5rem; /* ~24px */
+  font-weight: 600;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+.textBlock {
+  text-align: left; /* paragraphs left aligned for readability */
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}

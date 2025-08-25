@@ -49,7 +49,7 @@ export default function LearnBaybayinPage() {
         {lessons.map((title, idx) => (
           <Link
             key={idx}
-            href={`/learn-baybayin/lesson/${idx + 1}`}
+            href={`/learnbaybayin/lesson-baybayin/${idx + 1}`}
             className={styles.lessonBtn}
           >
             {title}

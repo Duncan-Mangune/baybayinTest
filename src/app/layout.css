@@ -30,6 +30,7 @@ body {
   
 /* Navbar styles */
 .navbar {
+  font-family: "JejuHallasan", sans-serif;
   position: fixed;       /* Make it stay in place */
   top: 0;                /* Stick to the top */
   left: 0;               /* Align to the left */
