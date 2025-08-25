@@ -1,10 +1,10 @@
 "use client";
 
 import { useSearchParams, useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import styles from "./results.module.css";
 
-export default function ResultsPage() {
+function ResultsContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -71,5 +71,13 @@ export default function ResultsPage() {
         <p>Type something in the search bar first.</p>
       )}
     </section>
+  );
+}
+
+export default function ResultsPage() {
+  return (
+    <Suspense fallback={<p>Loading search...</p>}>
+      <ResultsContent />
+    </Suspense>
   );
 }
