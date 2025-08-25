@@ -2,7 +2,7 @@
 
 import { useSearchParams, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import styles from "./results.module.css";  
+import styles from "./results.module.css";
 
 export default function ResultsPage() {
   const searchParams = useSearchParams();
@@ -51,7 +51,7 @@ export default function ResultsPage() {
       <h1>
         Search Results for:{" "}
         <span className={styles.resultsHighlight}>
-          {query ? `"${query}"` : "Nothing yet"}
+          {query ? `“${query}”` : "Nothing yet"}
         </span>
       </h1>
 
