@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white; /* optional, for contrast */
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar h1,
+.navLinks a {
+  color: black;
+  text-decoration: none; /* remove underline from links */
+  font-weight: 500;
+}
+
+.navLinks a:hover {
+  text-decoration: underline; /* optional hover effect */
+}

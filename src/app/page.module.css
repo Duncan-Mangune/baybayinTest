@@ -1,0 +1,159 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem; /* pt-20 */
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Title */
+.title {
+  color: #000000;
+  font-size: 3rem; /* text-5xl */
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.title:hover {
+  transform: scale(1.05); /* title grows on hover */
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.5rem;   /* slightly smaller than title */
+  font-weight: 500;
+  color: #333;
+  transition: transform 0.3s ease-in-out;
+}
+
+.subtitle:hover {
+  transform: scale(1.08); /* grows smoothly on hover */
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3.75rem; /* md:text-6xl */
+  }
+}
+
+.subtitle {
+  margin-bottom: 2rem;
+  font-size: 1.125rem; /* text-lg */
+  max-width: 36rem;
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 1.25rem; /* md:text-xl */
+  }
+}
+
+/* Search bar */
+.searchForm {
+  display: flex;
+  width: 100%;
+  max-width: 36rem; /* max-w-xl */
+  margin-bottom: 2.5rem;
+}
+
+.searchForm:hover {
+  transform: scale(1.15);
+  transition: transform 0.3s ease-in-out;
+  
+}
+
+
+.searchInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #000000;
+  border-radius: 0.75rem 0 0 0.75rem;
+  color: #374151;
+}
+
+.searchInput::placeholder {
+  color: #181818;
+}
+
+.searchInput:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #757069;
+}
+
+
+.searchButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #514332;
+  color: white;
+  font-weight: 600;
+  border-radius: 0 0.75rem 0.75rem 0;
+  transition: background-color 0.3s;
+}
+
+.searchButton:hover {
+  background-color: #917c64;
+  transform: scale(1.15);
+  transition: transform 0.3s ease-in-out;
+  
+}
+/* Big buttons */
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 64rem;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .buttonGroup {
+    flex-direction: row;
+  }
+}
+
+.bigButton {
+  margin: 15;
+  width: 100%;
+  max-width: 16rem;
+  padding: 1.5rem 0;
+  border-radius: 1rem;
+  color: rgb(255, 255, 255);
+  font-size: 1.25rem;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.bigButton:hover {
+  transform: scale(1.30); /* grows smoothly */
+}
+
+.history {
+  background-color: #8d7556;
+  transition: transform 0.3s ease-in-out;
+}
+.history:hover {
+  background-color: #b0936d;
+}
+
+.learn {
+  background-color: #caa85e;
+  transition: transform 0.3s ease-in-out;
+}
+.learn:hover {
+  background-color: #ddb45b;
+}
+
+.translator {
+  background-color: #2563eb;
+  transition: transform 0.3s ease-in-out;
+}
+.translator:hover {
+  background-color: #1d4ed8;
+}
