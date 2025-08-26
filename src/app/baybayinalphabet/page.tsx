@@ -11,12 +11,22 @@ export default function baybayinalphabet() {
           ← Home
            </Link>
        </div>
+
+       <div className={styles.imageWrapper}>
+        <img 
+          src="/images/BaybayinChart.jpg" 
+          alt="Baybayin Alphabet" 
+          className={styles.image}
+        />
+      </div>
        
       <h2 className={styles.subtitle}>Description</h2>
       <p className={styles.textBlock}>
         The Baybayin Alphabet
         
       </p>
+
+        
 
      
     </div>

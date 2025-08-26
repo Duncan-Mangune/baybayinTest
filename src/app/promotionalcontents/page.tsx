@@ -1,5 +1,6 @@
 import styles from "./promotionalcontents.module.css";
 import Link from "next/link";
+
 export default function PromotionalContents() {
   const products = [
     {
@@ -17,7 +18,7 @@ export default function PromotionalContents() {
     {
       title: "Baybayin Tattoo",
       description: "Temporary and custom Baybayin tattoos for everyone.",
-      imageUrl: "/images/tattoo.jpg",
+      imageUrl: "/images/Tattoo.jpg",
       link: "https://example.com/tattoo",
     },
     {
@@ -29,18 +30,15 @@ export default function PromotionalContents() {
     {
       title: "Baybayin Logo",
       description: "Unique Baybayin-inspired logos for your brand.",
-      imageUrl: "/images/logo.jpg",
+      imageUrl: "/images/Logo.jpg",
       link: "https://example.com/logo",
     },
-      
   ];
 
   return (
     <div className={styles.container}>
-
-        {/* Title & Back Button*/}
-      < div className={styles.headerRow}>
-
+      {/* Title & Back Button */}
+      <div className={styles.headerRow}>
         <h1 className={styles.title}>Promotional Contents</h1>
 
         <Link href="/" className={styles.backLink}>
@@ -48,10 +46,35 @@ export default function PromotionalContents() {
         </Link>
       </div>
 
-       <h1 className={styles.title2}>Merchandise</h1>
-      
+      {/* 🚩 Campaign Card */}
+      <div className={styles.campaignCard}>
+        <h2 className={styles.campaignTitle}>📢 Baybayin Awareness Campaign</h2>
+        <p className={styles.campaignText}>
+          Baybayin is more than just a script — it is a symbol of Filipino identity and pride.
+          Join the movement to preserve and promote our cultural heritage by sharing this campaign
+          with your friends and community on Facebook.
+        </p>
+        <img
+          src="/images/Campaign.jpg" // 📌 local image
+          alt="Baybayin Awareness Campaign"
+          className={styles.campaignImage}
+        />
+        <a
+          href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.shareBtn}
+        >
+          📤 Share on Facebook
+        </a>
+      </div>
+
+      <h1 className={styles.title2}>Merchandise</h1>
+
       <p className={styles.textBlock}>
-        Explore products featuring Baybayin designs by. From T-shirts to tattoos, signage, and logos — click each product to view more. <strong>Disclaimer:</strong> All products lead to external links.
+        Explore products featuring Baybayin designs. From T-shirts to tattoos,
+        signage, and logos — click each product to view more.{" "}
+        <strong>Disclaimer:</strong> All products lead to external links.
       </p>
 
       <div className={styles.catalog}>

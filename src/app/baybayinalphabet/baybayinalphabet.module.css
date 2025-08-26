@@ -59,7 +59,7 @@
 /* Styling the back link */
 .backLink {
   text-decoration: none;
-  background-color: #ba9660; /* Dark gray background */
+  background-color: #514332; /* Dark gray background */
   color: #ffffff; /* White text */
   padding: 8px 16px;
   border-radius: 4px;
@@ -70,13 +70,30 @@
 }
 
 .backLink:hover {
-  background-color: #b0836c; /* Darker gray on hover */
-  transform: translateY(-2px); /* Slight lift effect */
+  background-color: #8d7558; /* Darker gray on hover */
+  transform: scale(1.15);
 }
 
 .backLink:active {
   background-color: #2a2a2a; /* Even darker gray when clicked */
   transform: translateY(0); /* Reset lift effect */
+}
+
+/* Centered image */
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.image {
+  height:300px;
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* optional: rounded corners */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* optional: subtle shadow */
 }
 
 

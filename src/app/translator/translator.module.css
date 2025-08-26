@@ -59,7 +59,7 @@
 /* Styling the back link */
 .backLink {
   text-decoration: none;
-  background-color: #957147; /* Dark gray background */
+  background-color: #514332; /* Dark gray background */
   color: #ffffff; /* White text */
   padding: 8px 16px;
   border-radius: 4px;
@@ -70,8 +70,8 @@
 }
 
 .backLink:hover {
-  background-color: #b0836c; /* Darker gray on hover */
-  transform: translateY(-2px); /* Slight lift effect */
+  background-color: #8d7558; /* Darker gray on hover */
+  transform: scale(1.15);
 }
 
 .backLink:active {
