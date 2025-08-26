@@ -37,6 +37,14 @@ export default function PromotionalContents() {
 
   return (
     <div className={styles.container}>
+        {/* Title & Back Button */}
+      <div className={styles.headerRow}>
+        <h1 className={styles.title}>Promotional Contents</h1>
+        <Link href="/" className={styles.backLink}>
+          ← Home
+        </Link>
+      </div>
+
        {/* 🚩 Government Efforts Section */}
       <h2 className={`${styles.subtitle} ${styles.govSection}`}>Government Efforts</h2>
       <p className={styles.textBlock}>
@@ -67,15 +75,8 @@ export default function PromotionalContents() {
           📜 View Proposed Bill
         </a>
       </div>
-      
-      {/* Title & Back Button */}
-      <div className={styles.headerRow}>
-        <h1 className={styles.title}>Promotional Contents</h1>
-        <Link href="/" className={styles.backLink}>
-          ← Home
-        </Link>
-      </div>
 
+    
       {/* 🚩 Campaign Card */}
       <div className={styles.campaignCard}>
         <h2 className={styles.campaignTitle}>📢 Baybayin Awareness Campaign</h2>
