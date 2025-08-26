@@ -5,13 +5,13 @@ export default function PromotionalContents() {
     {
       title: "Baybayin T-Shirt",
       description: "Wear your heritage with stylish Baybayin designs.",
-      imageUrl: "/images/tshirt.jpg",
+      imageUrl: "/images/Shirt.jpg",
       link: "https://example.com/tshirt",
     },
     {
       title: "Baybayin Shirt 2",
       description: "Unique Baybayin-inspired logos for your brand.",
-      imageUrl: "/images/logo.jpg",
+      imageUrl: "/images/LongSleeve.jpg",
       link: "https://example.com/logo",
     },
     {
@@ -23,7 +23,7 @@ export default function PromotionalContents() {
     {
       title: "Baybayin Signage",
       description: "Beautifully crafted Baybayin signs for businesses or homes.",
-      imageUrl: "/images/signage.jpg",
+      imageUrl: "/images/Signage.png",
       link: "https://example.com/signage",
     },
     {
@@ -41,15 +41,17 @@ export default function PromotionalContents() {
         {/* Title & Back Button*/}
       < div className={styles.headerRow}>
 
-        <h1 className={styles.title}>Learn Baybayin</h1>
+        <h1 className={styles.title}>Promotional Contents</h1>
 
         <Link href="/" className={styles.backLink}>
           ← Home
         </Link>
       </div>
+
+       <h1 className={styles.title2}>Merchandise</h1>
       
       <p className={styles.textBlock}>
-        Explore our products featuring Baybayin designs. From T-shirts to tattoos, signage, and logos — click each product to view more. <strong>Disclaimer:</strong> All products lead to external links.
+        Explore products featuring Baybayin designs by. From T-shirts to tattoos, signage, and logos — click each product to view more. <strong>Disclaimer:</strong> All products lead to external links.
       </p>
 
       <div className={styles.catalog}>

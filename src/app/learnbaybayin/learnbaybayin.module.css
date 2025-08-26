@@ -86,7 +86,7 @@
 }
 
 .lessonBtn:hover {
-  background-color: #dc9f2cda; /* darker brown on hover */
+  background-color: #c0aa82da; /* darker brown on hover */
   transform: scale(1.15);
   transition: transform 0.3s ease-in-out;
 }
@@ -117,6 +117,7 @@
 
 
 .headerRow {
+  
   display: flex;
   justify-content: space-between; /* title left, link right */
   align-items: flex-start; /* move items to the top */

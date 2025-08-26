@@ -19,14 +19,6 @@ export default function About() {
         cultural significance, as well as highlight its evolving role in different fields of society.
       </p>
 
-      <h2 className={styles.subtitle}>Education</h2>
-      <p className={styles.textBlock}>
-        Baybayin is being reintroduced into classrooms, especially in Filipino and Araling Panlipunan 
-        subjects, to strengthen national identity and cultural appreciation among students. 
-        The website supports this effort by offering interactive lessons and quizzes to make learning Baybayin accessible and engaging.
-
-      </p>
-
       <h2 className={styles.subtitle}>Design and Fashion</h2>
       <p className={styles.textBlock}>
         From t-shirts, tattoos, signage, to logos, Baybayin has become a growing trend in design and 

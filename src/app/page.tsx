@@ -37,7 +37,7 @@ export default function HomePage() {
 
 
       <p className={styles.subtitle}>
-        &quot; Reviving our Script, Preserving our Identity&quot;
+        &quot;Promoting National Identity in the Digital Age&quot;
       </p>
 
       {/* Search Bar */}
