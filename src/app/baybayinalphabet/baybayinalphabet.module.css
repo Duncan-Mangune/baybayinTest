@@ -4,7 +4,7 @@
   padding: 48px;     /* more spacing inside */
   font-family: "JejuHallasan", sans-serif;
 
-  background-color: #514332ed; /* brown card */
+  background-color: #7a664c; /* brown card */
   color: #ffffff; /* white text */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(166, 128, 67, 0.889);
@@ -46,3 +46,37 @@
   margin-bottom: 20px;
   font-size: 1rem;
 }
+
+
+.headerRow {
+  display: flex;
+  justify-content: space-between; /* title left, link right */
+  align-items: flex-start; /* move items to the top */
+  margin-bottom: 16px;
+}
+
+
+/* Styling the back link */
+.backLink {
+  text-decoration: none;
+  background-color: #ba9660; /* Dark gray background */
+  color: #ffffff; /* White text */
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1rem;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.backLink:hover {
+  background-color: #b0836c; /* Darker gray on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.backLink:active {
+  background-color: #2a2a2a; /* Even darker gray when clicked */
+  transform: translateY(0); /* Reset lift effect */
+}
+
+

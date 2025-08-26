@@ -153,7 +153,6 @@
   text-shadow: 8px 8px 32px rgba(0, 0, 0, 0.5);
   -webkit-text-stroke: 0.1px rgb(212, 212, 212);
   color: rgb(0, 0, 0);
-
   margin: 15px auto;        /* center horizontally if block */
   width: 100%;
   max-width: 20rem;         /* only one max-width */
@@ -181,21 +180,22 @@
   transition: transform 0.3s ease-in-out;
 }
 .history:hover {
-  background-color: #b0936d;
+  background-color: #bba184;
 }
 
 .learn {
-  background-color: #caa85e;
+  background-color: #dbac46;
   transition: transform 0.3s ease-in-out;
 }
+
 .learn:hover {
-  background-color: #ddb45b;
+  background-color: #ccaa61;
 }
 
 .translator {
-  background-color: #2563eb;
+  background-color: #9c6334;
   transition: transform 0.3s ease-in-out;
 }
 .translator:hover {
-  background-color: #1d4ed8;
+  background-color: #bb6e2f;
 }

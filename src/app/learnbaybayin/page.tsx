@@ -20,9 +20,20 @@ export default function LearnBaybayinPage() {
 
   return (
     <section className={styles.container}>
+
+      {/* Title & Back Button*/}
+      < div className={styles.headerRow}>
+
+        <h1 className={styles.title}>Learn Baybayin</h1>
+
+        <Link href="/" className={styles.backLink}>
+          ← Home
+        </Link>
+      </div>
+      
       {/* Title + Description + Tips + Goal */}
       <div className={styles.textBlock}>
-        <h1 className={styles.title}>Learn Baybayin</h1>
+        
 
         <p>
           Welcome to your Baybayin learning journey! This course is divided into

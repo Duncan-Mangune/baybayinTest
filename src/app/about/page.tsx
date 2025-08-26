@@ -3,7 +3,7 @@ import styles from "./about.module.css";
 export default function About() {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>About Baybayin App</h1>
+      <h1 className={styles.title}>About Know More Baybayin</h1>
       
       <h2 className={styles.subtitle}>Description</h2>
       <p className={styles.textBlock}>

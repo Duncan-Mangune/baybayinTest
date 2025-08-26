@@ -57,10 +57,10 @@ export default function HomePage() {
       {/* Big Buttons */}
       <div className={styles.buttonGroup}>
         <Link
-          href="/baybayinhistory"
+          href="/baybayinalphabet"
           className={`${styles.bigButton} ${styles.history}`}
         >
-          Brief History
+          Baybayin Alphabet
         </Link>
         <Link
           href="/learnbaybayin"

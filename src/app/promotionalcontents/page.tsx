@@ -1,5 +1,5 @@
 import styles from "./promotionalcontents.module.css";
-
+import Link from "next/link";
 export default function PromotionalContents() {
   const products = [
     {
@@ -7,6 +7,12 @@ export default function PromotionalContents() {
       description: "Wear your heritage with stylish Baybayin designs.",
       imageUrl: "/images/tshirt.jpg",
       link: "https://example.com/tshirt",
+    },
+    {
+      title: "Baybayin Shirt 2",
+      description: "Unique Baybayin-inspired logos for your brand.",
+      imageUrl: "/images/logo.jpg",
+      link: "https://example.com/logo",
     },
     {
       title: "Baybayin Tattoo",
@@ -26,11 +32,22 @@ export default function PromotionalContents() {
       imageUrl: "/images/logo.jpg",
       link: "https://example.com/logo",
     },
+      
   ];
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Promotional Contents</h1>
+
+        {/* Title & Back Button*/}
+      < div className={styles.headerRow}>
+
+        <h1 className={styles.title}>Learn Baybayin</h1>
+
+        <Link href="/" className={styles.backLink}>
+          ← Home
+        </Link>
+      </div>
+      
       <p className={styles.textBlock}>
         Explore our products featuring Baybayin designs. From T-shirts to tattoos, signage, and logos — click each product to view more. <strong>Disclaimer:</strong> All products lead to external links.
       </p>
