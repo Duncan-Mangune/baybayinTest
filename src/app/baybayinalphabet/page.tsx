@@ -6,7 +6,7 @@ export default function baybayinalphabet() {
 
       {/* Top row: title left, back link right */}
       <div className={styles.headerRow}>
-       <h1 className={styles.title}>The Baybayin Alphabet </h1>
+       <h1 className={styles.title}>The Baybayin Chart </h1>
           <Link href="/" className={styles.backLink}>
           ← Home
            </Link>
@@ -22,7 +22,7 @@ export default function baybayinalphabet() {
        
       <h2 className={styles.subtitle}>Description</h2>
       <p className={styles.textBlock}>
-        The Baybayin Alphabet
+        The Baybayin Chart
         
       </p>
 

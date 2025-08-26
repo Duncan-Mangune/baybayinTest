@@ -60,7 +60,7 @@ export default function HomePage() {
           href="/baybayinalphabet"
           className={`${styles.bigButton} ${styles.history}`}
         >
-          Baybayin Alphabet
+          Baybayin Chart
         </Link>
         <Link
           href="/learnbaybayin"
