@@ -6,14 +6,8 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function HomePage() {
-  const [query, setQuery] = useState("");
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (query.trim() !== "") {
-      window.location.href = `/results?query=${encodeURIComponent(query)}`;
-    }
-  };
+
 
   return (
     <section className={styles.section}>
@@ -40,40 +34,18 @@ export default function HomePage() {
         &quot;Promoting National Identity in the Digital Age&quot;
       </p>
 
-      {/* Search Bar */}
-      <form onSubmit={handleSearch} className={styles.searchForm}>
-        <input
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search anything related to Baybayin"
-          className={styles.searchInput}
-        />
-        <button type="submit" className={styles.searchButton}>
-          Search
-        </button>
-      </form>
+     
 
       {/* Big Buttons */}
       <div className={styles.buttonGroup}>
-        <Link
-          href="/baybayinalphabet"
-          className={`${styles.bigButton} ${styles.history}`}
-        >
-          Baybayin Chart
-        </Link>
+       
         <Link
           href="/learnbaybayin"
           className={`${styles.bigButton} ${styles.learn}`}
         >
           Learn Baybayin
         </Link>
-        <Link
-          href="/translator"
-          className={`${styles.bigButton} ${styles.translator}`}
-        >
-          Baybayin Translator
-        </Link>
+        
       </div>
     </section>
   );
