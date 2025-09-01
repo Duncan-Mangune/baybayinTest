@@ -56,8 +56,8 @@ export default function TranslatorPage() {
       {/* Header */}
       <div className={styles.headerRow}>
         <h1 className={styles.title}>Baybayin Translator</h1>
-        <Link href="/" className={styles.backLink}>
-          ← Home
+        <Link href="/learnbaybayin" className={styles.backLink}>
+          ← Back
         </Link>
       </div>
 

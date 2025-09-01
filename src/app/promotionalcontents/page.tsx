@@ -7,7 +7,7 @@ export default function PromotionalContents() {
       title: "Baybayin T-Shirt",
       description: "Wear your heritage with stylish Baybayin designs.",
       imageUrl: "/images/Shirt.jpg",
-      link: "https://example.com/tshirt",
+      link: "https://monsterry.com/au/products/philippines-1521-alibata-baybayin-script-proud-filipino-long-t-shirt-pDuRU4ZimZCH",
     },
     {
       title: "Baybayin Shirt 2",
@@ -92,7 +92,7 @@ export default function PromotionalContents() {
           className={styles.campaignImage}
         />
         <a
-          href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com"
+          href="https://www.facebook.com/sharer/sharer.php?u=https://www.sbs.com.au/language/filipino/en/podcast-episode/reviving-baybayin-a-collective-effort-to-preserve-filipino-heritage/picscl447"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.shareBtn}

@@ -6,7 +6,7 @@
 
   text-shadow: 8px 8px 32px rgba(0, 0, 0, 0.5);
   -webkit-text-stroke: 0.1px rgb(255, 255, 255);
-  background-color: #895d3be9;
+  background-color: #bc7552;
   color: #000000;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(166, 128, 67, 0.889);
@@ -74,7 +74,7 @@
 
 /* Button */
 .translateButton {
-  background-color: #514332;
+  background-color: #dc906a;
   color: #fff;
   padding: 10px 20px;
   border-radius: 6px;
@@ -86,7 +86,7 @@
 }
 
 .translateButton:hover {
-  background-color: #8d7558;
+  background-color: #bb8a72;
   transform: scale(1.05);
 }
 
@@ -105,7 +105,7 @@
 /* Back link */
 .backLink {
   text-decoration: none;
-  background-color: #514332;
+  background-color: #da885f;
   color: #ffffff;
   padding: 8px 16px;
   border-radius: 4px;
@@ -116,6 +116,6 @@
 }
 
 .backLink:hover {
-  background-color: #8d7558;
+  background-color: #d69675;
   transform: scale(1.15);
 }
