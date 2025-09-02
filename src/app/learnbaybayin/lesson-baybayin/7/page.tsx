@@ -42,8 +42,8 @@ export default function Lesson7() {
       </p>
 
       <p className={styles.textBlock}>
-        The Virama is also called the “silent mark” because it removes the vowel
-        sound and leaves only the consonant.
+        The Virama is also called the &quot;silent mark&quot; because it removes
+        the vowel sound and leaves only the consonant.
       </p>
 
       <p className={styles.textBlock}>
@@ -96,7 +96,7 @@ export default function Lesson7() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Hanunó'o Script
+            Hanunó&apos;o Script
           </a>
         </li>
       </ul>
