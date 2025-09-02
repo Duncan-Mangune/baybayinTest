@@ -34,7 +34,7 @@ export default function Lesson8() {
       </p>
 
       <p className={styles.textBlock}>
-        Quiz: Quiz Time! Read each questionnaire and click on the choice you think is correct. 
+        <strong>Quiz:</strong> Quiz Time! Read each questionnaire and click on the choice you think is correct. 
         After finishing, review your answers and proceed to the next lesson.
       </p>
 
@@ -50,23 +50,30 @@ export default function Lesson8() {
         </Link>
       </div>
       
-       <p className={styles.textBlock}>
+      <p className={styles.textBlock}>
         <strong>References:</strong>
       </p>
 
-      <p className={styles.textBlock}>
-       
-      Sinaunang Panahon.
-      "The Baybayin Writing System."
-      https://sinaunangpanahon.com/the-baybayin-writing-system/
-      Everything Explained Today.
-      "Baybayin Explained."
-      https://everything.explained.today/Baybayin/
-      Wikipedia Contributors.
-      "Baybayin." Wikipedia.
-      https://en.wikipedia.org/wiki/Baybayin
-
-      </p>
+      <ul className={styles.textBlock}>
+        <li>
+          Sinaunang Panahon.{" "}
+          <a href="https://sinaunangpanahon.com/the-baybayin-writing-system/" target="_blank" rel="noopener noreferrer">
+            The Baybayin Writing System
+          </a>
+        </li>
+        <li>
+          Everything Explained Today.{" "}
+          <a href="https://everything.explained.today/Baybayin/" target="_blank" rel="noopener noreferrer">
+            Baybayin Explained
+          </a>
+        </li>
+        <li>
+          Wikipedia Contributors.{" "}
+          <a href="https://en.wikipedia.org/wiki/Baybayin" target="_blank" rel="noopener noreferrer">
+            Baybayin — Wikipedia
+          </a>
+        </li>
+      </ul>
     </div>
   );
 }

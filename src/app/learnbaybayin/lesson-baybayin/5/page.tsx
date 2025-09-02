@@ -1,7 +1,8 @@
 import styles from "./5.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
-export default function Lesson5() { 
+export default function Lesson5() {
   const baybayinChars = [
     { img: "/images/ba.png", label: "ba" },
     { img: "/images/ta.png", label: "ta" },
@@ -17,6 +18,7 @@ export default function Lesson5() {
 
   return (
     <div className={styles.container}>
+      {/* Header */}
       <div className={styles.headerRow}>
         <h1 className={styles.title}>Lesson 5: Writing Your First Words</h1>
         <Link href="/learnbaybayin" className={styles.backLink}>
@@ -24,24 +26,37 @@ export default function Lesson5() {
         </Link>
       </div>
 
+      {/* Lesson Content */}
       <h2 className={styles.subtitle}>Lesson Content:</h2>
-
       <p className={styles.textBlock}>
-        Baybayin is a <strong>syllabic writing system</strong> (abugida), where each character represents a consonant + vowel sound. Words are written syllable by syllable, not letter by letter.
+        Baybayin is a <strong>syllabic writing system</strong> (abugida), where
+        each character represents a consonant + vowel sound. Words are written
+        syllable by syllable, not letter by letter.
       </p>
 
-      <p className={styles.textBlock}><strong>Key Symbols:</strong></p>
-
+      {/* Chart */}
+      <p className={styles.textBlock}>
+        <strong>Key Symbols:</strong>
+      </p>
       <div className={styles.chartGrid}>
         {baybayinChars.map((char, idx) => (
           <div key={idx} className={styles.chartButton}>
-            <img src={char.img} alt={char.label} className={styles.charImage} />
+            <Image
+              src={char.img}
+              alt={char.label}
+              width={60}
+              height={60}
+              className={styles.charImage}
+            />
             <p className={styles.charLabel}>{char.label}</p>
           </div>
         ))}
       </div>
 
-      <p className={styles.textBlock}><strong>Example Applications:</strong></p>
+      {/* Examples */}
+      <p className={styles.textBlock}>
+        <strong>Example Applications:</strong>
+      </p>
       <p className={styles.textBlock}>
         ᜊᜆ = bata → ba + ta <br />
         ᜎᜓᜉ = lupa → lu + pa <br />
@@ -54,38 +69,51 @@ export default function Lesson5() {
         ᜀᜎ = ala → a + la
       </p>
 
+      {/* Quiz note */}
       <p className={styles.textBlock}>
-        Quiz: Quiz Time! Read each questionnaire and click on the choice you think is correct. 
-        After finishing, review your answers and proceed to the next lesson.
+        <strong>Quiz:</strong> Quiz Time! Read each questionnaire and click on
+        the choice you think is correct. After finishing, review your answers
+        and proceed to the next lesson.
       </p>
 
+      {/* Navigation */}
       <div className={styles.buttonRow}>
-        <Link href="/learnbaybayin/lesson-baybayin/4" className={styles.navButton}>
+        <Link
+          href="/learnbaybayin/lesson-baybayin/4"
+          className={styles.navButton}
+        >
           ← Previous Lesson
         </Link>
-        <Link href="/learnbaybayin/lesson-baybayin/5/quiz" className={styles.quizButton}>
+        <Link
+          href="/learnbaybayin/lesson-baybayin/5/quiz"
+          className={styles.quizButton}
+        >
           Take Quiz →
         </Link>
-        <Link href="/learnbaybayin/lesson-baybayin/6" className={styles.navButton}>
+        <Link
+          href="/learnbaybayin/lesson-baybayin/6"
+          className={styles.navButton}
+        >
           Next Lesson →
         </Link>
       </div>
 
+      {/* References */}
       <p className={styles.textBlock}>
         <strong>References:</strong>
       </p>
-
-      <p className={styles.textBlock}>
-       
-          Simon Ager
-          Link: https://www.omniglot.com/writing/baybayin.htm
-          Site: Omniglot – Writing Systems & Languages
-          Omniglot.
-          "Baybayin Script."
-          https://www.omniglot.com/writing/baybayin.htm
-
-      </p>
-
+      <ul className={styles.textBlock}>
+        <li>
+          Simon Ager –{" "}
+          <a
+            href="https://www.omniglot.com/writing/baybayin.htm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Omniglot: Writing Systems &amp; Languages – Baybayin Script
+          </a>
+        </li>
+      </ul>
     </div>
   );
 }

@@ -52,12 +52,20 @@ export default function Lesson10() {
       </p>
 
       <p className={styles.textBlock}>
-       
-      Wikipedia Contributors."Baybayin." Wikipedia.	https://en.wikipedia.org/wiki/Baybayin
-Wikipedia Contributors.	"Tagalog (Unicode block)." Wikipedia.	https://en.wikipedia.org/wiki/
-Tagalog_%28Unicode_block%29 Esquire Philippines."10 Modern Baybayin Fonts That Are Free."	
-https://www.esquiremag.ph/culture/design/baybayin-fonts-a1926-20190806-lfrm
-
+        Wikipedia Contributors.&quot;Baybayin.&quot; Wikipedia.{" "}
+        <a href="https://en.wikipedia.org/wiki/Baybayin" target="_blank" rel="noopener noreferrer">
+          https://en.wikipedia.org/wiki/Baybayin
+        </a>
+        <br />
+        Wikipedia Contributors.&quot;Tagalog (Unicode block).&quot; Wikipedia.{" "}
+        <a href="https://en.wikipedia.org/wiki/Tagalog_%28Unicode_block%29" target="_blank" rel="noopener noreferrer">
+          https://en.wikipedia.org/wiki/Tagalog_%28Unicode_block%29
+        </a>
+        <br />
+        Esquire Philippines.&quot;10 Modern Baybayin Fonts That Are Free.&quot;{" "}
+        <a href="https://www.esquiremag.ph/culture/design/baybayin-fonts-a1926-20190806-lfrm" target="_blank" rel="noopener noreferrer">
+          https://www.esquiremag.ph/culture/design/baybayin-fonts-a1926-20190806-lfrm
+        </a>
       </p>
     </div>
   );

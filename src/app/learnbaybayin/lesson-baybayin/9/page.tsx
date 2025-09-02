@@ -45,19 +45,27 @@ export default function Lesson9() {
           Next Lesson →
         </Link>
       </div>
+      
       <p className={styles.textBlock}>
         <strong>References:</strong>
       </p>
 
       <p className={styles.textBlock}>
-       
-      Fluent Filipino.	“The Evolution of Filipino Writing Scripts.” https://fluentfilipino.com/the-evolution-of-
-      filipino-writing-scripts/ HAPI Humanist.“Baybayin: How This Ancient Pinoy Script’s Legacy Lives On.” https://
-      hapihumanist.org/2022/08/18/baybayin-legacy/ Wikipedia Contributors.	“Baybayin.” Wikipedia. 				
-      https://en.wikipedia.org/wiki/Baybayin
-
+        Fluent Filipino.&quot;The Evolution of Filipino Writing Scripts.&quot;{" "}
+        <a href="https://fluentfilipino.com/the-evolution-of-filipino-writing-scripts/" target="_blank" rel="noopener noreferrer">
+          https://fluentfilipino.com/the-evolution-of-filipino-writing-scripts/
+        </a>
+        <br />
+        HAPI Humanist.&quot;Baybayin: How This Ancient Pinoy Script&apos;s Legacy Lives On.&quot;{" "}
+        <a href="https://hapihumanist.org/2022/08/18/baybayin-legacy/" target="_blank" rel="noopener noreferrer">
+          https://hapihumanist.org/2022/08/18/baybayin-legacy/
+        </a>
+        <br />
+        Wikipedia Contributors.&quot;Baybayin.&quot; Wikipedia.{" "}
+        <a href="https://en.wikipedia.org/wiki/Baybayin" target="_blank" rel="noopener noreferrer">
+          https://en.wikipedia.org/wiki/Baybayin
+        </a>
       </p>
-
     </div>
   );
 }

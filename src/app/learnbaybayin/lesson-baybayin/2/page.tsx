@@ -1,9 +1,8 @@
 import styles from "./2.module.css";
 import Link from "next/link";
 
-export default function Lesson2() {   // ✅ matches the folder "2"
+export default function Lesson2() {
   const baybayinChars = [
-    
     { img: "/images/a.png", label: "A" },
     { img: "/images/ei.png", label: "E / I" },
     { img: "/images/ou.png", label: "O / U" },
@@ -39,50 +38,76 @@ export default function Lesson2() {   // ✅ matches the folder "2"
         These vowels are fewer than in the English alphabet, which has five (A,
         E, I, O, U). Instead of representing letters individually, Baybayin
         vowels represent whole sounds (syllables). The vowel ᜀ (A) comes first
-        in Baybayin order and stands for the “A” sound. The vowel ᜁ (I/E) is
-        pronounced as “I” or “E” depending on context. The vowel ᜂ (U/O) is
-        unique because it can sound like “U” or “O.” It is often shaped like a
-        small hook. Vowels in Baybayin can stand alone or combine with
-        consonants to form abugida syllables. This makes them the foundation of
-        the script.
+        in Baybayin order and stands for the &quot;A&quot; sound. The vowel ᜁ
+        (I/E) is pronounced as &quot;I&quot; or &quot;E&quot; depending on
+        context. The vowel ᜂ (U/O) is unique because it can sound like
+        &quot;U&quot; or &quot;O.&quot; It is often shaped like a small hook.
+        Vowels in Baybayin can stand alone or combine with consonants to form
+        abugida syllables. This makes them the foundation of the script.
       </p>
 
+      {/* Navigation buttons */}
+      <div className={styles.buttonRow}>
+        <Link
+          href="/learnbaybayin/lesson-baybayin/1"
+          className={styles.navButton}
+        >
+          ← Previous Lesson
+        </Link>
 
-       {/* Navigation buttons */}
-    <div className={styles.buttonRow}>
-      <Link href="/learnbaybayin/lesson-baybayin/1" className={styles.navButton}>
-        ← Previous Lesson
-      </Link>
+        <Link
+          href="/learnbaybayin/lesson-baybayin/2/quiz"
+          className={styles.quizButton}
+        >
+          Take Quiz →
+        </Link>
 
-      <Link href="/learnbaybayin/lesson-baybayin/2/quiz" className={styles.quizButton}>
-        Take Quiz →
-      </Link>
+        <Link
+          href="/learnbaybayin/lesson-baybayin/3"
+          className={styles.navButton}
+        >
+          Next Lesson →
+        </Link>
+      </div>
 
-      <Link href="/learnbaybayin/lesson-baybayin/3" className={styles.navButton}>
-        Next Lesson →
-      </Link>
-    </div>
-
-
-    <p className={styles.textBlock}>
+      <p className={styles.textBlock}>
         <strong>References:</strong>
       </p>
-      
-    <p className={styles.textBlock}>
-       
-      National Commission for Culture and the Arts (NCCA).
-      "Baybayin: Ancient Script of the Philippines."
-      https://ncca.gov.ph/about-ncca-3/subcommissions/subcommission-on-cultural-disseminations-scd/cultural-heritage-education-and-information/baybayin-ancient-script-of-the-philippines/
-      National Museum of the Philippines.
-      "Baybayin: A Writing System of Our Own."
-      https://www.nationalmuseum.gov.ph/baybayin/
-      Cabuay, Christian.
-      "Baybayin Vowels and Writing System." (Baybayin.com)
-      http://www.baybayin.com
 
-
-      </p>
-
+      <ul className={styles.textBlock}>
+        <li>
+          National Commission for Culture and the Arts (NCCA). &quot;Baybayin:
+          Ancient Script of the Philippines.&quot; –{" "}
+          <a
+            href="https://ncca.gov.ph/about-ncca-3/subcommissions/subcommission-on-cultural-disseminations-scd/cultural-heritage-education-and-information/baybayin-ancient-script-of-the-philippines/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Link
+          </a>
+        </li>
+        <li>
+          National Museum of the Philippines. &quot;Baybayin: A Writing System
+          of Our Own.&quot; –{" "}
+          <a
+            href="https://www.nationalmuseum.gov.ph/baybayin/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Link
+          </a>
+        </li>
+        <li>
+          Cabuay, Christian. &quot;Baybayin Vowels and Writing System.&quot; –{" "}
+          <a
+            href="http://www.baybayin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Baybayin.com
+          </a>
+        </li>
+      </ul>
     </div>
   );
 }
