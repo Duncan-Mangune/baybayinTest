@@ -5,30 +5,21 @@ export default function About() {
     <div className={styles.container}>
       <h1 className={styles.title}>About Know More Baybayin</h1>
       
-      <h2 className={styles.subtitle}>Description</h2>
+      <h2 className={styles.subtitle}>Goal</h2>
       <p className={styles.textBlock}>
-        The Know More Baybayin is designed to promote awareness and education about Baybayin, the 
-        ancient pre-colonial script of the Philippines. This website serves as a platform to introduce, 
-        preserve, and celebrate Baybayin as an important part of Filipino heritage while making it 
-        relevant in today’s modern context.
+       “Know More Baybayin” is a digital learning platform designed to educate users about Baybayin, 
+       the ancient pre-colonial Philippine script. Its goal is to preserve and promote Filipino cultural 
+       heritage by providing an interactive, accessible, and engaging way to learn how to read and write Baybayin. 
+       Through lessons, quizzes, and digital resources, the platform aims to inspire learners of all ages to connect 
+       with and appreciate this important part of Philippine history.
       </p>
 
-      <p className={styles.textBlock}>
-        Our goal is to educate Filipinos and future generations about Baybayin’s historical and 
-        cultural significance, as well as highlight its evolving role in different fields of society.
-      </p>
-
+     
 
 
      
 
-      <h2 className={styles.subtitle}>Social Media</h2>
-      <p className={styles.textBlock}>
-       With the rise of digital platforms, social media campaigns have played a big role in raising 
-       awareness and teaching people how to read and write Baybayin. Through this platform, learners can 
-       easily practice and share their knowledge, further contributing to the growing online movement 
-       to preserve and promote the script.
-      </p>
+      
     </div>
   );
 }

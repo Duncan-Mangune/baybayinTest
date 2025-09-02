@@ -204,7 +204,7 @@
 }
 
 .chartButton:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
   background-color: #d4b98a;
 }
 

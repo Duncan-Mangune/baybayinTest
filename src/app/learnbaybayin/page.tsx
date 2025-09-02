@@ -7,15 +7,15 @@ export default function LearnBaybayinPage() {
   // Custom lesson titles
   const lessons = [
     "Lesson 1: Discovering Baybayin",
-    "Lesson 2: The Baybayin Alphabet",
-    "Lesson 3: Kudlit Vowel Marks",
-    "Lesson 4: Consonant Clusters",
-    "Lesson 5: Writing Simple Words",
-    "Lesson 6: Names in Baybayin",
-    "Lesson 7: Sentences in Baybayin",
-    "Lesson 8: Historical Usage",
-    "Lesson 9: Modern Applications",
-    "Lesson 10: Practice & Mastery",
+    "Lesson 2: The Vowels – A, I/E, U/O",
+    "Lesson 3: Consonants Made Simple",
+    "Lesson 4: The Kudlit – Changing Sounds",
+    "Lesson 5: Writing Your First Words",
+    "Lesson 6: Writing Your Name in Baybayin",
+    "Lesson 7: Advanced Marks – The Virama (᜔)",
+    "Lesson 8: Reading Sentences in Baybayin",
+    "Lesson 9: Baybayin in History and Culture",
+    "Lesson 10: Baybayin in the Modern World",
   ];
 
    const baybayinChars = [
@@ -127,13 +127,7 @@ export default function LearnBaybayinPage() {
           <li>Don’t rush. Take one lesson at a time.</li>
         </ul>
 
-        {/* Goal */}
-        <h2 className={styles.subtitle}>Goal of the Course</h2>
-        <ul>
-          <li>Recognize and read Baybayin characters.</li>
-          <li>Write simple words, names, and sentences.</li>
-          <li>Appreciate Baybayin as a living part of Filipino culture.</li>
-        </ul>
+      
       </div>
     </section>
   );

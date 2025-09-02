@@ -1,31 +1,88 @@
 import styles from "./2.module.css";
 import Link from "next/link";
 
-export default function Lesson2() {
+export default function Lesson2() {   // ✅ matches the folder "2"
+  const baybayinChars = [
+    
+    { img: "/images/a.png", label: "A" },
+    { img: "/images/ei.png", label: "E / I" },
+    { img: "/images/ou.png", label: "O / U" },
+  ];
+
   return (
     <div className={styles.container}>
       {/* Top row: title left, back link right */}
       <div className={styles.headerRow}>
-        <h1 className={styles.title}>Lesson 2: More Baybayin</h1>
+        <h1 className={styles.title}>Lesson 2: The Vowels – A, I/E, U/O</h1>
         <Link href="/learnbaybayin" className={styles.backLink}>
-          ← Back
+          ← Lesson Page
         </Link>
       </div>
 
-      <h2 className={styles.subtitle}>Overview:</h2>
+      <h2 className={styles.subtitle}>Lesson Content:</h2>
+      <p className={styles.textBlock}>Baybayin uses three vowels:</p>
+
+      <div className={styles.chartGrid}>
+        {baybayinChars.map((char, idx) => (
+          <div key={idx} className={styles.chartButton}>
+            <img
+              src={char.img}
+              alt={char.label}
+              className={styles.charImage}
+            />
+            <p className={styles.charLabel}>{char.label}</p>
+          </div>
+        ))}
+      </div>
+
       <p className={styles.textBlock}>
-        Baybayin is an ancient Philippine script used before Spanish colonization.  
-        It comes from the word baybay meaning “to spell.”
+        These vowels are fewer than in the English alphabet, which has five (A,
+        E, I, O, U). Instead of representing letters individually, Baybayin
+        vowels represent whole sounds (syllables). The vowel ᜀ (A) comes first
+        in Baybayin order and stands for the “A” sound. The vowel ᜁ (I/E) is
+        pronounced as “I” or “E” depending on context. The vowel ᜂ (U/O) is
+        unique because it can sound like “U” or “O.” It is often shaped like a
+        small hook. Vowels in Baybayin can stand alone or combine with
+        consonants to form abugida syllables. This makes them the foundation of
+        the script.
       </p>
 
-      <div className={styles.textBlock}>
-        <strong>Key Points:</strong>
-        <ul>
-          <li>Baybayin is a syllabary, not an alphabet.</li>
-          <li>Widely used in Luzon and Visayas before Latin letters replaced it.</li>
-          <li>Important cultural symbol of identity.</li>
-        </ul>
-      </div>
+
+       {/* Navigation buttons */}
+    <div className={styles.buttonRow}>
+      <Link href="/learnbaybayin/lesson-baybayin/1" className={styles.navButton}>
+        ← Previous Lesson
+      </Link>
+
+      <Link href="/learnbaybayin/lesson-baybayin/2/quiz" className={styles.quizButton}>
+        Take Quiz →
+      </Link>
+
+      <Link href="/learnbaybayin/lesson-baybayin/3" className={styles.navButton}>
+        Next Lesson →
+      </Link>
+    </div>
+
+
+    <p className={styles.textBlock}>
+        <strong>References:</strong>
+      </p>
+      
+    <p className={styles.textBlock}>
+       
+      National Commission for Culture and the Arts (NCCA).
+      "Baybayin: Ancient Script of the Philippines."
+      https://ncca.gov.ph/about-ncca-3/subcommissions/subcommission-on-cultural-disseminations-scd/cultural-heritage-education-and-information/baybayin-ancient-script-of-the-philippines/
+      National Museum of the Philippines.
+      "Baybayin: A Writing System of Our Own."
+      https://www.nationalmuseum.gov.ph/baybayin/
+      Cabuay, Christian.
+      "Baybayin Vowels and Writing System." (Baybayin.com)
+      http://www.baybayin.com
+
+
+      </p>
+
     </div>
   );
 }

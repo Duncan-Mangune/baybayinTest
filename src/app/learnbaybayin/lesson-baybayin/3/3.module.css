@@ -80,30 +80,7 @@
   transform: translateY(0); /* Reset lift effect */
 }
 
-.buttonRow {
-  display: flex;
-  justify-content: space-between; /* pushes first & last items apart */
-  align-items: center;
-  margin-top: 70px;
-}
 
-.navButton {
-  background-color: #c48b4e;
-  padding: 12px 24px;
-  border-radius: 8px;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-
-.navButton:hover {
-  background-color: #8d7558;
-  
-  transform: scale(1.5);
-  background-color: #d4b98a;
-  transition: transform 0.15s ease, background-color 0.2s ease;
-}
 
 .quizButton {
 
@@ -125,13 +102,40 @@
 }
 
 
+.navButton {
+  background-color: #c48b4e;
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+.navButton:hover {
+  background-color: #8d7558;
+  
+  transform: scale(1.5);
+  background-color: #d4b98a;
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+
+.buttonRow {
+  display: flex;
+  justify-content: space-between; /* pushes first & last items apart */
+  align-items: center;
+  margin-top: 70px;
+}
+
+
 
 .chartGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* flexible buttons */
-  gap: 24px; /* balanced spacing */
-  justify-items: center; /* center each button in its grid cell */
-  margin-top: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* more flexible */
+  gap: 20px 40px; /* row-gap = 20px, column-gap = 40px */
+  justify-content: flex-start;
+  margin-right: 40px;
 }
 
 /* Chart buttons */

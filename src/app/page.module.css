@@ -184,12 +184,12 @@
 }
 
 .learn {
-  background-color: #fbba30df;
+  background-color: #f3a529df;
   transition: transform 0.3s ease-in-out;
 }
 
 .learn:hover {
-  background-color: #ccaa61;
+  background-color: #fabe5edf;
 }
 
 .translator {

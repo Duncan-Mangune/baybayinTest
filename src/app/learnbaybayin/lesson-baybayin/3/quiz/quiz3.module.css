@@ -1,0 +1,147 @@
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff3d8e7;
+  border-radius: 12px;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.question {
+  margin: 20px 0;
+}
+
+.choice {
+  display: block;
+  margin: 6px 0;
+}
+
+.choiceText {
+  margin-left: 6px;
+}
+
+.correct {
+  color: green;
+  font-weight: bold;
+}
+
+.wrong {
+  color: red;
+}
+
+.feedback {
+  font-size: 14px;
+  color: #666;
+  margin-left: 10px;
+}
+
+.submitBtn {
+  margin-top: 20px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+}
+
+.submitBtn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.score {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 12px 0;
+}
+
+.backLink {
+  text-decoration: none;
+  background-color: #a17a4e;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1rem;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.backLink:hover {
+  background-color: #8d7558;
+  transform: scale(1.15);
+}
+
+.backLink:active {
+  background-color: #2a2a2a;
+  transform: translateY(0);
+}
+
+.bottomBtns {
+  display: flex;
+  justify-content: center; /* center the two buttons */
+  align-items: center;
+  gap: 16px;               /* <-- this adds space between Retry and Back */
+  margin-top: 16px;        /* spacing above the buttons group */
+}
+
+.retryBtn,
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  min-width: 120px;       /* optional: makes them equal width */
+  text-align: center;
+}
+
+/* Retry Quiz */
+.retryBtn {
+  background: #ef4444;
+  color: white;
+}
+.retryBtn:hover {
+  background: #dc2626;
+  transform: scale(1.1);
+}
+.retryBtn:active {
+  background: #991b1b;
+  transform: scale(1);
+}
+
+/* Back to Lesson */
+.backBtn {
+  background: #a17a4e;
+  color: white;
+  text-decoration: none;
+}
+.backBtn:hover {
+  background: #8d7558;
+  transform: scale(1.1);
+}
+.backBtn:active {
+  background: #2a2a2a;
+  transform: scale(1);
+}
+
+
