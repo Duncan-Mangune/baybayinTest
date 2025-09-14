@@ -47,3 +47,23 @@
   font-size: 1rem;
 }
 
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px; /* space below logo */
+  overflow: hidden;     /* Ensures that the image does not overflow the container */
+  transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.logo {
+  width: 500px;
+  height: 200px;
+}
+.logo:hover {
+  transform: scale(1.1); /* Increases the size of the image on hover */
+  transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+
+
+

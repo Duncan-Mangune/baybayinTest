@@ -1,181 +1,205 @@
 "use client";
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "./quiz4.module.css";
 
-export default function QuizPage4() {
+// 🔀 Shuffle helper
+function shuffleArray<T>(array: T[]): T[] {
+  return [...array].sort(() => Math.random() - 0.5);
+}
+
+export default function QuizPage3() {
   const questions = [
-    {
-      prompt: "1. What does a kudlit above a character change the vowel to?",
-      choices: ["A", "I/E", "U/O", "None"],
+     {
+      prompt: "How many vowels are there in Baybayin?",
+      choices: ["2", "3", "4", "5"],
       answer: 1,
     },
     {
-      prompt: "2. ᜊ with a kudlit below sounds like…",
-      choices: ["Ba", "Bi", "Bu", "Bo"],
-      answer: 2,
-    },
-    {
-      prompt: "3. Kudlit marks are used to…",
-      choices: ["Cancel vowels", "Change vowel sounds", "Add consonants", "Add numbers"],
+      prompt: "Which Baybayin vowel comes first in order?",
+      choices: ["I/E", "A", "U/O", "E only"],
       answer: 1,
     },
     {
-      prompt: "4. The default sound without kudlit is…",
-      choices: ["I", "U", "A", "O"],
+      prompt: "The Baybayin vowel I/E can sound like:",
+      choices: ["Only E", "Only I", "Either I or E depending on context", "None of the above"],
       answer: 2,
     },
     {
-      prompt: "5. Kudlit above =",
-      choices: ["I/E", "A", "U/O", "Silent"],
+      prompt: "What is unique about the vowel U/O in Baybayin?",
+      choices: ["It only represents O", "It only represents U", "It can represent both U and O sounds", "It is not used in Baybayin"],
+      answer: 2,
+    },
+    {
+      prompt: "Compared to English, how many vowels does Baybayin have?",
+      choices: ["The same number as English", "More vowels than English", "Fewer vowels than English", "No vowels at all"],
+      answer: 2,
+    },
+    {
+      prompt: "Why are vowels considered the foundation of Baybayin?",
+      choices: [
+        "They can stand alone and combine with consonants to form syllables",
+        "They are always written larger than consonants",
+        "They appear only at the end of words",
+        "They replace consonants in writing",
+      ],
       answer: 0,
     },
     {
-      prompt: "6. Kudlit below =",
-      choices: ["A", "I/E", "U/O", "Double consonant"],
-      answer: 2,
-    },
-    {
-      prompt: "7. ᜋ (ma) with kudlit above =",
-      choices: ["Me", "Mo", "Mu", "Ma"],
-      answer: 0,
-    },
-    {
-      prompt: "8. ᜋ with kudlit below =",
-      choices: ["Ma", "Me", "Mu", "Mi"],
-      answer: 2,
-    },
-    {
-      prompt: "9. What symbol changes consonants’ vowels in Baybayin?",
-      choices: ["Virama", "Kudlit", "Accent", "Number"],
+      prompt: "When combined with consonants, Baybayin vowels form:",
+      choices: ["Words only", "Syllables (abugida system)", "Numbers", "Sentences"],
       answer: 1,
     },
     {
-      prompt: "10. ᜃ (ka) → with kudlit above =",
-      choices: ["Ku", "Ko", "Ki", "Ka"],
-      answer: 2,
-    },
-    {
-      prompt: "11. ᜃ with kudlit below =",
-      choices: ["Ka", "Ki", "Ku", "Ko"],
-      answer: 2,
-    },
-    {
-      prompt: "12. Kudlit can represent how many vowels?",
-      choices: ["1", "2", "3", "4"],
+      prompt: "Which statement is true about Baybayin vowels?",
+      choices: [
+        "They are always written separately from consonants",
+        "They can appear alone or with consonants",
+        "They represent silent sounds",
+        "They only appear at the beginning of words",
+      ],
       answer: 1,
     },
     {
-      prompt: "13. Which word is correct?",
-      choices: ["ᜊ = ba", "ᜊ́ = bo", "ᜊ̀ = bi", "ᜊ = bu"],
-      answer: 0,
-    },
-    {
-      prompt: "14. Kudlit is like a…",
-      choices: ["Diacritic mark", "Number", "Code", "Letter"],
-      answer: 0,
-    },
-    {
-      prompt: "15. Without kudlit, every consonant ends with…",
-      choices: ["O", "I", "A", "U"],
+      prompt: "The vowel A in Baybayin stands for which sound?",
+      choices: ["I", "O", "A", "U"],
       answer: 2,
+    },
+    {
+      prompt: "How does the Baybayin vowel system differ from English?",
+      choices: [
+        "Baybayin vowels represent whole sounds or syllables",
+        "Baybayin vowels only appear at the end of words",
+        "Baybayin has the same number of vowels as English",
+        "Baybayin vowels do not combine with consonants",
+      ],
+      answer: 0,
     },
   ];
 
-  const [answers, setAnswers] = useState<(number | null)[]>(Array(questions.length).fill(null));
-  const [submitted, setSubmitted] = useState(false);
+  const [shuffledQuestions, setShuffledQuestions] = useState<typeof questions>([]);
+  const [current, setCurrent] = useState(0);
+  const [score, setScore] = useState(0);
+  const [finished, setFinished] = useState(false);
+  const [showInstructions, setShowInstructions] = useState(true);
+  const [wrongAnswers, setWrongAnswers] = useState<
+    { question: string; correct: string; chosen: string }[]
+  >([]);
 
-  const handleSelect = (qIdx: number, cIdx: number) => {
-    if (submitted) return;
-    const newAns = [...answers];
-    newAns[qIdx] = cIdx;
-    setAnswers(newAns);
+  //Shuffle once on mount
+  useEffect(() => {
+    setShuffledQuestions(shuffleArray(questions));
+  }, []);
+
+  const handleAnswer = (idx: number) => {
+    const currentQ = shuffledQuestions[current];
+    if (idx === currentQ.answer) {
+      setScore(score + 1);
+    } else {
+      setWrongAnswers([
+        ...wrongAnswers,
+        {
+          question: currentQ.prompt,
+          correct: currentQ.choices[currentQ.answer],
+          chosen: currentQ.choices[idx],
+        },
+      ]);
+    }
+
+    if (current < shuffledQuestions.length - 1) {
+      setCurrent(current + 1);
+    } else {
+      setFinished(true);
+    }
   };
 
-  let score = 0;
-  if (submitted) {
-    for (let i = 0; i < questions.length; i++) {
-      if (answers[i] === questions[i].answer) score++;
-    }
-  }
+  const retryQuiz = () => {
+    setCurrent(0);
+    setScore(0);
+    setFinished(false);
+    setShowInstructions(true);
+    setWrongAnswers([]);
+    setShuffledQuestions(shuffleArray(questions)); // reshuffle on retry
+  };
+
+  if (!shuffledQuestions.length) return <p>Loading quiz...</p>;
 
   return (
     <section className={styles.container}>
       <div className={styles.headerRow}>
         <h1 className={styles.title}>Lesson 4 Quiz</h1>
-        <Link href="/learnbaybayin/lesson-baybayin/4" className={styles.backLink}>
+        <Link href="/learnbaybayin/lesson-baybayin/1" className={styles.backLink}>
           ← Back to Lesson
         </Link>
       </div>
 
-      <h2 className={styles.subtitle}>Test your knowledge about Kudlit in Baybayin!</h2>
-
-      <ol>
-        {questions.map((q, qIdx) => (
-          <li key={qIdx} className={styles.question}>
-            <p>{q.prompt}</p>
-            {q.choices.map((choice, cIdx) => {
-              const chosen = answers[qIdx] === cIdx;
-              const correct = submitted && cIdx === q.answer;
-              const wrong = submitted && chosen && cIdx !== q.answer;
-
-              return (
-                <label key={cIdx} className={styles.choice}>
-                  <input
-                    type="radio"
-                    name={`q-${qIdx}`}
-                    checked={chosen}
-                    onChange={() => handleSelect(qIdx, cIdx)}
-                  />
-                  <span
-                    className={`${styles.choiceText} ${correct ? styles.correct : ""} ${
-                      wrong ? styles.wrong : ""
-                    }`}
-                  >
-                    {choice}
-                  </span>
-                </label>
-              );
-            })}
-            {submitted && answers[qIdx] !== questions[qIdx].answer && (
-              <p className={styles.feedback}>
-                Correct: {q.choices[questions[qIdx].answer]}
-              </p>
-            )}
-          </li>
-        ))}
-      </ol>
-
-      {!submitted ? (
-        <button
-          className={styles.submitBtn}
-          disabled={answers.includes(null)}
-          onClick={() => setSubmitted(true)}
-        >
-          Submit Quiz
-        </button>
-      ) : (
-        <div>
-          <p className={styles.score}>Score: {score} / {questions.length}</p>
-          
-
-          <div className={styles.bottomBtns}>
-            <Link href="/learnbaybayin/lesson-baybayin/4" className={styles.backBtn}>
-            ← Back to Lesson
-          </Link>
-          
-          <button className={styles.retryBtn} onClick={() => window.location.reload()}>
-            Retry Quiz
+      {showInstructions ? (
+        <div className={styles.instructionsBox}>
+          <h2>📋 Instructions</h2>
+          <p>
+            Answer each question about the Lesson you just viewed. Choose the correct
+            answer to earn a point. Your score will be shown at the end.
+          </p>
+          <button className={styles.nextBtn} onClick={() => setShowInstructions(false)}>
+            🚀 Start Quiz
           </button>
-        
-
-          <Link href="/learnbaybayin/lesson-baybayin/5" className={styles.backBtn}>
-            Next Lesson →
-          </Link>
         </div>
+      ) : !finished ? (
+        <>
+          <p className={styles.questionText}>{shuffledQuestions[current].prompt}</p>
+          <div className={styles.choicesStack}>
+            {shuffledQuestions[current].choices.map((choice, idx) => (
+              <button
+                key={idx}
+                className={styles.choiceBtn}
+                onClick={() => handleAnswer(idx)}
+              >
+                {choice}
+              </button>
+            ))}
+          </div>
+          <p className={styles.questionNumber}>
+            Question {current + 1} of {shuffledQuestions.length}
+          </p>
+        </>
+      ) : (
+        <>
+          <div className={styles.resultsCard}>
+            <h2 className={styles.resultsTitle}>Quiz Results</h2>
+            <p className={styles.resultsStats}>
+              ✅ Correct Answers: <span>{score}</span>
+              <br />
+              ❌ Wrong Answers: <span>{shuffledQuestions.length - score}</span>
+              <br />
+              Final Score: <strong>{score}/{shuffledQuestions.length}</strong>
+            </p>
+            <div className={styles.bottomBtns}>
+              <button onClick={retryQuiz} className={styles.retryBtn}>
+                Retry Quiz
+              </button>
+              <Link href="/learnbaybayin/lesson-baybayin/5" className={styles.backBtn}>
+                Next Lesson →
+              </Link>
+            </div>
+          </div>
 
-        </div>
+          {wrongAnswers.length > 0 && (
+            <div className={styles.wrongAnswersBox}>
+              <h3 className={styles.wrongTitle}>Review Your Mistakes</h3>
+              {wrongAnswers.map((item, i) => (
+                <div key={i} className={styles.wrongItem}>
+                  <p className={styles.wrongQuestion}>{item.question}</p>
+                  <p className={styles.wrongChosen}>
+                    Your Answer: <span>{item.chosen}</span>
+                  </p>
+                  <p className={styles.wrongCorrect}>
+                    Correct Answer: <strong>{item.correct}</strong>
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
+        </>
       )}
     </section>
   );

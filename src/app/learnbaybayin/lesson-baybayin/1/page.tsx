@@ -52,12 +52,23 @@ export default function Lesson2() {
               className={styles.charImage}
             />
             <p className={styles.charLabel}>{char.label}</p>
+
           </div>
+
         ))}
+
       </div>
+
+
+      {/* Navigation instructions */}
+      <p className={styles.takeQuiz}>
+        Ready to test your knowledge? Take the quiz by pressing the button below,  
+        or you can choose to proceed to the next lesson.
+      </p>
 
       {/* Navigation buttons */}
       <div className={styles.buttonRow}>
+        
         <Link
           href="/learnbaybayin/lesson-baybayin/1/quiz"
           className={styles.quizButton}

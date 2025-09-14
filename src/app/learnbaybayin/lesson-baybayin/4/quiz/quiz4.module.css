@@ -2,8 +2,11 @@
   max-width: 700px;
   margin: 40px auto;
   padding: 24px;
-  background: #fff3d8e7;
+  background: #ad9f7af2;
   border-radius: 12px;
+
+  /* fade-in effect */
+  animation: fadeIn 0.5s ease-in forwards;
 }
 
 .headerRow {
@@ -16,11 +19,53 @@
   margin: 0;
   font-size: 24px;
   font-weight: bold;
+  color: #ffffff;
 }
 
 .question {
   margin: 20px 0;
+  color: #ffffff;
 }
+
+/* Question text color */
+.questionText {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fefefe; /* rich brown tone to fit Baybayin theme */
+  margin-bottom: 12px;
+}
+
+.questionNumber {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000000; /* a green shade for contrast */
+  margin-top: 8px;
+}
+
+.choicesStack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.choiceBtn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.choiceBtn:hover {
+  background: #2563eb;
+  transform: scale(1.03);
+}
+
 
 .choice {
   display: block;
@@ -68,16 +113,22 @@
 }
 
 .backLink {
+  display: inline-flex;        /* behave like retryBtn */
+  align-items: center;         /* vertical centering */
+  justify-content: center;
   text-decoration: none;
   background-color: #a17a4e;
   color: #ffffff;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 8px 14px;           /* smaller padding than retryBtn */
+  border-radius: 6px;
   font-weight: bold;
-  font-size: 1rem;
-  display: inline-block;
+  font-size: 0.95rem;          /* slightly smaller font */
+  line-height: 1;              /* removes the tall "chin" */
+  cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
+
 
 .backLink:hover {
   background-color: #8d7558;
@@ -143,3 +194,171 @@
   background: #2a2a2a;
   transform: scale(1);
 }
+
+
+/* Stack the answer buttons vertically */
+.choicesStack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* space between buttons */
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Style for answer buttons */
+.choiceBtn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #906b40;
+  color: white;
+  cursor: pointer;
+  text-align: left; /* optional: align text to left */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.choiceBtn:hover {
+  background: #d49d5e;
+  transform: scale(1.03);
+}
+
+
+.instructionsBox {
+  background: #fff4e3;
+  border: 2px solid #d49d5e;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: #3a2c1a;
+  margin-bottom: 20px;
+
+  /* Fade-in effect */
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.instructionsBox h2 {
+  color: #8b5e3c;
+  margin-bottom: 12px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nextBtn {
+  padding: 12px 24px;
+  margin-top: 16px;
+  background-color: #a17a4e; /* warm brown */
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nextBtn:hover {
+  background-color: #8d7558;  /* darker brown on hover */
+  transform: scale(1.08);
+}
+
+.nextBtn:active {
+  background-color: #6b563c;
+  transform: scale(1);
+}
+
+.resultsCard {
+  background: linear-gradient(145deg, #fff8ec, #f1e0c6);
+  border: 2px solid #d49d5e;
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  color: #3a2c1a;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+  animation: fadeIn 0.8s ease forwards;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.resultsTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #8b5e3c;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.6);
+}
+
+.resultsStats {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.resultsStats span {
+  font-weight: bold;
+  color: #a17a4e;
+}
+
+.resultsStats strong {
+  color: #ef4444;
+  font-size: 1.3rem;
+}
+
+
+.wrongAnswersBox {
+  margin-top: 24px;
+  background: #fff8ec;
+  border: 2px solid #d49d5e;
+  border-radius: 12px;
+  padding: 20px;
+  animation: fadeIn 0.8s ease forwards;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.wrongTitle {
+  font-size: 1.5rem;
+  color: #a17a4e;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.wrongItem {
+  background: #fefaf3;
+  border: 1px solid #e2c799;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.wrongQuestion {
+  font-weight: 600;
+  color: #3a2c1a;
+  margin-bottom: 6px;
+}
+
+.wrongChosen {
+  color: #b91c1c; /* red for wrong answer */
+  margin: 4px 0;
+}
+
+.wrongChosen span {
+  font-weight: bold;
+}
+
+.wrongCorrect {
+  color: #166534; /* green for correct answer */
+  margin: 4px 0;
+}
+

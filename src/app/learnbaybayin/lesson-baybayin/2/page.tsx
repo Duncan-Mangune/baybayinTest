@@ -45,6 +45,11 @@ export default function Lesson2() {
         Vowels in Baybayin can stand alone or combine with consonants to form
         abugida syllables. This makes them the foundation of the script.
       </p>
+       {/* Navigation instructions */}
+      <p className={styles.takeQuiz}>
+       Ready to test your knowledge? Click the button below to take the quiz, 
+       continue to the next lesson, or go back to the previous lesson.
+      </p>
 
       {/* Navigation buttons */}
       <div className={styles.buttonRow}>
