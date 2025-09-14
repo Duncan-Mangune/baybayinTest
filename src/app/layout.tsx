@@ -31,6 +31,7 @@ export default function RootLayout({
           <div>
             <Link href="/">Home</Link>
             <Link href="/promotionalcontents">Promotional Contents</Link>
+            <Link href="/government">Government Efforts</Link>
             <Link href="/about">About</Link>
           </div>
         </nav>
