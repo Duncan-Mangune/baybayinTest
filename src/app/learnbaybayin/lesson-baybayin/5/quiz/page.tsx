@@ -10,32 +10,33 @@ function shuffleArray<T>(array: T[]): T[] {
 
 export default function QuizPage5() {
   const questions = [
-  { prompt: "The word bata in Baybayin is…", choices: ["ᜊᜆ", "ᜋᜆ", "ᜄᜆ", "ᜐᜆ"], answer: 0 },
-  { prompt: "The word lupa starts with…", choices: ["ᜎ", "ᜋ", "ᜊ", "ᜐ"], answer: 0 },
-  { prompt: "The word ganda is written as…", choices: ["ᜄᜈᜇ", "ᜊᜋ", "ᜊᜄ", "ᜆᜎ"], answer: 0 },
+  { prompt: "The word bata in Baybayin is…", choices: ["ᜋᜆ", "ᜊᜆ", "ᜄᜆ", "ᜐᜆ"], answer: 1 },
+  { prompt: "The word lupa starts with…", choices: ["ᜊ", "ᜋ", "ᜎ", "ᜐ"], answer: 2 },
+  { prompt: "The word ganda is written as…", choices: ["ᜊᜋ", "ᜄᜈᜇ", "ᜊᜄ", "ᜆᜎ"], answer: 1 },
   { prompt: "In Baybayin, words are formed by…", choices: ["Adding letters", "Combining syllables", "Using numbers", "Ignoring vowels"], answer: 1 },
-  { prompt: "To write ma-ta, use…", choices: ["ᜋᜆ", "ᜊᜆ", "ᜃᜆ", "ᜐᜆ"], answer: 0 },
-  { prompt: "Which word is correctly written?", choices: ["ᜎᜓᜉ = lupa", "ᜎᜉ = lapi", "ᜊᜈ = bana", "ᜄᜆ = gati"], answer: 0 },
-  { prompt: "“Ba-ta” is composed of…", choices: ["Two syllables", "Three syllables", "Four syllables", "One syllable"], answer: 0 },
+  { prompt: "To write ma-ta, use…", choices: ["ᜊᜆ", "ᜋᜆ", "ᜃᜆ", "ᜐᜆ"], answer: 1 },
+  { prompt: "Which word is correctly written?", choices: ["ᜊᜈ = bana", "ᜎᜉ = lapi", "ᜄᜆ = gati", "ᜎᜓᜉ = lupa"], answer: 3 },
+  { prompt: "“Ba-ta” is composed of…", choices: ["Four syllables", "Three syllables", "Two syllables", "One syllable"], answer: 2 },
   { prompt: "To write “sa-ma”, use…", choices: ["ᜐᜋ", "ᜊᜆ", "ᜋᜎ", "ᜄᜇ"], answer: 0 },
-  { prompt: "Which symbol combination makes “du”?", choices: ["ᜇ with kudlit below", "ᜆ with kudlit above", "ᜎ with kudlit above", "ᜋ with kudlit above"], answer: 0 },
-  { prompt: "“LA” is represented by…", choices: ["ᜎ", "ᜋ", "ᜃ", "ᜊ"], answer: 0 },
+  { prompt: "Which symbol combination makes “du”?", choices: ["ᜎ with kudlit above", "ᜇ with kudlit below", "ᜆ with kudlit above", "ᜋ with kudlit above"], answer: 1 },
+  { prompt: "“LA” is represented by…", choices: ["ᜋ", "ᜃ", "ᜊ", "ᜎ"], answer: 3 },
   { prompt: "True or False: Writing words in Baybayin is always letter by letter.", choices: ["True", "False"], answer: 1 },
   { prompt: "The Baybayin script “ᜀᜎ” is…", choices: ["Ala", "Ali", "Alo", "Alu"], answer: 0 },
-  { prompt: "The word puso would be…", choices: ["ᜉᜓᜐᜓ", "ᜉᜐ", "ᜊᜓᜆ", "ᜎᜓᜉ"], answer: 0 },
+  { prompt: "The word puso would be…", choices: ["ᜉᜐ", "ᜉᜓᜐᜓ", "ᜊᜓᜆ", "ᜎᜓᜉ"], answer: 1 },
   { prompt: "How do you write “Ga-ma”?", choices: ["ᜄᜋ", "ᜇᜋ", "ᜃᜋ", "ᜊᜋ"], answer: 0 },
-  { prompt: "Which is NOT a correct Baybayin word?", choices: ["ᜊᜆ = bata", "ᜄᜈᜇ = ganda", "ᜎᜓᜉ = lupa", "ᜄᜎᜂ = mango"], answer: 3 },
-  { prompt: "In Baybayin, the word “mata” is written as…", choices: ["ᜋᜆ", "ᜊᜆ", "ᜎᜆ", "ᜈᜆ"], answer: 0 },
+  { prompt: "Which is NOT a correct Baybayin word?", choices: ["ᜊᜆ = bata", "ᜄᜈᜇ = ganda", "ᜄᜎᜂ = mango", "ᜎᜓᜉ = lupa"], answer: 2 },
+  { prompt: "In Baybayin, the word “mata” is written as…", choices: ["ᜎᜆ", "ᜋᜆ", "ᜊᜆ", "ᜈᜆ"], answer: 1 },
   { prompt: "Which Baybayin word means “sama”?", choices: ["ᜊᜆ", "ᜐᜋ", "ᜎᜓ", "ᜄᜈ"], answer: 1 },
   { prompt: "The Baybayin character ᜀ represents which sound?", choices: ["Ma", "Ba", "A", "Ra"], answer: 2 },
-  { prompt: "The Baybayin word ala is correctly written as…", choices: ["ᜀᜎ", "ᜊᜎ", "ᜇᜎ", "ᜋᜎ"], answer: 0 },
-  { prompt: "Which Baybayin script stands for “ganda”?", choices: ["ᜄᜈᜇ", "ᜇᜈᜄ", "ᜊᜄᜈ", "ᜎᜈᜄ"], answer: 0 },
+  { prompt: "The Baybayin word ala is correctly written as…", choices: ["ᜇᜎ", "ᜊᜎ", "ᜀᜎ", "ᜋᜎ"], answer: 2 },
+  { prompt: "Which Baybayin script stands for “ganda”?", choices: ["ᜎᜈᜄ", "ᜇᜈᜄ", "ᜄᜈᜇ", "ᜊᜄᜈ"], answer: 2 },
   { prompt: "To write the word “puso”, which combination is correct?", choices: ["ᜉᜓᜐᜓ", "ᜊᜐ", "ᜋᜆ", "ᜎᜓ"], answer: 0 },
-  { prompt: "Which Baybayin word means “bata”?", choices: ["ᜊᜆ", "ᜋᜈ", "ᜄᜋ", "ᜎᜆ"], answer: 0 },
-  { prompt: "The Baybayin word “gama” is formed from…", choices: ["Ga + Ma", "Ga + Na", "Ga + Ta", "Ga + Pa"], answer: 0 },
+  { prompt: "Which Baybayin word means “bata”?", choices: ["ᜋᜈ", "ᜄᜋ", "ᜊᜆ", "ᜎᜆ"], answer: 2 },
+  { prompt: "The Baybayin word “gama” is formed from…", choices: ["Ga + Na", "Ga + Ma", "Ga + Ta", "Ga + Pa"], answer: 1 },
   { prompt: "Baybayin writing is considered an abugida because…", choices: ["Each symbol represents a consonant only", "Each symbol represents a consonant + vowel sound", "Vowels are written alone always", "It removes consonants completely"], answer: 1 },
-  { prompt: "Which of the following is NOT a Baybayin word example from this lesson?", choices: ["ᜊᜆ (bata)", "ᜎᜓᜉ (lupa)", "ᜄᜋ (gama)", "ᜐᜋᜎ (samala)"], answer: 3 }
+  { prompt: "Which of the following is NOT a Baybayin word example from this lesson?", choices: ["ᜊᜆ (bata)", "ᜎᜓᜉ (lupa)", "ᜄᜈᜇ (ganda)", "ᜄᜎᜂ (mango)"], answer: 3 },
 ];
+
 
 
   const [shuffledQuestions, setShuffledQuestions] = useState<typeof questions>([]);
@@ -89,7 +90,7 @@ export default function QuizPage5() {
     <section className={styles.container}>
       <div className={styles.headerRow}>
         <h1 className={styles.title}>Lesson 5 Quiz</h1>
-        <Link href="/learnbaybayin/lesson-baybayin/1" className={styles.backLink}>
+        <Link href="/learnbaybayin/lesson-baybayin/5" className={styles.backLink}>
           ← Back to Lesson
         </Link>
       </div>

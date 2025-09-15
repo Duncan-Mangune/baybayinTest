@@ -88,7 +88,7 @@ export default function QuizPage3() {
     <section className={styles.container}>
       <div className={styles.headerRow}>
         <h1 className={styles.title}>Lesson 3 Quiz</h1>
-        <Link href="/learnbaybayin/lesson-baybayin/1" className={styles.backLink}>
+        <Link href="/learnbaybayin/lesson-baybayin/3" className={styles.backLink}>
           ← Back to Lesson
         </Link>
       </div>

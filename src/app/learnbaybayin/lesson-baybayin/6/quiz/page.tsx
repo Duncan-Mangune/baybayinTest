@@ -89,8 +89,8 @@ export default function QuizPage6() {
   return (
     <section className={styles.container}>
       <div className={styles.headerRow}>
-        <h1 className={styles.title}>Lesson 5 Quiz</h1>
-        <Link href="/learnbaybayin/lesson-baybayin/1" className={styles.backLink}>
+        <h1 className={styles.title}>Lesson 6 Quiz</h1>
+        <Link href="/learnbaybayin/lesson-baybayin/6" className={styles.backLink}>
           ← Back to Lesson
         </Link>
       </div>
@@ -139,7 +139,7 @@ export default function QuizPage6() {
               <button onClick={retryQuiz} className={styles.retryBtn}>
                 Retry Quiz
               </button>
-              <Link href="/learnbaybayin/lesson-baybayin/6" className={styles.backBtn}>
+              <Link href="/learnbaybayin/lesson-baybayin/7" className={styles.backBtn}>
                 Next Lesson →
               </Link>
             </div>

@@ -90,7 +90,7 @@ export default function QuizPage2() {
     <section className={styles.container}>
       <div className={styles.headerRow}>
         <h1 className={styles.title}>Lesson 2 Quiz</h1>
-        <Link href="/learnbaybayin/lesson-baybayin/1" className={styles.backLink}>
+        <Link href="/learnbaybayin/lesson-baybayin/2" className={styles.backLink}>
           ← Back to Lesson
         </Link>
       </div>

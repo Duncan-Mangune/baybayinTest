@@ -10,28 +10,28 @@ export default function PromotionalContents() {
       link: "https://monsterry.com/au/products/philippines-1521-alibata-baybayin-script-proud-filipino-long-t-shirt-pDuRU4ZimZCH",
     },
     {
-      title: "Baybayin Shirt 2",
+      title: "Baybayin Long Sleeve",
       description: "Unique Baybayin-inspired logos for your brand.",
       imageUrl: "/images/LongSleeve.jpg",
-      link: "https://example.com/logo",
+      link: "https://shop.coolpinoy.com/products/filipino-in-baybayin-script-mens-jersey-long-sleeve-t-shirt",
     },
     {
       title: "Baybayin Tattoo",
       description: "Temporary and custom Baybayin tattoos for everyone.",
       imageUrl: "/images/Tattoo.jpg",
-      link: "https://example.com/tattoo",
+      link: "https://www.facebook.com/profile.php?id=61551760809531&sk=reels_tab",
     },
     {
       title: "Baybayin Signage",
       description: "Beautifully crafted Baybayin signs for businesses or homes.",
       imageUrl: "/images/Signage.png",
-      link: "https://example.com/signage",
+      link: "https://www.facebook.com/profile.php?id=100064168561363",
     },
     {
       title: "Baybayin Logo",
       description: "Unique Baybayin-inspired logos for your brand.",
       imageUrl: "/images/Logo.jpg",
-      link: "https://example.com/logo",
+      link: "https://www.facebook.com/profile.php?id=100064168561363",
     },
   ];
 
@@ -61,7 +61,7 @@ export default function PromotionalContents() {
           className={styles.campaignImage}
         />
         <a
-          href="https://www.facebook.com/sharer/sharer.php?u=https://www.sbs.com.au/language/filipino/en/podcast-episode/reviving-baybayin-a-collective-effort-to-preserve-filipino-heritage/picscl447"
+          href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/share/p/16LamA7QEz/"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.shareBtn}
@@ -77,8 +77,17 @@ export default function PromotionalContents() {
       <p className={styles.textBlock}>
         Explore products featuring Baybayin designs. From T-shirts to tattoos,
         signage, and logos — click each product to view more.{" "}
-        <strong>Disclaimer:</strong> All products lead to external links.
       </p>
+
+      {/* 🚩 Disclaimer Box */}
+      <div className={styles.disclaimerBox}>
+        <strong>Disclaimer:</strong> The merchandise links above lead to external,
+        third-party websites. “Know More Baybayin” does not own, sell, or manage
+        these products and is not responsible for their quality, availability,
+        pricing, or any transactions made. Please direct all purchase-related
+        inquiries to the respective vendors.
+      </div>
+
 
       <div className={styles.catalog}>
         {products.map((product, index) => (
@@ -105,6 +114,7 @@ export default function PromotionalContents() {
         ))}
       </div>
 
+      
 
       
     </div>
