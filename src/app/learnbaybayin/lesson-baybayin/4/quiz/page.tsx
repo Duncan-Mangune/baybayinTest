@@ -10,72 +10,33 @@ function shuffleArray<T>(array: T[]): T[] {
 
 export default function QuizPage3() {
   const questions = [
-     {
-      prompt: "How many vowels are there in Baybayin?",
-      choices: ["2", "3", "4", "5"],
-      answer: 1,
-    },
-    {
-      prompt: "Which Baybayin vowel comes first in order?",
-      choices: ["I/E", "A", "U/O", "E only"],
-      answer: 1,
-    },
-    {
-      prompt: "The Baybayin vowel I/E can sound like:",
-      choices: ["Only E", "Only I", "Either I or E depending on context", "None of the above"],
-      answer: 2,
-    },
-    {
-      prompt: "What is unique about the vowel U/O in Baybayin?",
-      choices: ["It only represents O", "It only represents U", "It can represent both U and O sounds", "It is not used in Baybayin"],
-      answer: 2,
-    },
-    {
-      prompt: "Compared to English, how many vowels does Baybayin have?",
-      choices: ["The same number as English", "More vowels than English", "Fewer vowels than English", "No vowels at all"],
-      answer: 2,
-    },
-    {
-      prompt: "Why are vowels considered the foundation of Baybayin?",
-      choices: [
-        "They can stand alone and combine with consonants to form syllables",
-        "They are always written larger than consonants",
-        "They appear only at the end of words",
-        "They replace consonants in writing",
-      ],
-      answer: 0,
-    },
-    {
-      prompt: "When combined with consonants, Baybayin vowels form:",
-      choices: ["Words only", "Syllables (abugida system)", "Numbers", "Sentences"],
-      answer: 1,
-    },
-    {
-      prompt: "Which statement is true about Baybayin vowels?",
-      choices: [
-        "They are always written separately from consonants",
-        "They can appear alone or with consonants",
-        "They represent silent sounds",
-        "They only appear at the beginning of words",
-      ],
-      answer: 1,
-    },
-    {
-      prompt: "The vowel A in Baybayin stands for which sound?",
-      choices: ["I", "O", "A", "U"],
-      answer: 2,
-    },
-    {
-      prompt: "How does the Baybayin vowel system differ from English?",
-      choices: [
-        "Baybayin vowels represent whole sounds or syllables",
-        "Baybayin vowels only appear at the end of words",
-        "Baybayin has the same number of vowels as English",
-        "Baybayin vowels do not combine with consonants",
-      ],
-      answer: 0,
-    },
-  ];
+  { prompt: "What does a kudlit above a character change the vowel to?", choices: ["A", "I/E", "U/O", "None"], answer: 1 },
+  { prompt: "ᜊ with a kudlit below sounds like…", choices: ["Ba", "Bi", "Bu", "Bo"], answer: 2 },
+  { prompt: "Kudlit marks are used to…", choices: ["Cancel vowels", "Change vowel sounds", "Add consonants", "Add numbers"], answer: 1 },
+  { prompt: "The default sound without kudlit is…", choices: ["I", "U", "A", "O"], answer: 2 },
+  { prompt: "Kudlit above =", choices: ["I/E", "A", "U/O", "Silent"], answer: 0 },
+  { prompt: "Kudlit below =", choices: ["A", "I/E", "U/O", "Double consonant"], answer: 2 },
+  { prompt: "ᜋ (ma) with kudlit above =", choices: ["Me", "Mo", "Mu", "Ma"], answer: 0 },
+  { prompt: "ᜋ with kudlit below =", choices: ["Ma", "Me", "Mu", "Mi"], answer: 2 },
+  { prompt: "What symbol changes consonants’ vowels in Baybayin?", choices: ["Virama", "Kudlit", "Accent", "Number"], answer: 1 },
+  { prompt: "ᜃ (ka) → with kudlit above =", choices: ["Ku", "Ko", "Ki", "Ka"], answer: 2 },
+  { prompt: "ᜃ with kudlit below =", choices: ["Ka", "Ki", "Ku", "Ko"], answer: 2 },
+  { prompt: "Kudlit can represent how many vowels?", choices: ["1", "2 (I/E and U/O)", "3", "4"], answer: 1 },
+  { prompt: "Which word is correct?", choices: ["ᜊ = ba", "ᜊ́ = bo", "ᜊ̀ = bi", "ᜊ = bu"], answer: 0 },
+  { prompt: "Kudlit is like a…", choices: ["Diacritic mark", "Number", "Code", "Letter"], answer: 0 },
+  { prompt: "Without kudlit, every consonant ends with…", choices: ["O", "I", "A", "U"], answer: 2 },
+  { prompt: "In Baybayin, kudlit changes the…", choices: ["Consonant", "Vowel", "Word meaning", "Sentence"], answer: 1 },
+  { prompt: "Which kudlit placement makes the sound “I” or “E”?", choices: ["Above", "Below", "Beside", "None"], answer: 0 },
+  { prompt: "Which kudlit placement makes the sound “U” or “O”?", choices: ["Above", "Below", "Side", "None"], answer: 1 },
+  { prompt: "The symbol ᜇ (da/ra) with a kudlit above is pronounced…", choices: ["Do", "Di", "Da", "Du"], answer: 1 },
+  { prompt: "The symbol ᜇ (da/ra) with a kudlit below is pronounced…", choices: ["De", "Do", "Di", "Da"], answer: 1 },
+  { prompt: "The Baybayin word ᜊᜓᜐ (busa = foam) shows that the kudlit…", choices: ["Adds a consonant", "Turns “ba” into “bu”", "Removes a vowel", "Doubles the sound"], answer: 1 },
+  { prompt: "In the word ᜇᜎᜒ (dali = quick), which letter has the kudlit?", choices: ["ᜇ", "ᜎ", "ᜊ", "ᜉ"], answer: 1 },
+  { prompt: "Which of the following is an example of kudlit above?", choices: ["ᜋᜒ", "ᜋᜓ", "ᜋ", "ᜇᜓ"], answer: 0 },
+  { prompt: "Which of the following is an example of kudlit below?", choices: ["ᜋᜒ", "ᜋᜓ", "ᜊ", "ᜎ"], answer: 1 },
+  { prompt: "Kudlit makes Baybayin an abugida because…", choices: ["Each consonant stands alone", "Vowels are written separately", "Consonant + vowel sounds are formed with diacritics", "It cancels consonants"], answer: 2 }
+];
+
 
   const [shuffledQuestions, setShuffledQuestions] = useState<typeof questions>([]);
   const [current, setCurrent] = useState(0);

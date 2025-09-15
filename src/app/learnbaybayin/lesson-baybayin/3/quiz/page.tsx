@@ -9,73 +9,33 @@ function shuffleArray<T>(array: T[]): T[] {
 }
 
 export default function QuizPage3() {
-  const questions = [
-     {
-      prompt: "How many vowels are there in Baybayin?",
-      choices: ["2", "3", "4", "5"],
-      answer: 1,
-    },
-    {
-      prompt: "Which Baybayin vowel comes first in order?",
-      choices: ["I/E", "A", "U/O", "E only"],
-      answer: 1,
-    },
-    {
-      prompt: "The Baybayin vowel I/E can sound like:",
-      choices: ["Only E", "Only I", "Either I or E depending on context", "None of the above"],
-      answer: 2,
-    },
-    {
-      prompt: "What is unique about the vowel U/O in Baybayin?",
-      choices: ["It only represents O", "It only represents U", "It can represent both U and O sounds", "It is not used in Baybayin"],
-      answer: 2,
-    },
-    {
-      prompt: "Compared to English, how many vowels does Baybayin have?",
-      choices: ["The same number as English", "More vowels than English", "Fewer vowels than English", "No vowels at all"],
-      answer: 2,
-    },
-    {
-      prompt: "Why are vowels considered the foundation of Baybayin?",
-      choices: [
-        "They can stand alone and combine with consonants to form syllables",
-        "They are always written larger than consonants",
-        "They appear only at the end of words",
-        "They replace consonants in writing",
-      ],
-      answer: 0,
-    },
-    {
-      prompt: "When combined with consonants, Baybayin vowels form:",
-      choices: ["Words only", "Syllables (abugida system)", "Numbers", "Sentences"],
-      answer: 1,
-    },
-    {
-      prompt: "Which statement is true about Baybayin vowels?",
-      choices: [
-        "They are always written separately from consonants",
-        "They can appear alone or with consonants",
-        "They represent silent sounds",
-        "They only appear at the beginning of words",
-      ],
-      answer: 1,
-    },
-    {
-      prompt: "The vowel A in Baybayin stands for which sound?",
-      choices: ["I", "O", "A", "U"],
-      answer: 2,
-    },
-    {
-      prompt: "How does the Baybayin vowel system differ from English?",
-      choices: [
-        "Baybayin vowels represent whole sounds or syllables",
-        "Baybayin vowels only appear at the end of words",
-        "Baybayin has the same number of vowels as English",
-        "Baybayin vowels do not combine with consonants",
-      ],
-      answer: 0,
-    },
-  ];
+   const questions = [
+  { prompt: "What sound does ᜊ represent?", choices: ["Ka", "Ba", "La", "Ma"], answer: 1 },
+  { prompt: "Which character represents “Ma”?", choices: ["ᜋ", "ᜐ", "ᜎ", "ᜇ"], answer: 0 },
+  { prompt: "Which character represents “Ka”?", choices: ["ᜃ", "ᜄ", "ᜊ", "ᜇ"], answer: 0 },
+  { prompt: "By default, Baybayin consonants end with…", choices: ["E", "I", "A", "U"], answer: 2 },
+  { prompt: "Which character is read as “DA/RA”?", choices: ["ᜇ", "ᜎ", "ᜋ", "ᜊ"], answer: 0 },
+  { prompt: "True or False: Each Baybayin consonant has a built-in vowel.", choices: ["True", "False"], answer: 0 },
+  { prompt: "The sound of ᜄ is…", choices: ["Ka", "Sa", "Ga", "Ma"], answer: 2 },
+  { prompt: "Which is the symbol for SA?", choices: ["ᜋ", "ᜐ", "ᜎ", "ᜊ"], answer: 1 },
+  { prompt: "Baybayin consonants are more like…", choices: ["Alphabets", "Syllables", "Numbers", "Marks"], answer: 1 },
+  { prompt: "Which character would you use for “Ra”?", choices: ["ᜎ", "ᜇ", "ᜋ", "ᜃ"], answer: 1 },
+  { prompt: "The sound “Ba” is always…", choices: ["ᜊ", "ᜁ", "ᜂ", "ᜄ"], answer: 0 },
+  { prompt: "Which pair is correct?", choices: ["ᜊ – Ka", "ᜃ – Ka", "ᜄ – Ba", "ᜐ – Ga"], answer: 1 },
+  { prompt: "In Baybayin, to write “MA”, you use…", choices: ["ᜋ", "ᜆ", "ᜂ", "ᜈ"], answer: 0 },
+  { prompt: "The symbol ᜇ can mean…", choices: ["Da", "Ra", "Both Da and Ra", "None"], answer: 2 },
+  { prompt: "Which is NOT a consonant symbol in Baybayin?", choices: ["ᜊ", "ᜃ", "ᜄ", "ᜀ"], answer: 3 },
+  { prompt: "What does the symbol ᜅ represent?", choices: ["Ma", "Sa", "Nga", "Ga"], answer: 2 },
+  { prompt: "Which Baybayin character is unique because it represents the nasal sound “NG”?", choices: ["ᜊ", "ᜐ", "ᜅ", "ᜄ"], answer: 2 },
+  { prompt: "The Baybayin symbol ᜊ by default is pronounced as…", choices: ["Ba", "Be", "Bi", "Bo"], answer: 0 },
+  { prompt: "In Baybayin, consonants are read with what built-in vowel if no kudlit is added?", choices: ["U", "A", "I", "O"], answer: 1 },
+  { prompt: "Which Baybayin character would you use to begin the word “kabayo”?", choices: ["ᜋ", "ᜃ", "ᜄ", "ᜅ"], answer: 1 },
+  { prompt: "Which character is paired with “Ba” in the Baybayin word ᜃᜊᜌ (kabayo)?", choices: ["ᜐ", "ᜃ", "ᜊ", "ᜅ"], answer: 2 },
+  { prompt: "The word ᜅᜊᜓ (ngubo = cough) begins with which symbol?", choices: ["ᜄ", "ᜅ", "ᜊ", "ᜐ"], answer: 1 },
+  { prompt: "Which consonant symbol in Baybayin can serve as two sounds in one (Da/Ra)?", choices: ["ᜎ", "ᜐ", "ᜇ", "ᜅ"], answer: 2 },
+  { prompt: "True or False: Baybayin consonants can stand alone without a vowel sound.", choices: ["True", "False"], answer: 1 },
+  { prompt: "What makes Baybayin consonants different from English consonants?", choices: ["They are silent", "They represent syllables", "They change by tone", "They only mean vowels"], answer: 1 }
+];
 
   const [shuffledQuestions, setShuffledQuestions] = useState<typeof questions>([]);
   const [current, setCurrent] = useState(0);

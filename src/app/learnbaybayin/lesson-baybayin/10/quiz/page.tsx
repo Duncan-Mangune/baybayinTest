@@ -1,183 +1,166 @@
 "use client";
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import styles from "./quiz10.module.css"; // reuse CSS
+import styles from "./quiz10.module.css";
+
+// 🔀 Shuffle helper
+function shuffleArray<T>(array: T[]): T[] {
+  return [...array].sort(() => Math.random() - 0.5);
+}
 
 export default function QuizPage10() {
   const questions = [
-    {
-      prompt: "1. Today, Baybayin is often seen in…",
-      choices: ["Tattoos", "Newspapers", "Street signs everywhere", "TV subtitles"],
-      answer: 0,
-    },
-    {
-      prompt: "2. Baybayin is included in modern digital systems because of…",
-      choices: ["Unicode", "Morse code", "Binary", "Braille"],
-      answer: 0,
-    },
-    {
-      prompt: "3. Unicode assigned Baybayin a range from…",
-      choices: ["ᜀ–᜔", "A–Z", "1–9", "100–200"],
-      answer: 0,
-    },
-    {
-      prompt: "4. Modern uses of Baybayin include…",
-      choices: ["Calligraphy", "Banking", "Coding", "Stock trading"],
-      answer: 0,
-    },
-    {
-      prompt: "5. Which movement helps revive Baybayin?",
-      choices: ["Baybayin activism", "Spanish colonization", "Americanization", "Industrialization"],
-      answer: 0,
-    },
-    {
-      prompt: "6. Baybayin is visible today in…",
-      choices: ["Tattoos", "Ancient ruins only", "Maps only", "No longer used"],
-      answer: 0,
-    },
-    {
-      prompt: "7. Baybayin revival connects to…",
-      choices: ["National identity", "Business only", "Sports", "Food"],
-      answer: 0,
-    },
-    {
-      prompt: "8. Which is correct about Baybayin in modern use?",
-      choices: ["Only historians know it", "It is part of digital Unicode", "It cannot be typed", "It is illegal"],
-      answer: 1,
-    },
-    {
-      prompt: "9. Baybayin appears in…",
-      choices: ["Government seals", "U.S. dollars", "Foreign textbooks", "TV subtitles"],
-      answer: 0,
-    },
-    {
-      prompt: "10. Baybayin in fashion appears as…",
-      choices: ["T-shirt prints", "Shoes only", "Cars", "Glasses"],
-      answer: 0,
-    },
-    {
-      prompt: "11. Which group promotes Baybayin education?",
-      choices: ["Activists & artists", "Only Spanish priests", "Americans", "None"],
-      answer: 0,
-    },
-    {
-      prompt: "12. Baybayin can be typed in…",
-      choices: ["Unicode keyboards", "Only handwriting", "Morse code", "Roman numerals"],
-      answer: 0,
-    },
-    {
-      prompt: "13. Which phrase is TRUE?",
-      choices: ["Baybayin is forgotten forever", "Baybayin is revived today", "Baybayin is only math", "Baybayin is European"],
-      answer: 1,
-    },
-    {
-      prompt: "14. Digital Baybayin fonts exist because of…",
-      choices: ["Unicode", "Braille", "Binary", "Morse"],
-      answer: 0,
-    },
-    {
-      prompt: "15. The modern role of Baybayin is…",
-      choices: ["Cultural revival", "Economic tool", "Math system", "Scientific formula"],
-      answer: 0,
-    },
-  ];
+  { prompt: "Today, Baybayin is often seen in…", choices: ["Tattoos", "Newspapers", "Street signs everywhere", "TV subtitles"], answer: 0 },
+  { prompt: "Baybayin is included in modern digital systems because of…", choices: ["Unicode", "Morse code", "Binary", "Braille"], answer: 0 },
+  { prompt: "Unicode assigned Baybayin a range from…", choices: ["ᜀ–᜔", "A–Z", "1–9", "100–200"], answer: 0 },
+  { prompt: "Modern uses of Baybayin include…", choices: ["Calligraphy", "Banking", "Coding", "Stock trading"], answer: 0 },
+  { prompt: "Which movement helps revive Baybayin?", choices: ["Baybayin activism", "Spanish colonization", "Americanization", "Industrialization"], answer: 0 },
+  { prompt: "Baybayin is visible today in…", choices: ["Tattoos", "Ancient ruins only", "Maps only", "No longer used"], answer: 0 },
+  { prompt: "Baybayin revival connects to…", choices: ["National identity", "Business only", "Sports", "Food"], answer: 0 },
+  { prompt: "Which is correct about Baybayin in modern use?", choices: ["Only historians know it", "It is part of digital Unicode", "It cannot be typed", "It is illegal"], answer: 1 },
+  { prompt: "Baybayin appears in…", choices: ["Government seals", "U.S. dollars", "Foreign textbooks", "TV subtitles"], answer: 0 },
+  { prompt: "Baybayin in fashion appears as…", choices: ["T-shirt prints", "Shoes only", "Cars", "Glasses"], answer: 0 },
+  { prompt: "Which group promotes Baybayin education?", choices: ["Activists & artists", "Only Spanish priests", "Americans", "None"], answer: 0 },
+  { prompt: "Baybayin can be typed in…", choices: ["Unicode keyboards", "Only handwriting", "Morse code", "Roman numerals"], answer: 0 },
+  { prompt: "Which phrase is TRUE?", choices: ["Baybayin is forgotten forever", "Baybayin is revived today", "Baybayin is only math", "Baybayin is European"], answer: 1 },
+  { prompt: "Digital Baybayin fonts exist because of…", choices: ["Unicode", "Braille", "Binary", "Morse"], answer: 0 },
+  { prompt: "The modern role of Baybayin is…", choices: ["Cultural revival", "Economic tool", "Math system", "Scientific formula"], answer: 0 },
+  { prompt: "Baybayin’s survival today is linked to…", choices: ["Unicode and activism", "Decline during Spanish rule", "Lack of use in schools", "Only oral tradition"], answer: 0 },
+  { prompt: "The Baybayin Unicode block allows…", choices: ["Writing Baybayin digitally", "Translating into Spanish", "Removing Baybayin from use", "Turning Baybayin into numbers"], answer: 0 },
+  { prompt: "Baybayin keyboards are available in…", choices: ["Computers and smartphones", "Only old typewriters", "Calculators", "None"], answer: 0 },
+  { prompt: "The cultural revival of Baybayin is seen in…", choices: ["Education, art, and technology", "Farming and fishing", "Medicine only", "Sports tournaments"], answer: 0 },
+  { prompt: "A symbol of heritage often used in design and clothing is…", choices: ["Baybayin", "Latin alphabet", "Binary code", "Braille"], answer: 0 },
+  { prompt: "Baybayin activism shows that Baybayin is…", choices: ["A living script", "Dead language", "Only for tattoos", "European in origin"], answer: 0 },
+  { prompt: "Modern art with Baybayin includes…", choices: ["Murals and posters", "Only government records", "Ancient stone carvings only", "Foreign logos"], answer: 0 },
+  { prompt: "Baybayin’s digital presence makes it…", choices: ["Accessible worldwide", "Limited only to the Philippines", "Illegal in schools", "Used only for math"], answer: 0 },
+  { prompt: "The inclusion of Baybayin in Unicode means…", choices: ["It can be shared globally online", "It cannot be used in computers", "It was erased from history", "It is exclusive to Spanish texts"], answer: 0 },
+  { prompt: "Why does Baybayin matter in the modern world?", choices: ["It connects Filipinos to ancestral identity", "It replaces English completely", "It is only decorative", "It has no real purpose"], answer: 0 },
+];
 
-  const [answers, setAnswers] = useState<(number | null)[]>(Array(questions.length).fill(null));
-  const [submitted, setSubmitted] = useState(false);
 
-  const handleSelect = (qIdx: number, cIdx: number) => {
-    if (submitted) return;
-    const newAns = [...answers];
-    newAns[qIdx] = cIdx;
-    setAnswers(newAns);
+  const [shuffledQuestions, setShuffledQuestions] = useState<typeof questions>([]);
+  const [current, setCurrent] = useState(0);
+  const [score, setScore] = useState(0);
+  const [finished, setFinished] = useState(false);
+  const [showInstructions, setShowInstructions] = useState(true);
+  const [wrongAnswers, setWrongAnswers] = useState<
+    { question: string; correct: string; chosen: string }[]
+  >([]);
+
+  //Shuffle once on mount
+  useEffect(() => {
+    setShuffledQuestions(shuffleArray(questions));
+  }, []);
+
+  const handleAnswer = (idx: number) => {
+    const currentQ = shuffledQuestions[current];
+    if (idx === currentQ.answer) {
+      setScore(score + 1);
+    } else {
+      setWrongAnswers([
+        ...wrongAnswers,
+        {
+          question: currentQ.prompt,
+          correct: currentQ.choices[currentQ.answer],
+          chosen: currentQ.choices[idx],
+        },
+      ]);
+    }
+
+    if (current < shuffledQuestions.length - 1) {
+      setCurrent(current + 1);
+    } else {
+      setFinished(true);
+    }
   };
 
-  let score = 0;
-  if (submitted) {
-    for (let i = 0; i < questions.length; i++) {
-      if (answers[i] === questions[i].answer) score++;
-    }
-  }
+  const retryQuiz = () => {
+    setCurrent(0);
+    setScore(0);
+    setFinished(false);
+    setShowInstructions(true);
+    setWrongAnswers([]);
+    setShuffledQuestions(shuffleArray(questions)); // reshuffle on retry
+  };
+
+  if (!shuffledQuestions.length) return <p>Loading quiz...</p>;
 
   return (
     <section className={styles.container}>
       <div className={styles.headerRow}>
-        <h1 className={styles.title}>Lesson 10 Quiz</h1>
-        <Link href="/learnbaybayin/lesson-baybayin/10" className={styles.backLink}>
+        <h1 className={styles.title}>Lesson 5 Quiz</h1>
+        <Link href="/learnbaybayin/lesson-baybayin/1" className={styles.backLink}>
           ← Back to Lesson
         </Link>
       </div>
 
-      <div className={styles.description}>
-        <h1 className={styles.subtitle}>
-          Quiz Time! Read each question and click on the choice you think is correct.
-        </h1>
-      </div>
-
-      <ol>
-        {questions.map((q, qIdx) => (
-          <li key={qIdx} className={styles.question}>
-            <p>{q.prompt}</p>
-            {q.choices.map((choice, cIdx) => {
-              const chosen = answers[qIdx] === cIdx;
-              const correct = submitted && cIdx === q.answer;
-              const wrong = submitted && chosen && cIdx !== q.answer;
-
-              return (
-                <label key={cIdx} className={styles.choice}>
-                  <input
-                    type="radio"
-                    name={`q-${qIdx}`}
-                    checked={chosen}
-                    onChange={() => handleSelect(qIdx, cIdx)}
-                  />
-                  <span
-                    className={`${styles.choiceText} ${
-                      correct ? styles.correct : ""
-                    } ${wrong ? styles.wrong : ""}`}
-                  >
-                    {choice}
-                  </span>
-                </label>
-              );
-            })}
-            {submitted && answers[qIdx] !== questions[qIdx].answer && (
-              <p className={styles.feedback}>
-                Correct: {q.choices[q.answer]}
-              </p>
-            )}
-          </li>
-        ))}
-      </ol>
-
-      {!submitted ? (
-        <button
-          className={styles.submitBtn}
-          disabled={answers.includes(null)}
-          onClick={() => setSubmitted(true)}
-        >
-          Submit Quiz
-        </button>
-      ) : (
-        <div>
-          <p className={styles.score}>
-            Score: {score} / {questions.length}
+      {showInstructions ? (
+        <div className={styles.instructionsBox}>
+          <h2>📋 Instructions</h2>
+          <p>
+            Answer each question about the Lesson you just viewed. Choose the correct
+            answer to earn a point. Your score will be shown at the end.
           </p>
-         
-         <div className={styles.bottomBtns}>
-            <Link href="/learnbaybayin/lesson-baybayin/10" className={styles.backBtn}>
-            ← Back to Lesson
-          </Link>
-          
-          <button className={styles.retryBtn} onClick={() => window.location.reload()}>
-            Retry Quiz
+          <button className={styles.nextBtn} onClick={() => setShowInstructions(false)}>
+            🚀 Start Quiz
           </button>
-        
-
         </div>
+      ) : !finished ? (
+        <>
+          <p className={styles.questionText}>{shuffledQuestions[current].prompt}</p>
+          <div className={styles.choicesStack}>
+            {shuffledQuestions[current].choices.map((choice, idx) => (
+              <button
+                key={idx}
+                className={styles.choiceBtn}
+                onClick={() => handleAnswer(idx)}
+              >
+                {choice}
+              </button>
+            ))}
+          </div>
+          <p className={styles.questionNumber}>
+            Question {current + 1} of {shuffledQuestions.length}
+          </p>
+        </>
+      ) : (
+        <>
+          <div className={styles.resultsCard}>
+            <h2 className={styles.resultsTitle}>Quiz Results</h2>
+            <p className={styles.resultsStats}>
+              ✅ Correct Answers: <span>{score}</span>
+              <br />
+              ❌ Wrong Answers: <span>{shuffledQuestions.length - score}</span>
+              <br />
+              Final Score: <strong>{score}/{shuffledQuestions.length}</strong>
+            </p>
+            <div className={styles.bottomBtns}>
+              <button onClick={retryQuiz} className={styles.retryBtn}>
+                Retry Quiz
+              </button>
+              <Link href="/learnbaybayin/lesson-baybayin/6" className={styles.backBtn}>
+                Next Lesson →
+              </Link>
+            </div>
+          </div>
 
-        </div>
+          {wrongAnswers.length > 0 && (
+            <div className={styles.wrongAnswersBox}>
+              <h3 className={styles.wrongTitle}>Review Your Mistakes</h3>
+              {wrongAnswers.map((item, i) => (
+                <div key={i} className={styles.wrongItem}>
+                  <p className={styles.wrongQuestion}>{item.question}</p>
+                  <p className={styles.wrongChosen}>
+                    Your Answer: <span>{item.chosen}</span>
+                  </p>
+                  <p className={styles.wrongCorrect}>
+                    Correct Answer: <strong>{item.correct}</strong>
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
+        </>
       )}
     </section>
   );

@@ -9,73 +9,35 @@ function shuffleArray<T>(array: T[]): T[] {
 }
 
 export default function QuizPage2() {
-  const questions = [
-     {
-      prompt: "How many vowels are there in Baybayin?",
-      choices: ["2", "3", "4", "5"],
-      answer: 1,
-    },
-    {
-      prompt: "Which Baybayin vowel comes first in order?",
-      choices: ["I/E", "A", "U/O", "E only"],
-      answer: 1,
-    },
-    {
-      prompt: "The Baybayin vowel I/E can sound like:",
-      choices: ["Only E", "Only I", "Either I or E depending on context", "None of the above"],
-      answer: 2,
-    },
-    {
-      prompt: "What is unique about the vowel U/O in Baybayin?",
-      choices: ["It only represents O", "It only represents U", "It can represent both U and O sounds", "It is not used in Baybayin"],
-      answer: 2,
-    },
-    {
-      prompt: "Compared to English, how many vowels does Baybayin have?",
-      choices: ["The same number as English", "More vowels than English", "Fewer vowels than English", "No vowels at all"],
-      answer: 2,
-    },
-    {
-      prompt: "Why are vowels considered the foundation of Baybayin?",
-      choices: [
-        "They can stand alone and combine with consonants to form syllables",
-        "They are always written larger than consonants",
-        "They appear only at the end of words",
-        "They replace consonants in writing",
-      ],
-      answer: 0,
-    },
-    {
-      prompt: "When combined with consonants, Baybayin vowels form:",
-      choices: ["Words only", "Syllables (abugida system)", "Numbers", "Sentences"],
-      answer: 1,
-    },
-    {
-      prompt: "Which statement is true about Baybayin vowels?",
-      choices: [
-        "They are always written separately from consonants",
-        "They can appear alone or with consonants",
-        "They represent silent sounds",
-        "They only appear at the beginning of words",
-      ],
-      answer: 1,
-    },
-    {
-      prompt: "The vowel A in Baybayin stands for which sound?",
-      choices: ["I", "O", "A", "U"],
-      answer: 2,
-    },
-    {
-      prompt: "How does the Baybayin vowel system differ from English?",
-      choices: [
-        "Baybayin vowels represent whole sounds or syllables",
-        "Baybayin vowels only appear at the end of words",
-        "Baybayin has the same number of vowels as English",
-        "Baybayin vowels do not combine with consonants",
-      ],
-      answer: 0,
-    },
-  ];
+ const questions = [
+  { prompt: "Which symbol represents A?", choices: ["ᜀ", "ᜁ", "ᜂ", "ᜊ"], answer: 0 },
+  { prompt: "Which character is read as I/E?", choices: ["ᜀ", "ᜁ", "ᜂ", "ᜐ"], answer: 1 },
+  { prompt: "The character ᜂ sounds like…", choices: ["O or U", "A", "I or E", "NG"], answer: 0 },
+  { prompt: "Baybayin vowels represent…", choices: ["Letters only", "Whole sounds", "Numbers", "Consonants"], answer: 1 },
+  { prompt: "Which vowel comes first in Baybayin order?", choices: ["ᜂ", "ᜀ", "ᜁ", "ᜊ"], answer: 1 },
+  { prompt: "The symbol ᜁ is pronounced…", choices: ["A", "E/I", "O", "U"], answer: 1 },
+  { prompt: "Which vowel can be both “O” and “U”?", choices: ["ᜂ", "ᜀ", "ᜁ", "ᜊ"], answer: 0 },
+  { prompt: "How many vowel characters are there in Baybayin?", choices: ["2", "3", "4", "5"], answer: 1 },
+  { prompt: "The Baybayin vowel system is simpler than…", choices: ["English alphabet", "Japanese Kana", "Chinese characters", "Roman numerals"], answer: 0 },
+  { prompt: "ᜀ can stand for which sound?", choices: ["A", "O", "I", "E"], answer: 0 },
+  { prompt: "In Baybayin, vowels are…", choices: ["Optional", "Always written", "Only used at the start of words", "Replaced with numbers"], answer: 1 },
+  { prompt: "Which word begins with ᜁ?", choices: ["araw", "ilaw", "ulam", "baybay"], answer: 1 },
+  { prompt: "Which vowel symbol is shaped like a hook?", choices: ["ᜀ", "ᜁ", "ᜂ", "ᜐ"], answer: 2 },
+  { prompt: "The combination of vowels and consonants creates…", choices: ["Abugida syllables", "Alphabet", "Pictographs", "Codes"], answer: 0 },
+  { prompt: "Which of the following is NOT a Baybayin vowel?", choices: ["ᜀ", "ᜁ", "ᜂ", "ᜎ"], answer: 3 },
+  { prompt: "The vowel A is considered…", choices: ["The foundation of Baybayin order", "The rarest vowel", "A consonant symbol", "A modern addition"], answer: 0 },
+  { prompt: "When reading Baybayin, the vowel I/E can sound like “E” when…", choices: ["It appears alone", "Context suggests the “E” sound", "It follows U/O", "It’s paired with kudlit"], answer: 1 },
+  { prompt: "The vowel U/O is often described as…", choices: ["Square-shaped", "Hook-shaped", "Star-like", "Circular"], answer: 1 },
+  { prompt: "Compared to English vowels, Baybayin vowels are…", choices: ["More numerous", "Fewer", "Identical in number", "Completely unrelated"], answer: 1 },
+  { prompt: "In Baybayin, vowels can function…", choices: ["Only at the end of words", "Alone or combined with consonants", "Only as silent markers", "As punctuation"], answer: 1 },
+  { prompt: "The example word “ilaw” demonstrates the vowel…", choices: ["U/O", "I/E", "A", "L"], answer: 1 },
+  { prompt: "The example word “ulam” begins with which vowel?", choices: ["I/E", "U/O", "A", "B"], answer: 1 },
+  { prompt: "Baybayin vowels represent…", choices: ["Single consonant letters", "Whole syllabic sounds", "Accents", "Word endings"], answer: 1 },
+  { prompt: "The small number of vowels in Baybayin makes the script…", choices: ["Harder to learn", "Easier to memorize", "Equivalent to Latin script", "Less consistent"], answer: 1 },
+  { prompt: "Understanding Baybayin vowels is important because they…", choices: ["Are rarely used", "Form the base for all abugida syllables", "Replace all consonants", "Are used only in modern fonts"], answer: 1 }
+];
+
+
 
   const [shuffledQuestions, setShuffledQuestions] = useState<typeof questions>([]);
   const [current, setCurrent] = useState(0);

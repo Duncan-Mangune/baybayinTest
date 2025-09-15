@@ -10,21 +10,33 @@ function shuffleArray<T>(array: T[]): T[] {
 
 export default function QuizPage1() {
   const questions = [
-    { prompt: "Baybayin is…", choices: ["An alphabet", "A syllabary", "A number system", "A secret code"], answer: 1 },
-    { prompt: "The word “Baybayin” comes from…", choices: ["Bayan", "Baybay", "Babaylan", "Bayani"], answer: 1 },
-    { prompt: "Baybayin characters represent…", choices: ["Single letters", "Syllables", "Numbers", "Symbols"], answer: 1 },
-    { prompt: "Which region was Baybayin most used?", choices: ["Luzon and Visayas", "Mindanao only", "Cordillera only", "Palawan only"], answer: 0 },
-    { prompt: "Baybayin served as a form of…", choices: ["Oral tradition", "Writing", "Music", "Dance"], answer: 1 },
-    { prompt: "Baybayin is related to the word meaning…", choices: ["To sing", "To spell", "To write", "To count"], answer: 1 },
-    { prompt: "True or False: Baybayin is the same as Alibata.", choices: ["True", "False"], answer: 1 },
-    { prompt: "The Spanish discouraged Baybayin because…", choices: ["It was too easy", "It competed with Latin letters", "It was secret writing", "It had no vowels"], answer: 1 },
-    { prompt: "What type of script is Baybayin?", choices: ["Alphabet", "Abugida", "Hieroglyphics", "Pictogram"], answer: 1 },
-    { prompt: "Early Filipinos used Baybayin for…", choices: ["Shopping lists", "Poetry and communication", "Mathematics", "Maps"], answer: 1 },
-    { prompt: "Which modern movement promotes Baybayin revival?", choices: ["Unicode integration", "Braille", "Binary code", "ASCII"], answer: 0 },
-    { prompt: "Baybayin symbols can be compared to…", choices: ["Roman numerals", "Japanese Kana", "Egyptian hieroglyphics", "Morse code"], answer: 1 },
-    { prompt: "Which is NOT true about Baybayin?", choices: ["It is ancient", "It is part of Filipino culture", "It is a syllabary", "It was invented by Spain"], answer: 3 },
-    { prompt: "Baybayin is important…", choices: ["Cultural heritage", "Currency", "Weapon", "Sports"], answer: 0 },
-  ];
+  { prompt: "Baybayin is…", choices: ["An alphabet", "A syllabary", "A number system", "A secret code"], answer: 1 },
+  { prompt: "The word “Baybayin” comes from…", choices: ["Bayan", "Baybay", "Babaylan", "Bayani"], answer: 1 },
+  { prompt: "Baybayin was used during…", choices: ["Pre-colonial Philippines", "Spanish colonization only", "American occupation", "Japanese period"], answer: 0 },
+  { prompt: "Baybayin characters represent…", choices: ["Single letters", "Syllables", "Numbers", "Symbols"], answer: 1 },
+  { prompt: "Which region was Baybayin most used?", choices: ["Luzon and Visayas", "Mindanao only", "Cordillera only", "Palawan only"], answer: 0 },
+  { prompt: "Baybayin served as a form of…", choices: ["Oral tradition", "Writing", "Music", "Dance"], answer: 1 },
+  { prompt: "Baybayin is related to the word meaning…", choices: ["To sing", "To spell", "To write", "To count"], answer: 1 },
+  { prompt: "True or False: Baybayin is the same as Alibata.", choices: ["True", "False"], answer: 1 },
+  { prompt: "The Spanish discouraged Baybayin because…", choices: ["It was too easy", "It competed with Latin letters", "It was secret writing", "It had no vowels"], answer: 1 },
+  { prompt: "What type of script is Baybayin?", choices: ["Alphabet", "Abugida", "Hieroglyphics", "Pictogram"], answer: 1 },
+  { prompt: "Early Filipinos used Baybayin for…", choices: ["Shopping lists", "Poetry and communication", "Mathematics", "Maps"], answer: 1 },
+  { prompt: "Which modern movement promotes Baybayin revival?", choices: ["Unicode integration", "Braille", "Binary code", "ASCII"], answer: 0 },
+  { prompt: "Baybayin symbols can be compared to…", choices: ["Roman numerals", "Japanese Kana", "Egyptian hieroglyphics", "Morse code"], answer: 1 },
+  { prompt: "Which is NOT true about Baybayin?", choices: ["It is ancient", "It is part of Filipino culture", "It is a syllabary", "It was invented by Spain"], answer: 3 },
+  { prompt: "Baybayin is important…", choices: ["Cultural heritage", "Currency", "Weapon", "Sports"], answer: 0 },
+  { prompt: "The primary purpose of Baybayin in pre-colonial society was…", choices: ["Decorative art", "Communication and record-keeping", "Religious chanting", "Trading currency"], answer: 1 },
+  { prompt: "Baybayin letters are modified using…", choices: ["Accents called kudlit", "Extra consonants", "Dashes only", "Dots under the line"], answer: 0 },
+  { prompt: "When a kudlit is placed above a Baybayin character, it…", choices: ["Adds a consonant sound", "Changes the vowel sound to “e” or “i”", "Removes the vowel", "Duplicates the consonant"], answer: 1 },
+  { prompt: "Baybayin writing traditionally did NOT include…", choices: ["Vowels", "Consonants", "Final consonant markers", "Syllables"], answer: 2 },
+  { prompt: "The arrival of Spanish colonizers led to…", choices: ["The widespread use of Baybayin", "The decline of Baybayin writing", "The creation of new Baybayin characters", "The banning of all languages"], answer: 1 },
+  { prompt: "Baybayin is an example of a writing system in Southeast Asia that was influenced by…", choices: ["Latin scripts", "Brahmic scripts", "Cyrillic scripts", "Greek alphabets"], answer: 1 },
+  { prompt: "Modern Baybayin revival is often seen in…", choices: ["Digital fonts and tattoos", "Road signs only", "Secret societies", "Currency design"], answer: 0 },
+  { prompt: "One reason Baybayin is taught today is to…", choices: ["Replace English entirely", "Preserve Filipino cultural identity", "Compete with modern keyboards", "Abandon Latin letters"], answer: 1 },
+  { prompt: "Which of the following BEST describes Baybayin’s structure?", choices: ["Consonant-vowel pairs", "Vowel-only script", "Consonant-only script", "Picture-based writing"], answer: 0 },
+  { prompt: "Baybayin’s reintroduction into popular culture is supported by…", choices: ["Artists and historians", "Foreign governments", "Space agencies", "Maritime traders"], answer: 0 }
+];
+
 
   const [shuffledQuestions, setShuffledQuestions] = useState<typeof questions>([]);
   const [current, setCurrent] = useState(0);
