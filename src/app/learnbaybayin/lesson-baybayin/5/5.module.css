@@ -2,7 +2,7 @@
   max-width: 1100px;
   margin: 40px auto;
   padding: 48px;
-  font-family: "JejuHallasan", sans-serif;
+  font-family: "Merriweather Sans", "Arial", sans-serif;
   background-color: #514332;
   color: #ffffff;
   border-radius: 12px;
@@ -45,20 +45,81 @@
   margin-bottom: 16px;
 }
 
+/* Back to Lesson Page button */
 .backLink {
   text-decoration: none;
-  background-color: #a17a4e;
-  color: #ffffff;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 1rem;
+  background-color: #b29264;
+  color: #fff8dc;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.05rem;
   display: inline-block;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: 5px solid #e4b46c;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease;
+  
+  /* ✨ Added text border/outline */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
-.backLink:hover { background-color: #8d7558; transform: translateY(-2px); }
-.backLink:active { background-color: #2a2a2a; transform: translateY(0); }
 
+.backLink:hover {
+  background-color: #d4b98a;
+  border-color: #ffe6ba;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.35);
+}
+
+.backLink:active {
+  transform: translateY(0);
+  background-color: #a17a4e;
+  border-color: #b29264;
+}
+
+/* Button row layout */
+.buttonRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Next Lesson button */
+.navButton {
+  background: linear-gradient(145deg, #b29264, #8d7558);
+  color: #fff8dc;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 14px 34px;
+  border: 5px solid #d4b98a;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+
+  /* ✨ Added text border/outline */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.navButton:hover {
+  background: linear-gradient(145deg, #d4b98a, #b29264);
+  color: #ffffff;
+  border-color: #fff06e;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45);
+}
+
+.navButton:active {
+  transform: scale(0.98);
+  background: #a17a4e;
+  border-color: #b29264;
+}
+
+/* Take Quiz button */
 .quizButton {
   margin: 0 auto;
   background-color: #d97706;
@@ -67,32 +128,25 @@
   color: #fff;
   font-weight: bold;
   text-decoration: none;
+  border: 5px solid #fbbf24;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+
+  /* ✨ Added text border/outline */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
+
 .quizButton:hover {
-  transform: scale(1.5);
-  background-color: #d4b98a;
-  transition: transform 0.15s ease, background-color 0.2s ease;
+  background-color: #eaa040;
+  border-color: #fff06e;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45);
 }
 
-.navButton {
-  background-color: #c48b4e;
-  padding: 12px 24px;
-  border-radius: 8px;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-}
-.navButton:hover {
-  transform: scale(1.5);
-  background-color: #d4b98a;
-  transition: transform 0.15s ease, background-color 0.2s ease;
-}
-
-.buttonRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 70px;
+.quizButton:active {
+  transform: scale(0.98);
+  background-color: #b75b04;
+  border-color: #fbbf24;
 }
 
 .chartGrid {

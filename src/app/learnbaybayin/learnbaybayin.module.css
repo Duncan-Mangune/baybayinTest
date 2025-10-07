@@ -82,26 +82,35 @@
   transition: transform 0.3s ease-in-out;
 }
 
+/* Back to Lesson Page button */
 .backLink {
   text-decoration: none;
-  background-color: #514332;
-  color: #ffffff;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 1rem;
+  background-color: #b29264;
+  color: #fff8dc;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.05rem;
   display: inline-block;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: 5px solid #e4b46c;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease;
+  
+  /* ✨ Added text border/outline */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .backLink:hover {
-  background-color: #8d7558;
-  transform: scale(1.15);
+  background-color: #d4b98a;
+  border-color: #ffe6ba;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.35);
 }
 
 .backLink:active {
-  background-color: #2a2a2a;
   transform: translateY(0);
+  background-color: #a17a4e;
+  border-color: #b29264;
 }
 
 .headerRow {

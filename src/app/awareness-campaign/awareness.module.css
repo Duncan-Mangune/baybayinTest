@@ -2,7 +2,8 @@
   max-width: 1100px;
   margin: 40px auto;
   padding: 48px;
-  font-family: "JejuHallasan", sans-serif;
+  font-family: "Merriweather Sans", "Arial", sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 
   background-color: #514332ed;
   color: #ffffff;
@@ -11,6 +12,7 @@
 
   opacity: 0;
   animation: fadeIn 0.5s ease-in forwards;
+
 }
 
 @keyframes fadeIn {
@@ -292,4 +294,38 @@
   margin-top: 8px;
   font-size: 1rem;
   color: #fff5d1;
+}
+
+.learnBtn {
+  display: inline-block;
+  padding: 12px 22px;
+  background-color: #c89e62;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.05rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.learnBtn:hover {
+  background-color: #e6b872;
+  transform: translateY(-3px);
+}
+
+
+.citation {
+  font-size: 0.95rem;
+  color: #ffeaa7;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.citation a {
+  color: #ffd27f;
+  text-decoration: underline;
+}
+
+.citation a:hover {
+  color: #fff2d1;
 }
