@@ -10,32 +10,32 @@ function shuffleArray<T>(array: T[]): T[] {
 
 export default function QuizPage7() {
   const questions = [
-  { prompt: "What does the Virama (᜔) do?", choices: ["Add a vowel", "Cancel the vowel", "Double the consonant", "None"], answer: 1 },
-  { prompt: "ᜊ᜔ represents…", choices: ["Ba", "B", "Bu", "Be"], answer: 1 },
-  { prompt: "Virama is also called…", choices: ["Kudlit", "Punctuation", "Pamudpod", "Accent"], answer: 2 },
-  { prompt: "Which is the “silent mark” of Baybayin?", choices: ["Kudlit", "Virama", "Period", "Dash"], answer: 1 },
-  { prompt: "“ᜄ᜔” is read as…", choices: ["Ga", "G", "Go", "Ge"], answer: 1 },
-  { prompt: "True or False: Virama is used to remove vowels in consonants.", choices: ["True", "False"], answer: 0 },
-  { prompt: "The Virama was introduced mainly during…", choices: ["Pre-colonial times", "Spanish period", "American period", "Japanese period"], answer: 1 },
-  { prompt: "“DA” without a vowel =", choices: ["ᜇ᜔", "ᜇ", "ᜇᜁ", "ᜇᜓ"], answer: 0 },
-  { prompt: "Why is Virama important?", choices: ["To shorten words", "To write final consonants", "To change vowels", "To add accents"], answer: 1 },
-  { prompt: "“ᜋ᜔” is read as…", choices: ["Ma", "M", "Mu", "Me"], answer: 1 },
-  { prompt: "The Virama mark looks like…", choices: ["Dot below", "Slash", "Circle", "Hook"], answer: 0 },
-  { prompt: "Which word would use Virama?", choices: ["Bundok (ᜊᜓᜈ᜔ᜇᜓᜃ᜔)", "Ana", "Lupa", "Ganda"], answer: 0 },
-  { prompt: "The Virama is NOT used for…", choices: ["Silent consonants", "Ending consonants", "Changing vowels", "Removing vowels"], answer: 2 },
-  { prompt: "Which pair is correct?", choices: ["ᜊ = Ba", "ᜊ᜔ = B", "Both", "None"], answer: 2 },
-  { prompt: "Virama makes Baybayin writing…", choices: ["More flexible", "Harder only", "Useless", "Obsolete"], answer: 0 },
-  { prompt: "The Virama cancels the vowel in Baybayin. What does “ᜎ᜔” become?", choices: ["La", "L", "Lo", "Lu"], answer: 1 },
-  { prompt: "In the word bundok (ᜊᜓᜈ᜔ᜇᜓᜃ᜔), which letters use the Virama?", choices: ["ᜊ, ᜓ", "ᜈ, ᜃ", "ᜇ, ᜎ", "ᜋ, ᜐ"], answer: 1 },
-  { prompt: "The Virama was introduced to help Baybayin adapt to which type of syllables?", choices: ["Open syllables (ending in vowels)", "Closed syllables (ending in consonants)", "Reduplicated syllables", "Silent syllables"], answer: 1 },
-  { prompt: "Without the Virama, how would “ᜐ” normally be read?", choices: ["Sa", "S", "So", "Su"], answer: 0 },
-  { prompt: "What is the main difference between Kudlit and Virama?", choices: ["Kudlit changes vowels, Virama removes them", "Kudlit removes vowels, Virama adds them", "Both are the same", "Kudlit is modern, Virama is ancient"], answer: 0 },
-  { prompt: "Which Baybayin form is correct for the final consonant “d” in “gand”?", choices: ["ᜄᜈᜇ", "ᜄᜈᜇ᜔", "ᜄᜈᜇᜓ", "ᜄᜈ"], answer: 1 },
-  { prompt: "Which of the following shows Virama used twice?", choices: ["ᜊᜓᜈ᜔ᜇᜓᜃ᜔", "ᜎᜓᜉ", "ᜐᜋ", "ᜊᜆ"], answer: 0 },
-  { prompt: "The Virama makes Baybayin closer to…", choices: ["Alphabetic writing", "Pictographs", "Numbers", "Hieroglyphs"], answer: 0 },
-  { prompt: "Virama is necessary in words with…", choices: ["Vowel endings", "Final consonants", "Repeated vowels", "Double kudlit"], answer: 1 },
-  { prompt: "Which of these is NOT true about Virama?", choices: ["It is also called Pamudpod", "It cancels the vowel", "It makes Baybayin more flexible", "It adds a new vowel"], answer: 3 }
-];
+    { prompt: "What does the Virama (᜔) do?", choices: ["Add a vowel", "Cancel the vowel", "Double the consonant", "None"], answer: 1 },
+    { prompt: "ᜊ᜔ represents…", choices: ["Ba", "B", "Bu", "Be"], answer: 1 },
+    { prompt: "Virama is also called…", choices: ["Kudlit", "Punctuation", "Pamudpod", "Accent"], answer: 2 },
+    { prompt: "Which is the “silent mark” of Baybayin?", choices: ["Kudlit", "Virama", "Period", "Dash"], answer: 1 },
+    { prompt: "“ᜄ᜔” is read as…", choices: ["Ga", "G", "Go", "Ge"], answer: 1 },
+    { prompt: "True or False: Virama is used to remove vowels in consonants.", choices: ["True", "False"], answer: 0 },
+    { prompt: "The Virama was introduced mainly during…", choices: ["Pre-colonial times", "Spanish period", "American period", "Japanese period"], answer: 1 },
+    { prompt: "“DA” without a vowel =", choices: ["ᜇ᜔", "ᜇ", "ᜇᜁ", "ᜇᜓ"], answer: 0 },
+    { prompt: "Why is Virama important?", choices: ["To shorten words", "To write final consonants", "To change vowels", "To add accents"], answer: 1 },
+    { prompt: "“ᜋ᜔” is read as…", choices: ["Ma", "M", "Mu", "Me"], answer: 1 },
+    { prompt: "The Virama mark looks like…", choices: ["Dot below", "Slash", "Circle", "Hook"], answer: 0 },
+    { prompt: "Which word would use Virama?", choices: ["Bundok (ᜊᜓᜈ᜔ᜇᜓᜃ᜔)", "Ana", "Lupa", "Ganda"], answer: 0 },
+    { prompt: "The Virama is NOT used for…", choices: ["Silent consonants", "Ending consonants", "Changing vowels", "Removing vowels"], answer: 2 },
+    { prompt: "Which pair is correct?", choices: ["ᜊ = Ba", "ᜊ᜔ = B", "Both", "None"], answer: 2 },
+    { prompt: "Virama makes Baybayin writing…", choices: ["More flexible", "Harder only", "Useless", "Obsolete"], answer: 0 },
+    { prompt: "The Virama cancels the vowel in Baybayin. What does “ᜎ᜔” become?", choices: ["La", "L", "Lo", "Lu"], answer: 1 },
+    { prompt: "In the word bundok (ᜊᜓᜈ᜔ᜇᜓᜃ᜔), which letters use the Virama?", choices: ["ᜊ, ᜓ", "ᜈ, ᜃ", "ᜇ, ᜎ", "ᜋ, ᜐ"], answer: 1 },
+    { prompt: "The Virama was introduced to help Baybayin adapt to which type of syllables?", choices: ["Open syllables (ending in vowels)", "Closed syllables (ending in consonants)", "Reduplicated syllables", "Silent syllables"], answer: 1 },
+    { prompt: "Without the Virama, how would “ᜐ” normally be read?", choices: ["Sa", "S", "So", "Su"], answer: 0 },
+    { prompt: "What is the main difference between Kudlit and Virama?", choices: ["Kudlit changes vowels, Virama removes them", "Kudlit removes vowels, Virama adds them", "Both are the same", "Kudlit is modern, Virama is ancient"], answer: 0 },
+    { prompt: "Which Baybayin form is correct for the final consonant “d” in “gand”?", choices: ["ᜄᜈᜇ", "ᜄᜈᜇ᜔", "ᜄᜈᜇᜓ", "ᜄᜈ"], answer: 1 },
+    { prompt: "Which of the following shows Virama used twice?", choices: ["ᜊᜓᜈ᜔ᜇᜓᜃ᜔", "ᜎᜓᜉ", "ᜐᜋ", "ᜊᜆ"], answer: 0 },
+    { prompt: "The Virama makes Baybayin closer to…", choices: ["Alphabetic writing", "Pictographs", "Numbers", "Hieroglyphs"], answer: 0 },
+    { prompt: "Virama is necessary in words with…", choices: ["Vowel endings", "Final consonants", "Repeated vowels", "Double kudlit"], answer: 1 },
+    { prompt: "Which of these is NOT true about Virama?", choices: ["It is also called Pamudpod", "It cancels the vowel", "It makes Baybayin more flexible", "It adds a new vowel"], answer: 3 }
+  ];
 
   const [shuffledQuestions, setShuffledQuestions] = useState<typeof questions>([]);
   const [current, setCurrent] = useState(0);
@@ -46,9 +46,10 @@ export default function QuizPage7() {
     { question: string; correct: string; chosen: string }[]
   >([]);
 
-  //Shuffle once on mount
+  // Shuffle & select 10 questions on mount
   useEffect(() => {
-    setShuffledQuestions(shuffleArray(questions));
+    const selected = shuffleArray(questions).slice(0, 10);
+    setShuffledQuestions(selected);
   }, []);
 
   const handleAnswer = (idx: number) => {
@@ -79,7 +80,8 @@ export default function QuizPage7() {
     setFinished(false);
     setShowInstructions(true);
     setWrongAnswers([]);
-    setShuffledQuestions(shuffleArray(questions)); // reshuffle on retry
+    const selected = shuffleArray(questions).slice(0, 10); // reshuffle and reselect 10
+    setShuffledQuestions(selected);
   };
 
   if (!shuffledQuestions.length) return <p>Loading quiz...</p>;
@@ -97,8 +99,8 @@ export default function QuizPage7() {
         <div className={styles.instructionsBox}>
           <h2>📋 Instructions</h2>
           <p>
-            Answer each question about the Lesson you just viewed. Choose the correct
-            answer to earn a point. Your score will be shown at the end.
+            Select the correct answer for each question about the Lesson you just viewed. 
+            There will be 10 questions displayed and is randomized each time you retry. Good Luck!
           </p>
           <button className={styles.nextBtn} onClick={() => setShowInstructions(false)}>
             🚀 Start Quiz

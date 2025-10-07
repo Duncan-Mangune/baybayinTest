@@ -10,33 +10,32 @@ function shuffleArray<T>(array: T[]): T[] {
 
 export default function QuizPage10() {
   const questions = [
-  { prompt: "Today, Baybayin is often seen in…", choices: ["Tattoos", "Newspapers", "Street signs everywhere", "TV subtitles"], answer: 0 },
-  { prompt: "Baybayin is included in modern digital systems because of…", choices: ["Unicode", "Morse code", "Binary", "Braille"], answer: 0 },
-  { prompt: "Unicode assigned Baybayin a range from…", choices: ["ᜀ–᜔", "A–Z", "1–9", "100–200"], answer: 0 },
-  { prompt: "Modern uses of Baybayin include…", choices: ["Calligraphy", "Banking", "Coding", "Stock trading"], answer: 0 },
-  { prompt: "Which movement helps revive Baybayin?", choices: ["Baybayin activism", "Spanish colonization", "Americanization", "Industrialization"], answer: 0 },
-  { prompt: "Baybayin is visible today in…", choices: ["Tattoos", "Ancient ruins only", "Maps only", "No longer used"], answer: 0 },
-  { prompt: "Baybayin revival connects to…", choices: ["National identity", "Business only", "Sports", "Food"], answer: 0 },
-  { prompt: "Which is correct about Baybayin in modern use?", choices: ["Only historians know it", "It is part of digital Unicode", "It cannot be typed", "It is illegal"], answer: 1 },
-  { prompt: "Baybayin appears in…", choices: ["Government seals", "U.S. dollars", "Foreign textbooks", "TV subtitles"], answer: 0 },
-  { prompt: "Baybayin in fashion appears as…", choices: ["T-shirt prints", "Shoes only", "Cars", "Glasses"], answer: 0 },
-  { prompt: "Which group promotes Baybayin education?", choices: ["Activists & artists", "Only Spanish priests", "Americans", "None"], answer: 0 },
-  { prompt: "Baybayin can be typed in…", choices: ["Unicode keyboards", "Only handwriting", "Morse code", "Roman numerals"], answer: 0 },
-  { prompt: "Which phrase is TRUE?", choices: ["Baybayin is forgotten forever", "Baybayin is revived today", "Baybayin is only math", "Baybayin is European"], answer: 1 },
-  { prompt: "Digital Baybayin fonts exist because of…", choices: ["Unicode", "Braille", "Binary", "Morse"], answer: 0 },
-  { prompt: "The modern role of Baybayin is…", choices: ["Cultural revival", "Economic tool", "Math system", "Scientific formula"], answer: 0 },
-  { prompt: "Baybayin’s survival today is linked to…", choices: ["Unicode and activism", "Decline during Spanish rule", "Lack of use in schools", "Only oral tradition"], answer: 0 },
-  { prompt: "The Baybayin Unicode block allows…", choices: ["Writing Baybayin digitally", "Translating into Spanish", "Removing Baybayin from use", "Turning Baybayin into numbers"], answer: 0 },
-  { prompt: "Baybayin keyboards are available in…", choices: ["Computers and smartphones", "Only old typewriters", "Calculators", "None"], answer: 0 },
-  { prompt: "The cultural revival of Baybayin is seen in…", choices: ["Education, art, and technology", "Farming and fishing", "Medicine only", "Sports tournaments"], answer: 0 },
-  { prompt: "A symbol of heritage often used in design and clothing is…", choices: ["Baybayin", "Latin alphabet", "Binary code", "Braille"], answer: 0 },
-  { prompt: "Baybayin activism shows that Baybayin is…", choices: ["A living script", "Dead language", "Only for tattoos", "European in origin"], answer: 0 },
-  { prompt: "Modern art with Baybayin includes…", choices: ["Murals and posters", "Only government records", "Ancient stone carvings only", "Foreign logos"], answer: 0 },
-  { prompt: "Baybayin’s digital presence makes it…", choices: ["Accessible worldwide", "Limited only to the Philippines", "Illegal in schools", "Used only for math"], answer: 0 },
-  { prompt: "The inclusion of Baybayin in Unicode means…", choices: ["It can be shared globally online", "It cannot be used in computers", "It was erased from history", "It is exclusive to Spanish texts"], answer: 0 },
-  { prompt: "Why does Baybayin matter in the modern world?", choices: ["It connects Filipinos to ancestral identity", "It replaces English completely", "It is only decorative", "It has no real purpose"], answer: 0 },
-];
-
+    { prompt: "Today, Baybayin is often seen in…", choices: ["Tattoos", "Newspapers", "Street signs everywhere", "TV subtitles"], answer: 0 },
+    { prompt: "Baybayin is included in modern digital systems because of…", choices: ["Unicode", "Morse code", "Binary", "Braille"], answer: 0 },
+    { prompt: "Unicode assigned Baybayin a range from…", choices: ["ᜀ–᜔", "A–Z", "1–9", "100–200"], answer: 0 },
+    { prompt: "Modern uses of Baybayin include…", choices: ["Calligraphy", "Banking", "Coding", "Stock trading"], answer: 0 },
+    { prompt: "Which movement helps revive Baybayin?", choices: ["Baybayin activism", "Spanish colonization", "Americanization", "Industrialization"], answer: 0 },
+    { prompt: "Baybayin is visible today in…", choices: ["Tattoos", "Ancient ruins only", "Maps only", "No longer used"], answer: 0 },
+    { prompt: "Baybayin revival connects to…", choices: ["National identity", "Business only", "Sports", "Food"], answer: 0 },
+    { prompt: "Which is correct about Baybayin in modern use?", choices: ["Only historians know it", "It is part of digital Unicode", "It cannot be typed", "It is illegal"], answer: 1 },
+    { prompt: "Baybayin appears in…", choices: ["Government seals", "U.S. dollars", "Foreign textbooks", "TV subtitles"], answer: 0 },
+    { prompt: "Baybayin in fashion appears as…", choices: ["T-shirt prints", "Shoes only", "Cars", "Glasses"], answer: 0 },
+    { prompt: "Which group promotes Baybayin education?", choices: ["Activists & artists", "Only Spanish priests", "Americans", "None"], answer: 0 },
+    { prompt: "Baybayin can be typed in…", choices: ["Unicode keyboards", "Only handwriting", "Morse code", "Roman numerals"], answer: 0 },
+    { prompt: "Which phrase is TRUE?", choices: ["Baybayin is forgotten forever", "Baybayin is revived today", "Baybayin is only math", "Baybayin is European"], answer: 1 },
+    { prompt: "Digital Baybayin fonts exist because of…", choices: ["Unicode", "Braille", "Binary", "Morse"], answer: 0 },
+    { prompt: "The modern role of Baybayin is…", choices: ["Cultural revival", "Economic tool", "Math system", "Scientific formula"], answer: 0 },
+    { prompt: "Baybayin’s survival today is linked to…", choices: ["Unicode and activism", "Decline during Spanish rule", "Lack of use in schools", "Only oral tradition"], answer: 0 },
+    { prompt: "The Baybayin Unicode block allows…", choices: ["Writing Baybayin digitally", "Translating into Spanish", "Removing Baybayin from use", "Turning Baybayin into numbers"], answer: 0 },
+    { prompt: "Baybayin keyboards are available in…", choices: ["Computers and smartphones", "Only old typewriters", "Calculators", "None"], answer: 0 },
+    { prompt: "The cultural revival of Baybayin is seen in…", choices: ["Education, art, and technology", "Farming and fishing", "Medicine only", "Sports tournaments"], answer: 0 },
+    { prompt: "A symbol of heritage often used in design and clothing is…", choices: ["Baybayin", "Latin alphabet", "Binary code", "Braille"], answer: 0 },
+    { prompt: "Baybayin activism shows that Baybayin is…", choices: ["A living script", "Dead language", "Only for tattoos", "European in origin"], answer: 0 },
+    { prompt: "Modern art with Baybayin includes…", choices: ["Murals and posters", "Only government records", "Ancient stone carvings only", "Foreign logos"], answer: 0 },
+    { prompt: "Baybayin’s digital presence makes it…", choices: ["Accessible worldwide", "Limited only to the Philippines", "Illegal in schools", "Used only for math"], answer: 0 },
+    { prompt: "The inclusion of Baybayin in Unicode means…", choices: ["It can be shared globally online", "It cannot be used in computers", "It was erased from history", "It is exclusive to Spanish texts"], answer: 0 },
+    { prompt: "Why does Baybayin matter in the modern world?", choices: ["It connects Filipinos to ancestral identity", "It replaces English completely", "It is only decorative", "It has no real purpose"], answer: 0 },
+  ];
 
   const [shuffledQuestions, setShuffledQuestions] = useState<typeof questions>([]);
   const [current, setCurrent] = useState(0);
@@ -47,18 +46,19 @@ export default function QuizPage10() {
     { question: string; correct: string; chosen: string }[]
   >([]);
 
-  //Shuffle once on mount
+  // Shuffle and pick only 10 questions
   useEffect(() => {
-    setShuffledQuestions(shuffleArray(questions));
+    const selected = shuffleArray(questions).slice(0, 10);
+    setShuffledQuestions(selected);
   }, []);
 
   const handleAnswer = (idx: number) => {
     const currentQ = shuffledQuestions[current];
     if (idx === currentQ.answer) {
-      setScore(score + 1);
+      setScore((prev) => prev + 1);
     } else {
-      setWrongAnswers([
-        ...wrongAnswers,
+      setWrongAnswers((prev) => [
+        ...prev,
         {
           question: currentQ.prompt,
           correct: currentQ.choices[currentQ.answer],
@@ -80,7 +80,7 @@ export default function QuizPage10() {
     setFinished(false);
     setShowInstructions(true);
     setWrongAnswers([]);
-    setShuffledQuestions(shuffleArray(questions)); // reshuffle on retry
+    setShuffledQuestions(shuffleArray(questions).slice(0, 10)); // reshuffle and pick new 10
   };
 
   if (!shuffledQuestions.length) return <p>Loading quiz...</p>;
@@ -98,8 +98,9 @@ export default function QuizPage10() {
         <div className={styles.instructionsBox}>
           <h2>📋 Instructions</h2>
           <p>
-            Answer each question about the Lesson you just viewed. Choose the correct
-            answer to earn a point. Your score will be shown at the end.
+            Select the correct answer for each question about the Lesson you just viewed.
+            There will be 10 questions displayed and is randomized each time you retry.
+            Good Luck!
           </p>
           <button className={styles.nextBtn} onClick={() => setShowInstructions(false)}>
             🚀 Start Quiz
@@ -139,7 +140,7 @@ export default function QuizPage10() {
                 Retry Quiz
               </button>
               <Link href="/learnbaybayin/lesson-baybayin/10" className={styles.backBtn}>
-                Next Lesson →
+                ← Back to Lesson
               </Link>
             </div>
           </div>

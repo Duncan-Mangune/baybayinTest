@@ -4,7 +4,6 @@ import Link from "next/link";
 import styles from "./learnbaybayin.module.css";
 
 export default function LearnBaybayinPage() {
-  // Custom lesson titles
   const lessons = [
     "Lesson 1: Discovering Baybayin",
     "Lesson 2: The Vowels – A, I/E, U/O",
@@ -40,7 +39,6 @@ export default function LearnBaybayinPage() {
 
   return (
     <section className={styles.container}>
-      {/* Title & Back Button*/}
       <div className={styles.headerRow}>
         <h1 className={styles.title}>Learn Baybayin</h1>
         <Link href="/" className={styles.backLink}>
@@ -50,7 +48,6 @@ export default function LearnBaybayinPage() {
 
       
 
-      {/* Title + Description + Tips + Goal */}
       <div className={styles.textBlock}>
 
 
@@ -99,7 +96,6 @@ export default function LearnBaybayinPage() {
           This helps with memory.
         </p>
 
-        {/* Lesson Buttons */}
         <div className={styles.lessonList}>
           {lessons.map((title, idx) => (
             <Link
@@ -112,7 +108,6 @@ export default function LearnBaybayinPage() {
           ))}
         </div>
 
-        {/* Tips */}
         <h2 className={styles.subtitle}>Tips for Learning</h2>
         <ul>
           <li>Repeat the characters and sounds as often as you can.</li>

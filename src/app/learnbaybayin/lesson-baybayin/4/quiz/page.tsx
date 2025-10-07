@@ -10,33 +10,32 @@ function shuffleArray<T>(array: T[]): T[] {
 
 export default function QuizPage3() {
   const questions = [
-  { prompt: "What does a kudlit above a character change the vowel to?", choices: ["A", "I/E", "U/O", "None"], answer: 1 },
-  { prompt: "ᜊ with a kudlit below sounds like…", choices: ["Ba", "Bi", "Bu", "Bo"], answer: 2 },
-  { prompt: "Kudlit marks are used to…", choices: ["Cancel vowels", "Change vowel sounds", "Add consonants", "Add numbers"], answer: 1 },
-  { prompt: "The default sound without kudlit is…", choices: ["I", "U", "A", "O"], answer: 2 },
-  { prompt: "Kudlit above =", choices: ["I/E", "A", "U/O", "Silent"], answer: 0 },
-  { prompt: "Kudlit below =", choices: ["A", "I/E", "U/O", "Double consonant"], answer: 2 },
-  { prompt: "ᜋ (ma) with kudlit above =", choices: ["Me", "Mo", "Mu", "Ma"], answer: 0 },
-  { prompt: "ᜋ with kudlit below =", choices: ["Ma", "Me", "Mu", "Mi"], answer: 2 },
-  { prompt: "What symbol changes consonants’ vowels in Baybayin?", choices: ["Virama", "Kudlit", "Accent", "Number"], answer: 1 },
-  { prompt: "ᜃ (ka) → with kudlit above =", choices: ["Ku", "Ko", "Ki", "Ka"], answer: 2 },
-  { prompt: "ᜃ with kudlit below =", choices: ["Ka", "Ki", "Ku", "Ko"], answer: 2 },
-  { prompt: "Kudlit can represent how many vowels?", choices: ["1", "2 (I/E and U/O)", "3", "4"], answer: 1 },
-  { prompt: "Which word is correct?", choices: ["ᜊ = ba", "ᜊ́ = bo", "ᜊ̀ = bi", "ᜊ = bu"], answer: 0 },
-  { prompt: "Kudlit is like a…", choices: ["Diacritic mark", "Number", "Code", "Letter"], answer: 0 },
-  { prompt: "Without kudlit, every consonant ends with…", choices: ["O", "I", "A", "U"], answer: 2 },
-  { prompt: "In Baybayin, kudlit changes the…", choices: ["Consonant", "Vowel", "Word meaning", "Sentence"], answer: 1 },
-  { prompt: "Which kudlit placement makes the sound “I” or “E”?", choices: ["Above", "Below", "Beside", "None"], answer: 0 },
-  { prompt: "Which kudlit placement makes the sound “U” or “O”?", choices: ["Above", "Below", "Side", "None"], answer: 1 },
-  { prompt: "The symbol ᜇ (da/ra) with a kudlit above is pronounced…", choices: ["Do", "Di", "Da", "Du"], answer: 1 },
-  { prompt: "The symbol ᜇ (da/ra) with a kudlit below is pronounced…", choices: ["De", "Do", "Di", "Da"], answer: 1 },
-  { prompt: "The Baybayin word ᜊᜓᜐ (busa = foam) shows that the kudlit…", choices: ["Adds a consonant", "Turns “ba” into “bu”", "Removes a vowel", "Doubles the sound"], answer: 1 },
-  { prompt: "In the word ᜇᜎᜒ (dali = quick), which letter has the kudlit?", choices: ["ᜇ", "ᜎ", "ᜊ", "ᜉ"], answer: 1 },
-  { prompt: "Which of the following is an example of kudlit above?", choices: ["ᜋᜒ", "ᜋᜓ", "ᜋ", "ᜇᜓ"], answer: 0 },
-  { prompt: "Which of the following is an example of kudlit below?", choices: ["ᜋᜒ", "ᜋᜓ", "ᜊ", "ᜎ"], answer: 1 },
-  { prompt: "Kudlit makes Baybayin an abugida because…", choices: ["Each consonant stands alone", "Vowels are written separately", "Consonant + vowel sounds are formed with diacritics", "It cancels consonants"], answer: 2 }
-];
-
+    { prompt: "What does a kudlit above a character change the vowel to?", choices: ["A", "I/E", "U/O", "None"], answer: 1 },
+    { prompt: "ᜊ with a kudlit below sounds like…", choices: ["Ba", "Bi", "Bu", "Bo"], answer: 2 },
+    { prompt: "Kudlit marks are used to…", choices: ["Cancel vowels", "Change vowel sounds", "Add consonants", "Add numbers"], answer: 1 },
+    { prompt: "The default sound without kudlit is…", choices: ["I", "U", "A", "O"], answer: 2 },
+    { prompt: "Kudlit above =", choices: ["I/E", "A", "U/O", "Silent"], answer: 0 },
+    { prompt: "Kudlit below =", choices: ["A", "I/E", "U/O", "Double consonant"], answer: 2 },
+    { prompt: "ᜋ (ma) with kudlit above =", choices: ["Me", "Mo", "Mu", "Ma"], answer: 0 },
+    { prompt: "ᜋ with kudlit below =", choices: ["Ma", "Me", "Mu", "Mi"], answer: 2 },
+    { prompt: "What symbol changes consonants’ vowels in Baybayin?", choices: ["Virama", "Kudlit", "Accent", "Number"], answer: 1 },
+    { prompt: "ᜃ (ka) → with kudlit above =", choices: ["Ku", "Ko", "Ki", "Ka"], answer: 2 },
+    { prompt: "ᜃ with kudlit below =", choices: ["Ka", "Ki", "Ku", "Ko"], answer: 2 },
+    { prompt: "Kudlit can represent how many vowels?", choices: ["1", "2 (I/E and U/O)", "3", "4"], answer: 1 },
+    { prompt: "Which word is correct?", choices: ["ᜊ = ba", "ᜊ́ = bo", "ᜊ̀ = bi", "ᜊ = bu"], answer: 0 },
+    { prompt: "Kudlit is like a…", choices: ["Diacritic mark", "Number", "Code", "Letter"], answer: 0 },
+    { prompt: "Without kudlit, every consonant ends with…", choices: ["O", "I", "A", "U"], answer: 2 },
+    { prompt: "In Baybayin, kudlit changes the…", choices: ["Consonant", "Vowel", "Word meaning", "Sentence"], answer: 1 },
+    { prompt: "Which kudlit placement makes the sound “I” or “E”?", choices: ["Above", "Below", "Beside", "None"], answer: 0 },
+    { prompt: "Which kudlit placement makes the sound “U” or “O”?", choices: ["Above", "Below", "Side", "None"], answer: 1 },
+    { prompt: "The symbol ᜇ (da/ra) with a kudlit above is pronounced…", choices: ["Do", "Di", "Da", "Du"], answer: 1 },
+    { prompt: "The symbol ᜇ (da/ra) with a kudlit below is pronounced…", choices: ["De", "Do", "Di", "Da"], answer: 1 },
+    { prompt: "The Baybayin word ᜊᜓᜐ (busa = foam) shows that the kudlit…", choices: ["Adds a consonant", "Turns “ba” into “bu”", "Removes a vowel", "Doubles the sound"], answer: 1 },
+    { prompt: "In the word ᜇᜎᜒ (dali = quick), which letter has the kudlit?", choices: ["ᜇ", "ᜎ", "ᜊ", "ᜉ"], answer: 1 },
+    { prompt: "Which of the following is an example of kudlit above?", choices: ["ᜋᜒ", "ᜋᜓ", "ᜋ", "ᜇᜓ"], answer: 0 },
+    { prompt: "Which of the following is an example of kudlit below?", choices: ["ᜋᜒ", "ᜋᜓ", "ᜊ", "ᜎ"], answer: 1 },
+    { prompt: "Kudlit makes Baybayin an abugida because…", choices: ["Each consonant stands alone", "Vowels are written separately", "Consonant + vowel sounds are formed with diacritics", "It cancels consonants"], answer: 2 },
+  ];
 
   const [shuffledQuestions, setShuffledQuestions] = useState<typeof questions>([]);
   const [current, setCurrent] = useState(0);
@@ -47,9 +46,14 @@ export default function QuizPage3() {
     { question: string; correct: string; chosen: string }[]
   >([]);
 
-  //Shuffle once on mount
+  // Shuffle and pick 10 random questions
+  const generateQuizSet = () => {
+    const randomized = shuffleArray(questions).slice(0, 10);
+    setShuffledQuestions(randomized);
+  };
+
   useEffect(() => {
-    setShuffledQuestions(shuffleArray(questions));
+    generateQuizSet();
   }, []);
 
   const handleAnswer = (idx: number) => {
@@ -80,7 +84,7 @@ export default function QuizPage3() {
     setFinished(false);
     setShowInstructions(true);
     setWrongAnswers([]);
-    setShuffledQuestions(shuffleArray(questions)); // reshuffle on retry
+    generateQuizSet(); // pick a new random 10 on retry
   };
 
   if (!shuffledQuestions.length) return <p>Loading quiz...</p>;
@@ -98,8 +102,9 @@ export default function QuizPage3() {
         <div className={styles.instructionsBox}>
           <h2>📋 Instructions</h2>
           <p>
-            Answer each question about the Lesson you just viewed. Choose the correct
-            answer to earn a point. Your score will be shown at the end.
+            Select the correct answer for each question about the Lesson you just viewed.
+            There will be 10 questions displayed and is randomized each time you retry.
+            Good Luck!
           </p>
           <button className={styles.nextBtn} onClick={() => setShowInstructions(false)}>
             🚀 Start Quiz

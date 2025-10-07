@@ -10,34 +10,32 @@ function shuffleArray<T>(array: T[]): T[] {
 
 export default function QuizPage6() {
   const questions = [
-  { prompt: "If your name is Marco, how would you syllabify it for Baybayin?", choices: ["Mar-co", "M-ar-co", "Ma-ro-co", "Mar-ko"], answer: 0 },
-  { prompt: "Which Baybayin character represents RA?", choices: ["ᜇ (da/ra)", "ᜎ", "ᜐ", "ᜊ"], answer: 0 },
-  { prompt: "The name “Ana” in Baybayin is…", choices: ["ᜀᜈ", "ᜀᜈᜀ", "ᜋᜈ", "ᜇᜀ"], answer: 1 },
-  { prompt: "“Juan” can be written as…", choices: ["ᜑᜓᜀᜈ", "ᜇᜓᜀᜈ", "ᜋᜀᜈ", "ᜊᜓᜀ"], answer: 0 },
-  { prompt: "The name “Liza” is broken into syllables as…", choices: ["Li-za", "Liz-a", "L-i-za", "Li-zaa"], answer: 0 },
-  { prompt: "Which symbol represents MA?", choices: ["ᜋ", "ᜎ", "ᜐ", "ᜊ"], answer: 0 },
-  { prompt: "The name “Rosa” is written as…", choices: ["ᜇᜓᜐ", "ᜇᜓᜐᜀ", "ᜇᜊᜐ", "ᜎᜓᜐ"], answer: 1 },
-  { prompt: "The name “Pedro” → syllables?", choices: ["Pe-d-ro", "P-e-d-ro", "Ped-ro", "Pe-dar-o"], answer: 0 },
-  { prompt: "Which Baybayin letter can be used for Ra?", choices: ["ᜇ", "ᜋ", "ᜎ", "ᜐ"], answer: 0 },
-  { prompt: "The name “Maria” =", choices: ["ᜋᜇᜒᜀ", "ᜋᜇᜀ", "ᜋᜐᜀ", "ᜊᜇᜀ"], answer: 0 },
-  { prompt: "Which part of Baybayin makes name writing unique?", choices: ["Letter by letter", "Syllable by syllable", "Sound by sound", "Silent writing"], answer: 1 },
-  { prompt: "“Jose” in Baybayin =", choices: ["ᜑᜓᜐᜒ", "ᜑᜓᜐ", "ᜑᜐ", "ᜑᜀᜐ"], answer: 0 },
-  { prompt: "Which of these is the correct spelling?", choices: ["Juan → ᜑᜓᜀᜈ", "Juan → ᜋᜓᜀ", "Juan → ᜇᜓᜀ", "Juan → ᜎᜓᜀ"], answer: 0 },
-  { prompt: "True or False: You must always adjust modern names to syllables.", choices: ["True", "False"], answer: 0 },
-  { prompt: "The name “Luna” →", choices: ["ᜎᜓᜈᜀ", "ᜎᜓᜈ", "ᜎᜋ", "ᜎᜊ"], answer: 0 },
-  { prompt: "The word bata in Baybayin is…", choices: ["ᜊᜆ", "ᜋᜆ", "ᜄᜆ", "ᜐᜆ"], answer: 0 },
-  { prompt: "The word lupa starts with…", choices: ["ᜎ", "ᜋ", "ᜊ", "ᜐ"], answer: 0 },
-  { prompt: "The word ganda is written as…", choices: ["ᜄᜈᜇ", "ᜊᜋ", "ᜊᜄ", "ᜆᜎ"], answer: 0 },
-  { prompt: "In Baybayin, words are formed by…", choices: ["Adding letters", "Combining syllables", "Using numbers", "Ignoring vowels"], answer: 1 },
-  { prompt: "To write ma-ta, use…", choices: ["ᜋᜆ", "ᜊᜆ", "ᜃᜆ", "ᜐᜆ"], answer: 0 },
-  { prompt: "Which word is correctly written?", choices: ["ᜎᜓᜉ = lupa", "ᜎᜉ = lapi", "ᜊᜈ = bana", "ᜄᜆ = gati"], answer: 0 },
-  { prompt: "“Ba-ta” is composed of…", choices: ["Two syllables", "Three syllables", "Four syllables", "One syllable"], answer: 0 },
-  { prompt: "To write “sa-ma”, use…", choices: ["ᜐᜋ", "ᜊᜆ", "ᜋᜎ", "ᜄᜇ"], answer: 0 },
-  { prompt: "Which symbol combination makes “du”?", choices: ["ᜇ with kudlit below", "ᜆ with kudlit above", "ᜎ with kudlit above", "ᜋ with kudlit above"], answer: 0 },
-  { prompt: "“LA” is represented by…", choices: ["ᜎ", "ᜋ", "ᜃ", "ᜊ"], answer: 0 }
-];
-
-
+    { prompt: "If your name is Marco, how would you syllabify it for Baybayin?", choices: ["Mar-co", "M-ar-co", "Ma-ro-co", "Mar-ko"], answer: 0 },
+    { prompt: "Which Baybayin character represents RA?", choices: ["ᜇ (da/ra)", "ᜎ", "ᜐ", "ᜊ"], answer: 0 },
+    { prompt: "The name “Ana” in Baybayin is…", choices: ["ᜀᜈ", "ᜀᜈᜀ", "ᜋᜈ", "ᜇᜀ"], answer: 1 },
+    { prompt: "“Juan” can be written as…", choices: ["ᜑᜓᜀᜈ", "ᜇᜓᜀᜈ", "ᜋᜀᜈ", "ᜊᜓᜀ"], answer: 0 },
+    { prompt: "The name “Liza” is broken into syllables as…", choices: ["Li-za", "Liz-a", "L-i-za", "Li-zaa"], answer: 0 },
+    { prompt: "Which symbol represents MA?", choices: ["ᜋ", "ᜎ", "ᜐ", "ᜊ"], answer: 0 },
+    { prompt: "The name “Rosa” is written as…", choices: ["ᜇᜓᜐ", "ᜇᜓᜐᜀ", "ᜇᜊᜐ", "ᜎᜓᜐ"], answer: 1 },
+    { prompt: "The name “Pedro” → syllables?", choices: ["Pe-d-ro", "P-e-d-ro", "Ped-ro", "Pe-dar-o"], answer: 0 },
+    { prompt: "Which Baybayin letter can be used for Ra?", choices: ["ᜇ", "ᜋ", "ᜎ", "ᜐ"], answer: 0 },
+    { prompt: "The name “Maria” =", choices: ["ᜋᜇᜒᜀ", "ᜋᜇᜀ", "ᜋᜐᜀ", "ᜊᜇᜀ"], answer: 0 },
+    { prompt: "Which part of Baybayin makes name writing unique?", choices: ["Letter by letter", "Syllable by syllable", "Sound by sound", "Silent writing"], answer: 1 },
+    { prompt: "“Jose” in Baybayin =", choices: ["ᜑᜓᜐᜒ", "ᜑᜓᜐ", "ᜑᜐ", "ᜑᜀᜐ"], answer: 0 },
+    { prompt: "Which of these is the correct spelling?", choices: ["Juan → ᜑᜓᜀᜈ", "Juan → ᜋᜓᜀ", "Juan → ᜇᜓᜀ", "Juan → ᜎᜓᜀ"], answer: 0 },
+    { prompt: "True or False: You must always adjust modern names to syllables.", choices: ["True", "False"], answer: 0 },
+    { prompt: "The name “Luna” →", choices: ["ᜎᜓᜈᜀ", "ᜎᜓᜈ", "ᜎᜋ", "ᜎᜊ"], answer: 0 },
+    { prompt: "The word bata in Baybayin is…", choices: ["ᜊᜆ", "ᜋᜆ", "ᜄᜆ", "ᜐᜆ"], answer: 0 },
+    { prompt: "The word lupa starts with…", choices: ["ᜎ", "ᜋ", "ᜊ", "ᜐ"], answer: 0 },
+    { prompt: "The word ganda is written as…", choices: ["ᜄᜈᜇ", "ᜊᜋ", "ᜊᜄ", "ᜆᜎ"], answer: 0 },
+    { prompt: "In Baybayin, words are formed by…", choices: ["Adding letters", "Combining syllables", "Using numbers", "Ignoring vowels"], answer: 1 },
+    { prompt: "To write ma-ta, use…", choices: ["ᜋᜆ", "ᜊᜆ", "ᜃᜆ", "ᜐᜆ"], answer: 0 },
+    { prompt: "Which word is correctly written?", choices: ["ᜎᜓᜉ = lupa", "ᜎᜉ = lapi", "ᜊᜈ = bana", "ᜄᜆ = gati"], answer: 0 },
+    { prompt: "“Ba-ta” is composed of…", choices: ["Two syllables", "Three syllables", "Four syllables", "One syllable"], answer: 0 },
+    { prompt: "To write “sa-ma”, use…", choices: ["ᜐᜋ", "ᜊᜆ", "ᜋᜎ", "ᜄᜇ"], answer: 0 },
+    { prompt: "Which symbol combination makes “du”?", choices: ["ᜇ with kudlit below", "ᜆ with kudlit above", "ᜎ with kudlit above", "ᜋ with kudlit above"], answer: 0 },
+    { prompt: "“LA” is represented by…", choices: ["ᜎ", "ᜋ", "ᜃ", "ᜊ"], answer: 0 },
+  ];
 
   const [shuffledQuestions, setShuffledQuestions] = useState<typeof questions>([]);
   const [current, setCurrent] = useState(0);
@@ -48,9 +46,14 @@ export default function QuizPage6() {
     { question: string; correct: string; chosen: string }[]
   >([]);
 
-  //Shuffle once on mount
+  // Shuffle and pick only 10 questions
+  const prepareQuestions = () => {
+    const randomTen = shuffleArray(questions).slice(0, 10);
+    setShuffledQuestions(randomTen);
+  };
+
   useEffect(() => {
-    setShuffledQuestions(shuffleArray(questions));
+    prepareQuestions();
   }, []);
 
   const handleAnswer = (idx: number) => {
@@ -81,7 +84,7 @@ export default function QuizPage6() {
     setFinished(false);
     setShowInstructions(true);
     setWrongAnswers([]);
-    setShuffledQuestions(shuffleArray(questions)); // reshuffle on retry
+    prepareQuestions(); // reshuffle and select new 10
   };
 
   if (!shuffledQuestions.length) return <p>Loading quiz...</p>;
@@ -99,8 +102,9 @@ export default function QuizPage6() {
         <div className={styles.instructionsBox}>
           <h2>📋 Instructions</h2>
           <p>
-            Answer each question about the Lesson you just viewed. Choose the correct
-            answer to earn a point. Your score will be shown at the end.
+            Select the correct answer for each question about the Lesson you just viewed. 
+            There will be 10 questions displayed and is randomized each time you retry. 
+            Good Luck!
           </p>
           <button className={styles.nextBtn} onClick={() => setShowInstructions(false)}>
             🚀 Start Quiz

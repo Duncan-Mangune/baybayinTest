@@ -8,35 +8,39 @@ function shuffleArray<T>(array: T[]): T[] {
   return [...array].sort(() => Math.random() - 0.5);
 }
 
+// ✂️ Pick only 10 random questions
+function getRandomQuestions<T>(array: T[], count: number): T[] {
+  return shuffleArray(array).slice(0, count);
+}
+
 export default function QuizPage8() {
   const questions = [
-  { prompt: "“Ako” in Baybayin is…", choices: ["ᜀᜃᜓ", "ᜀᜋᜓ", "ᜀᜐᜓ", "ᜀᜇᜓ"], answer: 0 },
-  { prompt: "The sentence “Ako ay bata” is…", choices: ["ᜀᜃᜓ ᜀᜌ᜔ ᜊᜆ", "ᜀᜃᜓ ᜊᜇ᜔ ᜋᜆ", "ᜀᜊᜓ ᜀᜎ᜔ ᜋᜆ", "ᜀᜃᜓ ᜀᜎ᜔ ᜊᜆ"], answer: 0 },
-  { prompt: "“Ay” is written as…", choices: ["ᜀᜌ᜔", "ᜀᜎ᜔", "ᜀᜊ", "ᜀᜐ"], answer: 0 },
-  { prompt: "“Ako” means…", choices: ["You", "I", "We", "They"], answer: 1 },
-  { prompt: "“Bata” means…", choices: ["Child", "Adult", "Friend", "Parent"], answer: 0 },
-  { prompt: "True or False: Sentences in Baybayin follow syllable order.", choices: ["True", "False"], answer: 0 },
-  { prompt: "Which word means “I am a child”?", choices: ["Ako ay bata", "Lupa ay ako", "Bata ay ganda", "Ako ay ganda"], answer: 0 },
-  { prompt: "Which is correct?", choices: ["ᜀᜌ᜔ = ay", "ᜀᜌ = aya", "ᜀᜌᜁ = ayi", "ᜀᜌᜓ = ayo"], answer: 0 },
-  { prompt: "“Siya ay maganda” =", choices: ["ᜐᜒᜌ ᜀᜌ᜔ ᜋᜄᜈᜇ", "ᜐᜒᜌᜀᜎ ᜋᜆ", "ᜀᜌ᜔ᜌᜐ", "ᜀᜌ ᜀᜎ"], answer: 0 },
-  { prompt: "Which word is the subject?", choices: ["Ako", "Bata", "Ay", "None"], answer: 0 },
-  { prompt: "Which Baybayin word is “ay”?", choices: ["ᜀᜌ᜔", "ᜐᜓ", "ᜀᜎ", "ᜀᜇ"], answer: 0 },
-  { prompt: "Sentences in Baybayin use…", choices: ["Latin punctuation", "Word spacing", "Numbers", "Colors"], answer: 1 },
-  { prompt: "“Maganda” in Baybayin is…", choices: ["ᜋᜄᜈᜇ", "ᜋᜇᜆ", "ᜋᜎ", "ᜋᜊ"], answer: 0 },
-  { prompt: "“Ako ay maganda” =", choices: ["ᜀᜃᜓ ᜀᜌ᜔ ᜋᜄᜈᜇ", "ᜀᜆᜓ ᜀᜌ᜔", "ᜀᜌ᜔ ᜋᜆ", "ᜀᜃᜓ ᜇᜌ᜔"], answer: 0 },
-  { prompt: "Translation of “Ako ay bata” is…", choices: ["I am a child", "You are a child", "He is a child", "We are children"], answer: 0 },
-  { prompt: "What does “guro” mean in English?", choices: ["Child", "Teacher", "Mountain", "Parent"], answer: 1 },
-  { prompt: "“Guro” in Baybayin is written as…", choices: ["ᜄᜓᜇᜓ", "ᜄᜆ", "ᜄᜋ", "ᜄᜓᜆ"], answer: 0 },
-  { prompt: "The word bundok (mountain) in Baybayin is…", choices: ["ᜊᜓᜈ᜔ᜇᜓᜃ᜔", "ᜊᜓᜇᜓᜈ᜔", "ᜊᜆᜓᜃ᜔", "ᜊᜋ᜔ᜇᜓ"], answer: 0 },
-  { prompt: "What is the function of Pamudpod (᜔) in Baybayin sentences?", choices: ["To add vowels", "To cancel vowels", "To repeat sounds", "To change word meaning"], answer: 1 },
-  { prompt: "In the sentence “Ako ay guro”, which Baybayin symbols represent guro?", choices: ["ᜄᜓᜇᜓ", "ᜄᜆ", "ᜋᜆ", "ᜊᜓᜆ"], answer: 0 },
-  { prompt: "True or False: Word order in Baybayin sentences follows Filipino grammar.", choices: ["True", "False"], answer: 0 },
-  { prompt: "Which Baybayin word stands for “ay” in “Ako ay guro”?", choices: ["ᜀᜌ᜔", "ᜀᜎ", "ᜀᜊ", "ᜀᜐ"], answer: 0 },
-  { prompt: "What is the correct translation of “Ako ay maganda”?", choices: ["I am beautiful", "You are beautiful", "He is beautiful", "We are beautiful"], answer: 0 },
-  { prompt: "How are sentences separated in Baybayin?", choices: ["By commas", "By spacing", "By kudlit marks", "By dots"], answer: 1 },
-  { prompt: "Which sentence means “I am a teacher”?", choices: ["ᜀᜃᜓ ᜀᜌ᜔ ᜄᜓᜇᜓ", "ᜀᜌ᜔ ᜀᜃᜓ ᜋᜆ", "ᜀᜆ ᜀᜌ᜔ ᜊᜆ", "ᜀᜃᜓ ᜊᜆ"], answer: 0 }
-];
-
+    { prompt: "“Ako” in Baybayin is…", choices: ["ᜀᜃᜓ", "ᜀᜋᜓ", "ᜀᜐᜓ", "ᜀᜇᜓ"], answer: 0 },
+    { prompt: "The sentence “Ako ay bata” is…", choices: ["ᜀᜃᜓ ᜀᜌ᜔ ᜊᜆ", "ᜀᜃᜓ ᜊᜇ᜔ ᜋᜆ", "ᜀᜊᜓ ᜀᜎ᜔ ᜋᜆ", "ᜀᜃᜓ ᜀᜎ᜔ ᜊᜆ"], answer: 0 },
+    { prompt: "“Ay” is written as…", choices: ["ᜀᜌ᜔", "ᜀᜎ᜔", "ᜀᜊ", "ᜀᜐ"], answer: 0 },
+    { prompt: "“Ako” means…", choices: ["You", "I", "We", "They"], answer: 1 },
+    { prompt: "“Bata” means…", choices: ["Child", "Adult", "Friend", "Parent"], answer: 0 },
+    { prompt: "True or False: Sentences in Baybayin follow syllable order.", choices: ["True", "False"], answer: 0 },
+    { prompt: "Which word means “I am a child”?", choices: ["Ako ay bata", "Lupa ay ako", "Bata ay ganda", "Ako ay ganda"], answer: 0 },
+    { prompt: "Which is correct?", choices: ["ᜀᜌ᜔ = ay", "ᜀᜌ = aya", "ᜀᜌᜁ = ayi", "ᜀᜌᜓ = ayo"], answer: 0 },
+    { prompt: "“Siya ay maganda” =", choices: ["ᜐᜒᜌ ᜀᜌ᜔ ᜋᜄᜈᜇ", "ᜐᜒᜌᜀᜎ ᜋᜆ", "ᜀᜌ᜔ᜌᜐ", "ᜀᜌ ᜀᜎ"], answer: 0 },
+    { prompt: "Which word is the subject?", choices: ["Ako", "Bata", "Ay", "None"], answer: 0 },
+    { prompt: "Which Baybayin word is “ay”?", choices: ["ᜀᜌ᜔", "ᜐᜓ", "ᜀᜎ", "ᜀᜇ"], answer: 0 },
+    { prompt: "Sentences in Baybayin use…", choices: ["Latin punctuation", "Word spacing", "Numbers", "Colors"], answer: 1 },
+    { prompt: "“Maganda” in Baybayin is…", choices: ["ᜋᜄᜈᜇ", "ᜋᜇᜆ", "ᜋᜎ", "ᜋᜊ"], answer: 0 },
+    { prompt: "“Ako ay maganda” =", choices: ["ᜀᜃᜓ ᜀᜌ᜔ ᜋᜄᜈᜇ", "ᜀᜆᜓ ᜀᜌ᜔", "ᜀᜌ᜔ ᜋᜆ", "ᜀᜃᜓ ᜇᜌ᜔"], answer: 0 },
+    { prompt: "Translation of “Ako ay bata” is…", choices: ["I am a child", "You are a child", "He is a child", "We are children"], answer: 0 },
+    { prompt: "What does “guro” mean in English?", choices: ["Child", "Teacher", "Mountain", "Parent"], answer: 1 },
+    { prompt: "“Guro” in Baybayin is written as…", choices: ["ᜄᜓᜇᜓ", "ᜄᜆ", "ᜄᜋ", "ᜄᜓᜆ"], answer: 0 },
+    { prompt: "The word bundok (mountain) in Baybayin is…", choices: ["ᜊᜓᜈ᜔ᜇᜓᜃ᜔", "ᜊᜓᜇᜓᜈ᜔", "ᜊᜆᜓᜃ᜔", "ᜊᜋ᜔ᜇᜓ"], answer: 0 },
+    { prompt: "What is the function of Pamudpod (᜔) in Baybayin sentences?", choices: ["To add vowels", "To cancel vowels", "To repeat sounds", "To change word meaning"], answer: 1 },
+    { prompt: "In the sentence “Ako ay guro”, which Baybayin symbols represent guro?", choices: ["ᜄᜓᜇᜓ", "ᜄᜆ", "ᜋᜆ", "ᜊᜓᜆ"], answer: 0 },
+    { prompt: "True or False: Word order in Baybayin sentences follows Filipino grammar.", choices: ["True", "False"], answer: 0 },
+    { prompt: "Which Baybayin word stands for “ay” in “Ako ay guro”?", choices: ["ᜀᜌ᜔", "ᜀᜎ", "ᜀᜊ", "ᜀᜐ"], answer: 0 },
+    { prompt: "What is the correct translation of “Ako ay maganda”?", choices: ["I am beautiful", "You are beautiful", "He is beautiful", "We are beautiful"], answer: 0 },
+    { prompt: "How are sentences separated in Baybayin?", choices: ["By commas", "By spacing", "By kudlit marks", "By dots"], answer: 1 },
+    { prompt: "Which sentence means “I am a teacher”?", choices: ["ᜀᜃᜓ ᜀᜌ᜔ ᜄᜓᜇᜓ", "ᜀᜌ᜔ ᜀᜃᜓ ᜋᜆ", "ᜀᜆ ᜀᜌ᜔ ᜊᜆ", "ᜀᜃᜓ ᜊᜆ"], answer: 0 }
+  ];
 
   const [shuffledQuestions, setShuffledQuestions] = useState<typeof questions>([]);
   const [current, setCurrent] = useState(0);
@@ -47,9 +51,9 @@ export default function QuizPage8() {
     { question: string; correct: string; chosen: string }[]
   >([]);
 
-  //Shuffle once on mount
+  // Shuffle and pick 10 on mount
   useEffect(() => {
-    setShuffledQuestions(shuffleArray(questions));
+    setShuffledQuestions(getRandomQuestions(questions, 10));
   }, []);
 
   const handleAnswer = (idx: number) => {
@@ -80,7 +84,7 @@ export default function QuizPage8() {
     setFinished(false);
     setShowInstructions(true);
     setWrongAnswers([]);
-    setShuffledQuestions(shuffleArray(questions)); // reshuffle on retry
+    setShuffledQuestions(getRandomQuestions(questions, 10)); // reshuffle and pick new 10
   };
 
   if (!shuffledQuestions.length) return <p>Loading quiz...</p>;
@@ -98,8 +102,9 @@ export default function QuizPage8() {
         <div className={styles.instructionsBox}>
           <h2>📋 Instructions</h2>
           <p>
-            Answer each question about the Lesson you just viewed. Choose the correct
-            answer to earn a point. Your score will be shown at the end.
+            Select the correct answer for each question about the Lesson you just viewed.
+            There will be 10 questions displayed and is randomized each time you retry.
+            Good Luck!
           </p>
           <button className={styles.nextBtn} onClick={() => setShowInstructions(false)}>
             🚀 Start Quiz
