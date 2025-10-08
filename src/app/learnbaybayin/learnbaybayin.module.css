@@ -4,9 +4,10 @@
   padding: 48px;
 
   font-size: 21px;
-  text-shadow: 4px 4px 8px rgba(91, 91, 91, 0.5);
-  background-color: #bebca8b4;
-  color: #000000;
+  text-shadow: 4px 4px 8px rgba(129, 128, 126, 0.5);
+  background-color: #5b4733d0;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(166, 128, 67, 0.889);
 
@@ -57,11 +58,10 @@
 }
 
 .lessonBtn {
-  background-color: #bebdbaaf;
-  text-shadow: 2px 6px 4px rgba(33, 33, 33, 0.762);
-  -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.723);
-  color: rgb(0, 0, 0);
-  border: 2.5px solid #000000;
+  background-color: #b29264;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+  color: rgb(255, 255, 255);
+  border: 5px solid #e4b46c;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.867);
 
   font-size: 26px;
@@ -78,6 +78,7 @@
 
 .lessonBtn:hover {
   background-color: #c0aa82da;
+  border-color: #e2a030;
   transform: scale(1.15);
   transition: transform 0.3s ease-in-out;
 }

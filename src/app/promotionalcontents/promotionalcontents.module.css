@@ -2,7 +2,7 @@
   max-width: 1100px;
   margin: 40px auto;
   padding: 48px;
-  font-family: "JejuHallasan", sans-serif;
+  font-family: "Merriweather Sans", "Arial", sans-serif;
 
   background-color: #514332ed;
   color: #ffffff;
@@ -102,27 +102,33 @@
 
 .backLink {
   text-decoration: none;
-  background-color: #b38653;
-  color: #ffffff; 
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 1rem;
+  background-color: #b29264;
+  color: #fff8dc;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.05rem;
   display: inline-block;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: 5px solid #e4b46c;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease;
+  
+  /* ✨ Added text border/outline */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .backLink:hover {
-  background-color: rgb(234, 153, 61); 
+  background-color: #d4b98a;
+  border-color: #ffe6ba;
   transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.35);
 }
 
 .backLink:active {
-  background-color: #2a2a2a;
-  transform: translateY(0); 
+  transform: translateY(0);
+  background-color: #a17a4e;
+  border-color: #b29264;
 }
-
-
 
 .headerRow {
   display: flex;
@@ -252,11 +258,13 @@
   text-decoration: none;
   box-shadow: 0 6px 12px rgba(0,0,0,0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 5px solid #e4b46c;
 }
 
 .bigButton:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 18px rgba(0,0,0,0.4);
+  border-color: #ffe6ba;
 }
 
 .buttonImage {
@@ -292,4 +300,24 @@
   margin-top: 8px;
   font-size: 1rem;
   color: #fff5d1;
+}
+
+
+/* "Click" text overlay effect */
+.clickHint {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff8dc;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  pointer-events: none; /* so it doesn’t block clicks */
+}
+
+.bigButton:hover .clickHint {
+  opacity: 1;
 }

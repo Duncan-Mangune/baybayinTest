@@ -36,10 +36,10 @@ export default function PromotionalContents() {
         </a>
       </div>
 
-      {/* 🌺 Campaign 2 - Learn Baybayin */}
+      {/*  Campaign 2 - Learn Baybayin */}
      <div className={styles.campaignCard}>
         <h2 className={styles.campaignTitle}>
-          🌿 Balik Baybayin: Rekindling Our Ancient Script
+           Balik Baybayin: Rekindling Our Ancient Script
         </h2>
 
         <p className={styles.campaignText}>

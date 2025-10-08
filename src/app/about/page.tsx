@@ -1,11 +1,17 @@
 import styles from "./about.module.css";
+import Link from "next/link";
 
 export default function About() {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>About</h1>
-
-      {/* Logo section */}
+      <div className={styles.container}>
+    <div className={styles.headerRow}>
+          <h1 className={styles.title}>About</h1>
+          <Link href="/" className={styles.backLink}>
+            ← Home
+          </Link>
+       </div>
+        {/* Logo section */}
+      
       <div className={styles.logoContainer}>
         <img
           src="/images/Title.png" // replace with your actual logo path

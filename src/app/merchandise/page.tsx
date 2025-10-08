@@ -7,13 +7,13 @@ export default function PromotionalContents() {
       title: "Baybayin T-Shirt",
       description: "Wear your heritage with stylish Baybayin designs.",
       imageUrl: "/images/Shirt.jpg",
-      link: "https://monsterry.com/au/products/philippines-1521-alibata-baybayin-script-proud-filipino-long-t-shirt-pDuRU4ZimZCH",
+      link: "https://shopee.ph/Rated-Cinco-Classics-Inhinyero-Baybayin-Shirt-Minimalist-Casual-Unisex-Tshirt-i.572848318.23904781854?sp_atk=fe75b6d3-c4e0-4625-933a-a7aa2f308659&xptdk=fe75b6d3-c4e0-4625-933a-a7aa2f308659",
     },
     {
       title: "Baybayin Long Sleeve",
       description: "Unique Baybayin-inspired logos for your brand.",
       imageUrl: "/images/LongSleeve.jpg",
-      link: "https://shop.coolpinoy.com/products/filipino-in-baybayin-script-mens-jersey-long-sleeve-t-shirt",
+      link: "https://shopee.ph/Motorcycle-Jersey-shirt-rider-LongSleeve-cycling-for-men-New-style-Bike-Rider-sports-rider-i.678063568.23239051675?sp_atk=382916bc-a79a-401d-8464-b63b9d5bf4bd&xptdk=382916bc-a79a-401d-8464-b63b9d5bf4bd",
     },
     {
       title: "Baybayin Tattoo",

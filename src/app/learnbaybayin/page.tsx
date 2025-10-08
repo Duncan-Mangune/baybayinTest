@@ -49,8 +49,6 @@ export default function LearnBaybayinPage() {
       
 
       <div className={styles.textBlock}>
-
-
         <h2 className={styles.title}>The Baybayin Chart</h2>
         <div className={styles.chartGrid}>
           {baybayinChars.map((char, idx) => (
