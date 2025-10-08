@@ -299,3 +299,125 @@
   font-size: 1rem;
   color: #fff5d1;
 }
+
+/* === Modal Popup (Themed & Polished) === */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal {
+  background-color: #514332; /* same as main container */
+  color: #fff8dc;
+  border-radius: 18px;
+  padding: 40px 50px; /* more padding */
+  width: 90%;
+  max-width: 700px; /* wider modal */
+  text-align: center;
+  position: relative;
+  animation: popIn 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  border: 3px solid #a68043;
+}
+
+/* Image styling inside modal */
+.modalImage {
+  width: 70%; /* narrower image */
+  max-width: 300px;
+  border-radius: 12px;
+  margin: 0 auto 24px auto;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.modal h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffd27f;
+  margin: 12px 0 16px 0;
+}
+
+.modalDescription {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #fff5d1;
+  margin-bottom: 28px;
+  padding: 0 12px;
+}
+
+/* Visit Site Button — same style as outside buttons */
+.visitBtn {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #a68043;
+  color: #fff8dc;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.25s ease;
+  border: 2px solid #e4b46c;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.visitBtn:hover {
+  background-color: #c89e62;
+  border-color: #ffd27f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.35);
+}
+
+.visitBtn:active {
+  transform: translateY(0);
+  background-color: #a17a4e;
+  border-color: #b29264;
+}
+
+/* ✕ Close Button — boxed & clearly visible */
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  background-color: #a68043;
+  color: #fff8dc;
+  border: 2px solid #e4b46c;
+  border-radius: 8px; /* boxed instead of circle */
+  width: 46px;
+  height: 46px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+  transition: all 0.25s ease;
+}
+
+.closeBtn:hover {
+  background-color: #c89e62;
+  border-color: #ffd27f;
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.closeBtn:active {
+  background-color: #a17a4e;
+  border-color: #b29264;
+  transform: scale(1);
+}
+
+/* Smooth Popup Animation */
+@keyframes popIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
