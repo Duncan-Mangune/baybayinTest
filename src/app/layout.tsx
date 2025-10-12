@@ -33,6 +33,7 @@ export default function RootLayout({
             <Link href="/promotionalcontents">Promotional Contents</Link>
             <Link href="/government">Government Efforts</Link>
             <Link href="/about">About</Link>
+            <Link href="/contact">Contact Us</Link>
           </div>
         </nav>
 
