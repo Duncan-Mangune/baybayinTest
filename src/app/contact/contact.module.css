@@ -143,75 +143,68 @@
 
 /* ---------------- Popup styling ---------------- */
 
-/* ✅ Center popup (more noticeable) */
+/* ✅ Center popup overlay properly */
 .popup {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(6px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 9999;
   animation: fadeIn 0.3s ease forwards;
 }
 
-
-/* Popup box */
+/* ✅ Perfectly centered popup box */
 .popupContent {
+  position: relative;
   background: #fff8dc;
   color: #2e2e2e;
-  padding: 40px 60px;
+  padding: 40px 50px;
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-  max-width: 600px;
   width: 90%;
-  min-height: 360px;
+  max-width: 500px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  animation: slideUp 0.4s ease forwards;
-  transform: translateY(0);
+  animation: slideUp 0.35s ease forwards;
 }
 
-/* Popup logo */
+/* ✅ Adjust logo so it doesn’t push content oddly */
 .popupLogo {
-  width: 90%;
-  max-width: 420px;
+  width: 300px;
+  max-width: 80%;
   height: auto;
-  margin-bottom: 24px;
-  animation: popIn 0.5s ease forwards;
+  margin-bottom: 20px;
 }
 
-/* Popup text */
+/* ✅ Adjust spacing and font sizes for cleaner layout */
 .popupContent h2 {
-  font-size: 1.75rem;
+  font-size: 1.8rem;
   color: #3b2b16;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-weight: 700;
 }
 
 .popupContent p {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: #4a3a24;
   line-height: 1.5;
+  margin-bottom: 24px;
 }
 
-/* Close button */
 .closeBtn {
-  margin-top: 24px;
-  padding: 12px 28px;
+  padding: 12px 24px;
   background: #b29264;
   border: 2px solid #e4b46c;
   color: #fff8dc;
   border-radius: 10px;
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: all 0.25s ease;
 }
@@ -221,17 +214,18 @@
   transform: translateY(-2px);
 }
 
-/* Animations */
+/* ✅ Center animation fix */
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 
 @keyframes popIn {
   from {
