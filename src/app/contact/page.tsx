@@ -12,24 +12,27 @@ export default function Contact() {
   const [messageCount, setMessageCount] = useState(0);
   const [errors, setErrors] = useState<{ name?: string; email?: string; message?: string }>({});
   const [warning, setWarning] = useState("");
+  const [activeField, setActiveField] = useState<string | null>(null);
 
   const formRef = useRef<HTMLFormElement>(null);
 
-  const showWarning = (msg: string) => {
+  const showWarning = (msg: string, field: string) => {
     setWarning(msg);
+    setActiveField(field);
     setTimeout(() => setWarning(""), 2500);
   };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     setCount: React.Dispatch<React.SetStateAction<number>>,
-    max: number
+    max: number,
+    field: string
   ) => {
     const length = e.target.value.length;
     setCount(length);
     if (length >= max) {
       e.target.classList.add(styles.maxReached);
-      showWarning("You’ve reached the maximum input!");
+      showWarning("You’ve reached the maximum input!", field);
     } else {
       e.target.classList.remove(styles.maxReached);
     }
@@ -39,10 +42,10 @@ export default function Contact() {
   const handleNameInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const regex = /^[A-Za-z.\-\s]*$/;
     if (!regex.test(e.target.value)) {
-      showWarning("Numbers or Special characters are not allowed.");
+      showWarning("Numbers or special characters are not allowed.", "name");
       e.target.value = e.target.value.replace(/[^A-Za-z.\-\s]/g, "");
     }
-    handleChange(e, setNameCount, 50);
+    handleChange(e, setNameCount, 50, "name");
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -116,85 +119,109 @@ export default function Contact() {
         <input type="hidden" name="_next" value="." />
 
         {/* Name Field */}
-        <label htmlFor="name" className={styles.label}>
-          Your Name:
-        </label>
-        <div className={styles.inputWrapper}>
-          <input
-            id="name"
-            type="text"
-            name="name"
-            placeholder="Enter your name"
-            className={styles.input}
-            required
-            maxLength={50}
-            onChange={handleNameInput}
-          />
-          <span
-            className={`${styles.counterInside} ${
-              nameCount >= 50 ? styles.counterRed : ""
-            }`}
-          >
-            {nameCount}/50
-          </span>
+        <div className={styles.fieldGroup}>
+          <label htmlFor="name" className={styles.label}>
+            Your Name:
+          </label>
+          <div className={styles.inputWrapper}>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              className={styles.input}
+              required
+              maxLength={50}
+              onFocus={() => setActiveField("name")}
+              onChange={handleNameInput}
+            />
+            <span
+              className={`${styles.counterInside} ${
+                nameCount >= 50 ? styles.counterRed : ""
+              }`}
+            >
+              {nameCount}/50
+            </span>
+          </div>
+          {errors.name && <p className={styles.errorMsg}>{errors.name}</p>}
+          {warning && activeField === "name" && (
+            <div className={styles.warningBelow}>
+              <p>{warning}</p>
+            </div>
+          )}
         </div>
-        {errors.name && <p className={styles.errorMsg}>{errors.name}</p>}
 
         {/* Email Field */}
-        <label htmlFor="email" className={styles.label}>
-          Your Email:
-        </label>
-        <div className={styles.inputWrapper}>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            className={styles.input}
-            required
-            maxLength={100}
-            onChange={(e) => handleChange(e, setEmailCount, 100)}
-          />
-          <span
-            className={`${styles.counterInside} ${
-              emailCount >= 100 ? styles.counterRed : ""
-            }`}
-          >
-            {emailCount}/100
-          </span>
+        <div className={styles.fieldGroup}>
+          <label htmlFor="email" className={styles.label}>
+            Your Email:
+          </label>
+          <div className={styles.inputWrapper}>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              className={styles.input}
+              required
+              maxLength={100}
+              onFocus={() => setActiveField("email")}
+              onChange={(e) => handleChange(e, setEmailCount, 100, "email")}
+            />
+            <span
+              className={`${styles.counterInside} ${
+                emailCount >= 100 ? styles.counterRed : ""
+              }`}
+            >
+              {emailCount}/100
+            </span>
+          </div>
+          {errors.email && <p className={styles.errorMsg}>{errors.email}</p>}
+          {warning && activeField === "email" && (
+            <div className={styles.warningBelow}>
+              <p>{warning}</p>
+            </div>
+          )}
         </div>
-        {errors.email && <p className={styles.errorMsg}>{errors.email}</p>}
 
         {/* Message Field */}
-        <label htmlFor="message" className={styles.label}>
-          Your Message:
-        </label>
-        <div className={styles.inputWrapper}>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Type your message here..."
-            className={styles.textarea}
-            required
-            maxLength={500}
-            onChange={(e) => handleChange(e, setMessageCount, 500)}
-          ></textarea>
-          <span
-            className={`${styles.counterInside} ${
-              messageCount >= 500 ? styles.counterRed : ""
-            }`}
-          >
-            {messageCount}/500
-          </span>
+        <div className={styles.fieldGroup}>
+          <label htmlFor="message" className={styles.label}>
+            Your Message:
+          </label>
+          <div className={styles.inputWrapper}>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Type your message here..."
+              className={styles.textarea}
+              required
+              maxLength={500}
+              onFocus={() => setActiveField("message")}
+              onChange={(e) => handleChange(e, setMessageCount, 500, "message")}
+            ></textarea>
+            <span
+              className={`${styles.counterInside} ${
+                messageCount >= 500 ? styles.counterRed : ""
+              }`}
+            >
+              {messageCount}/500
+            </span>
+          </div>
+          {errors.message && <p className={styles.errorMsg}>{errors.message}</p>}
+          {warning && activeField === "message" && (
+            <div className={styles.warningBelow}>
+              <p>{warning}</p>
+            </div>
+          )}
         </div>
-        {errors.message && <p className={styles.errorMsg}>{errors.message}</p>}
 
         <button type="submit" className={styles.submitBtn}>
           Send Message
         </button>
       </form>
 
-      {/* ✅ Centered Success Popup */}
+      {/* ✅ Success Popup */}
       {isSent && (
         <div className={styles.popup}>
           <div className={styles.popupContent}>
@@ -205,20 +232,10 @@ export default function Contact() {
             />
             <h2>Thanks, {userName || "there"}!</h2>
             <p>Your message was sent successfully. We’ll get back to you soon.</p>
-            <button
-              className={styles.closeBtn}
-              onClick={() => setIsSent(false)}
-            >
+            <button className={styles.closeBtn} onClick={() => setIsSent(false)}>
               Close
             </button>
           </div>
-        </div>
-      )}
-
-      {/* Toast Warning */}
-      {warning && (
-        <div className={styles.warningPopup}>
-          <p>{warning}</p>
         </div>
       )}
     </div>

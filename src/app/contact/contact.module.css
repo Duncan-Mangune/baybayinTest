@@ -310,3 +310,39 @@
   text-align: left;
   animation: fadeIn 0.3s ease forwards;
 }
+
+
+/* 🔹 Warning popup directly below the field */
+.warningBelow {
+  background-color: #ff3b3b;
+  color: white;
+  margin-top: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  animation: fadePopup 2.5s ease forwards;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Smooth fade animation */
+@keyframes fadePopup {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+/* Group each field for cleaner layout */
+.fieldGroup {
+  position: relative;
+  margin-bottom: 12px;
+}
